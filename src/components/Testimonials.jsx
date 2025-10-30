@@ -145,12 +145,6 @@ export default function AutoPlusTestimonial() {
                       alt={t.name}
                       className="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover ring-1 ring-white/10"
                     />
-                    <div
-                      className="absolute -right-3 top-1 w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center"
-                      style={{ backgroundColor: accent }}
-                    >
-                      <div className="w-3 h-3 sm:w-4 sm:h-4 border-2 border-black/70 border-t-transparent rounded-full animate-spin"></div>
-                    </div>
                   </div>
                 </div>
 
