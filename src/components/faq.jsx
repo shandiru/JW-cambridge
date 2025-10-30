@@ -77,7 +77,7 @@ export default function FAQSection() {
             className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight leading-snug sm:leading-tight md:leading-[1.2]"
           >
             Frequently Asked{" "}
-            <span className="text-[#FF3B3B] italic block sm:inline">
+            <span className="text-[#FF3B3B]  block sm:inline">
               Questions
             </span>
           </h2>
