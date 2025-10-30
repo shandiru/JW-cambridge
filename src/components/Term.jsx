@@ -28,7 +28,7 @@ const TermsConditions = () => {
                   <section>
                       <h2 className="text-2xl font-medium">3. Intellectual Property</h2>
                       <p className="text-white">
-                          All content on this website (including text, images, graphics, and logos) is owned by or licensed to  Ovi Car Body Repair.
+                          All content on this website (including text, images, graphics, and logos) is owned by or licensed to JW cambridge.
                           You may view, download, and print content for personal use only.
                           You must not copy, reproduce, or distribute our website content without prior written consent.
                       </p>
@@ -77,10 +77,10 @@ const TermsConditions = () => {
                           If you have any questions about these Terms of Use, please contact us:
                       </p>
                       <div className="text-white">
-                          <p><strong>Ovi Car Body Repair</strong></p>
-                          {/* <p>Email: <a href="mailto:sam.ferries@rsmobileservices.co.uk" className="text-[#4ab8e9] hover:underline">sam.ferries@rsmobileservices.co.uk</a></p> */}
-                          <p>Phone: 07788275026</p>
-                          <p>Address: 215 Attercliffe Road , Sheffield S4 7XF</p>
+                          <p><strong>JW cambridge</strong></p>
+                          <p>Email: <a href="mailto:info@jwcambridge.co.uk" className="text-[#4ab8e9] hover:underline">info@jwcambridge.co.uk</a></p>
+                          <p>Phone: 01223311711</p>
+                          <p>Address: Unit 1, 2 Swanns Rd, Cambridge CB5 8JZ</p>
                       </div>
                   </section>
               </div>

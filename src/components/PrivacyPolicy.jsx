@@ -110,10 +110,10 @@ const PrivacyPolicy = () => {
                         If you have any questions about this Privacy Policy or how we handle your personal data, please contact us:
                     </p>
                     <div className="text-white">
-                        <p><strong>Ovi Car Body Repair</strong></p>
-                        {/* <p>Email: <a href="mailto:sam.ferries@rsmobileservices.co.uk" className="text-[#4ab8e9] hover:underline">sam.ferries@rsmobileservices.co.uk</a></p> */}
-                        <p>Phone: 07788275026</p>
-                        <p>Address: 215 Attercliffe Road , Sheffield S4 7XF</p>
+                        <p><strong>JW cambridge</strong></p>
+                        <p>Email: <a href="mailto:info@jwcambridge.co.uk" className="text-[#4ab8e9] hover:underline">info@jwcambridge.co.uk</a></p>
+                        <p>Phone: 01223311711</p>
+                        <p>Address: Unit 1, 2 Swanns Rd, Cambridge CB5 8JZ</p>
                     </div>
                     <p className="mt-2 text-white">
                         If you are not satisfied with our response, you have the right to lodge a complaint with the{' '}
@@ -124,7 +124,7 @@ const PrivacyPolicy = () => {
                             className="text-[#D70C09] hover:underline"
                         >
                             Information Commissioner’s Office (ICO)
-                        </a>.
+                        </a>
                     </p>
 
                 </section>

@@ -1,85 +1,80 @@
-"use client";
 import React, { useEffect } from "react";
+import { FiArrowRight, FiPlay } from "react-icons/fi";
 import AOS from "aos";
-import "aos/dist/aos.css";
+import "aos/dist/aos.css"; // Import AOS styles
 
 const HeroSection = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1200,
-      once: true,
-      easing: "ease-out-cubic",
-    });
-  }, []);
+    useEffect(() => {
+        AOS.init({ duration: 1200, once: true }); // Initialize AOS
+    }, []);
 
-  return (
-    <section className="relative w-full h-[120vh] overflow-hidden">
-      {/* 🎥 Background Video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover"
-      >
-        <source src="/car-bg.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+    return (
+        <div className="bg-white dark:bg-black" id="hero">
+            {/* Hero Section */}
+            <section className="bg-[#111111] text-white min-h-screen flex items-center rounded-b-4xl justify-center px-6 md:px-12 lg:px-20">
+                <div className="max-w-7xl w-full grid md:grid-cols-2 gap-10 items-center">
 
-      {/* 🟥 Gradient Glow Background */}
-      <div className="absolute inset-0 pointer-events-none -z-10">
-        <div className="absolute top-[-200px] left-[-200px] w-[700px] h-[700px] bg-[#D70C09]/30 blur-[180px] rounded-full -translate-x-1/3 -translate-y-1/3"></div>
-        <div className="absolute bottom-[-200px] right-[-200px] w-[500px] h-[500px] bg-[#D70C09]/20 blur-[160px] rounded-full translate-x-1/3 translate-y-1/3"></div>
-      </div>
+                    {/* Left Content */}
+                    <div className="space-y-6" data-aos="fade-right">
+                        <h1 className="text-2xl md:text-3xl lg:text-4xl mt-30 sm:mt-10 font-extrabold leading-tight">
+                            Where Quality Meets the Open Road<br />
+                            <span className="text-[#4ab8e9]">Expert Mobile Mechanics </span>
+                        </h1>
 
-      {/* Black Overlay */}
-      <div className="absolute inset-0 bg-black/60 bg-opacity-50"></div>
+                        <p className="text-gray-300 max-w-md">
+                            Wherever You Are  JW Camebrdige brings the garage to you. From oil changes to engine diagnostics, our fully equipped vans ensure your vehicle runs smoothly without the hassle of visiting a workshop.
+                        </p>
 
-      {/* ✨ Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center text-center mt-10 h-full px-6">
-        <p
-          data-aos="fade-down"
-          className="text-white uppercase text-sm md:text-base tracking-widest mb-4"
-        >
-          <span className="text-[#D70C09] text-xl font-bold">| </span>
-          Since 2012 – Over 28 Years of Car Body Repair Expertise
-        </p>
+                        <div className="flex items-center gap-5 pt-4">
+                            <a href="/#contact">
+                                <button className="border-2 border-[#4ab8e9] text-white px-6 py-3 rounded-full flex items-center gap-2 group hover:bg-[#4ab8e9] transition font-semibold">
+                                    <span className="transition-transform duration-300 text-sm lg:text-base group-hover:-translate-x-1 group-active:-translate-x-1">
+                                        Book Your Mobile Service Today
+                                    </span>
+                                    <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1 group-active:translate-x-1 mt-1" />
+                                </button>
+                            </a>
 
-        <h1
-          data-aos="zoom-in"
-          data-aos-delay="200"
-          className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold uppercase leading-tight text-white max-w-5xl"
-        >
-          Fast. Affordable. Flawless Finishes.
-        </h1>
+                            <button className="w-14 h-14 rounded-full border-2 border-gray-500 flex items-center justify-center hover:border-[#4ab8e9] transition">
+                                <FiPlay className="text-2xl" />
+                            </button>
+                        </div>
+                    </div>
 
-        <p
-          data-aos="fade-up"
-          data-aos-delay="400"
-          className="text-gray-300 text-sm sm:text-base md:text-lg mt-6 max-w-4xl"
-        >
-          Ovi Car Body Repair has been delivering top-quality spray booth and
-          repair services in Sheffield since 2012. With decades of experience,
-          we specialize in dent and scratch repair, full resprays, and quick
-          24-hour turnarounds. Using advanced Blowtherm paint technology, we
-          guarantee a perfect finish every time.
-        </p>
+                    {/* Right Image */}
+                    <div className="relative" data-aos="fade-left">
+                        <img
+                            src="image.png" // Replace with your image path
+                            alt="Car Service"
+                            className="w-full h-100 mt-10 rounded-3xl shadow-lg object-cover"
+                        />
+                    </div>
+                </div>
+            </section>
 
-        <div
-          data-aos="fade-up"
-          data-aos-delay="600"
-          className="mt-10 flex flex-col sm:flex-row items-center gap-4"
-        >
-          <button className="bg-[#D70C09] hover:bg-transparent hover:border-[#D70C09] px-8 py-3 hover:border-2 hover:shadow-sm hover:shadow-[#D70C09] text-white font-semibold border-2 border-[#D70C09] text-sm uppercase tracking-widest transition-all duration-300">
-            Get a Quote
-          </button>
-          <button className="border-2 border-white text-white font-semibold px-8 py-3 text-sm uppercase hover:shadow-sm hover:shadow-[#D70C09] tracking-widest hover:bg-white hover:text-black transition-all duration-300">
-            View Services
-          </button>
+            {/* Stats Section */}
+            <section className="bg-white text-black shadow-lg py-10 -mt-12 justify-center w-[80%] px-6 md:px-12 lg:px-20 rounded-2xl max-w-5xl mx-auto translate-x-0 z-10">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl items-center">
+                    <div className="text-center" data-aos="fade-up">
+                        <h3 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#ef5a24]">3+</h3>
+                        <p className="text-[#ef5a24]">Cities covered</p>
+                    </div>
+                    <div className="text-center" data-aos="fade-up" data-aos-delay="100">
+                        <h3 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#ef5a24]">1000+</h3>
+                        <p className="text-[#ef5a24] ">Cars helped</p>
+                    </div>
+                    <div className="text-center" data-aos="fade-up" data-aos-delay="200">
+                        <h3 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#ef5a24]">40+</h3>
+                        <p className="text-[#ef5a24]">Mile radius</p>
+                    </div>
+                    <div className="text-center" data-aos="fade-up" data-aos-delay="300">
+                        <h3 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#ef5a24]">5+</h3>
+                        <p className="text-[#ef5a24]">Counties covered</p>
+                    </div>
+                </div>
+            </section>
         </div>
-      </div>
-    </section>
-  );
+    );
 };
 
 export default HeroSection;
