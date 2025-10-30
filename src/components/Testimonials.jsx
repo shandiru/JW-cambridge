@@ -1,192 +1,183 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const testimonials = [
-  {
-    id: 1,
-    quote:
-      "Ovi did an amazing job on my car after I had an accident. It looks completely brand new and exceeded my expectations. A very reasonable price and quick turnaround. I really appreciated the way he kept me informed throughout by sending me pictures and updates of the progress. I highly recommend him to anyone that wants a professional job doing. Lastly he was very welcoming and simplified things as I am not at all mechanical. Thank you Ovi :)",
-    name: "Kitti Nangtalar",
-    location: "UK",
-    avatar: "1.png",
-  },
-  {
-    id: 2,
-    quote:
-      "Ovi did a really excellent job on my van. We had scratches and dents on the rear panel caused by a lorry. It was a big job and Ovi was one of the few body workers in Sheffield willing to take it on.",
-    name: "Jerome Mowat",
-    location: "UK",
-    avatar: "2.png",
-  },
-  {
-    id: 3,
-    quote:
-      "My Renault Capture car was involved in an accident and the rear passenger door and panel was damaged and dented. Ovi completed the job on time and to a high standard. Strongly recommend him for any body repair job.",
-    name: "Jay J",
-    location: "UK",
-    avatar: "3.png",
-  },
-  {
-    id: 4,
-    quote:
-      "Ovi delivered perfectly — my car looks brand new now! I’m super impressed with the job he did and got updates throughout the process. Highly recommended!",
-    name: "Phoebe Potkins",
-    location: "UK",
-    avatar: "4.png",
-  },
-];
+export default function AutoPlusTestimonial() {
+  const accent = "#FF3B3B";
 
-const TestimonialsSection = () => {
-  const [paused, setPaused] = useState(false);
+  const testimonials = [
+    {
+      name: "Cally Keetley .",
+      role: "Customer from Nottingham",
+      text: "Rang on the Monday, got an appointment for Tuesday with plenty of upfront and transparent information about costs. Mike was quick and efficient and fixed the issue (fault with electric windows) in less than an hour.",
+      img: "c.png",
+    },
+    {
+      name: "Tommy Merrall .",
+      role: "Customer from Nottingham",
+      text: "BMW X5 electrical issues, 4 hours later car fixed and running. 5 star thank you!",
+      img: "t.png",
+    },
+    {
+      name: "Sylwia Ksiazkiewicz.",
+      role: "Customer from Nottingham",
+      text: "Professional and quick. Highly recommended!",
+      img: "s.png",
+    },
+  ];
+
+  const [index, setIndex] = useState(0);
+  const [direction, setDirection] = useState(0);
+  const [typedText, setTypedText] = useState("");
+  const [isTyping, setIsTyping] = useState(false);
 
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      easing: "ease-out-cubic",
-      once: false,
-    });
+    AOS.init({ duration: 1000, easing: "ease-in-out", once: false });
   }, []);
+
+  const next = () => {
+    setDirection(1);
+    setIndex((i) => (i + 1) % testimonials.length);
+  };
+
+  const prev = () => {
+    setDirection(-1);
+    setIndex((i) => (i - 1 + testimonials.length) % testimonials.length);
+  };
+
+  const t = testimonials[index];
+
+  // ✅ Safe Typewriter (no undefined)
+  useEffect(() => {
+    let i = 0;
+    const text = String(t.text || "");
+    setTypedText("");
+    setIsTyping(true);
+
+    const interval = setInterval(() => {
+      if (i < text.length && typeof text[i] === "string") {
+        setTypedText((prev) => prev + text[i-1]);
+        i++;
+      } else {
+        clearInterval(interval);
+        setIsTyping(false);
+      }
+    }, 25);
+
+    return () => clearInterval(interval);
+  }, [index, t.text]);
 
   return (
     <section
-      id="testimonials"
-      className="relative overflow-hidden bg-[#000000] text-white py-24 px-6 md:px-12"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
+      className="bg-[#000000] text-white font-inter py-20 md:py-24 px-4 sm:px-6 overflow-hidden border-t border-[#1A1A1A]"
+      id="review"
     >
-      {/* 🔥 Red Glow Background */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-0 w-[700px] h-[700px] bg-[#D70C09]/30 blur-[180px] rounded-full -translate-x-1/3 -translate-y-1/3"></div>
-        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#D70C09]/20 blur-[160px] rounded-full translate-x-1/3 translate-y-1/3"></div>
-      </div>
-
-      {/* 🏁 Header */}
       <div
-        className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center mb-14"
         data-aos="fade-up"
+        className="max-w-6xl mx-auto border border-[#1A1A1A] bg-[#0A0A0A] rounded-md overflow-hidden"
       >
-        <div data-aos="fade-right">
-          <p className="text-[#D70C09] uppercase tracking-[5px] text-sm font-semibold mb-2">
-            Testimonials
+        {/* Header */}
+        <div
+          data-aos="fade-down"
+          className="text-center py-10 sm:py-12 border-b border-[#1A1A1A] px-4"
+        >
+          <p className="inline-block border border-[#ff3b3b33] text-xs tracking-[4px] uppercase px-6 py-1 rounded-full text-[#ff6666] mb-6">
+            Review
           </p>
-          <h2 className="text-4xl md:text-5xl font-extrabold leading-[1.2] text-white">
-            What Our <span className="text-[#D70C09]">Customers</span> Say
+
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-snug">
+            What Our{" "}
+            <span className="text-[#FF3B3B] italic">Customers Say</span>
           </h2>
-          <p className="text-[#868386] text-base mt-4 max-w-lg">
-            At Ovi Car Body Repair, our mission is to deliver precision, passion
-            and perfection. Here’s what real customers have to say about their
-            experience with our expert team.
+
+          <p className="text-[#CCCCCC] text-sm sm:text-base mt-3 max-w-2xl mx-auto">
+            Real feedback from our happy customers across Nottinghamshire who
+            trust AutoPlus for all their electrical and diagnostic needs.
           </p>
         </div>
 
-        <button
-          data-aos="zoom-in"
-          data-aos-delay="200"
-          className="mt-8 md:mt-0 flex items-center gap-2 bg-[#D70C09] hover:bg-[#868386] text-white font-semibold uppercase px-8 py-3 rounded-md transition-all duration-300"
+        {/* Main Section */}
+        <div
+          data-aos="fade-up"
+          className="flex flex-col md:flex-row overflow-hidden"
         >
-          Book Your Repair
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-4 h-4"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
-      </div>
+          {/* LEFT SIDE */}
+          <div className="flex-1 p-8 sm:p-10 md:p-14 border-b md:border-b-0 md:border-r border-[#1A1A1A] bg-[#0A0A0A]/60 [background-image:radial-gradient(900px_700px_at_20%_20%,rgba(255,59,59,0.06),transparent_70%)]">
+            <AnimatePresence mode="wait" custom={direction}>
+              <motion.div
+                key={index}
+                custom={direction}
+                initial={{ opacity: 0, x: direction > 0 ? 100 : -100 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: direction > 0 ? -100 : 100 }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+                className="flex flex-col h-auto"
+              >
+                {/* Avatar */}
+                <div className="flex items-center gap-3 mb-6 sm:mb-8">
+                  <div className="relative">
+                    <img
+                      src={t.img}
+                      alt={t.name}
+                      className="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover ring-1 ring-white/10"
+                    />
+                    <div
+                      className="absolute -right-3 top-1 w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center"
+                      style={{ backgroundColor: accent }}
+                    >
+                      <div className="w-3 h-3 sm:w-4 sm:h-4 border-2 border-black/70 border-t-transparent rounded-full animate-spin"></div>
+                    </div>
+                  </div>
+                </div>
 
-      {/* 💬 Top Row */}
-      <div
-        data-aos="fade-up"
-        data-aos-delay="200"
-        className="relative z-10 flex gap-8 animate-scroll-left"
-        style={{ animationPlayState: paused ? "paused" : "running" }}
-      >
-        {[...testimonials, ...testimonials].map((item, i) => (
-          <div
-            key={`row1-${i}`}
-            className="bg-[#0E0E0E] border border-[#1C1C1C] rounded-2xl p-6 flex flex-col justify-between flex-shrink-0 hover:border-[#D70C09]/40 transition-all duration-300 w-[360px] h-[340px]"
-          >
-            <p className="italic text-[#CCCCCC] text-[15px] leading-relaxed line-clamp-[8] overflow-hidden">
-              “{item.quote}”
-            </p>
-            <div className="flex items-center gap-3 mt-6">
-              <img
-                src={item.avatar}
-                alt={item.name}
-                className="w-10 h-10 rounded-full object-cover border border-[#D70C09]/40"
-              />
-              <div>
-                <h4 className="text-white font-semibold text-sm">{item.name}</h4>
-                <p className="text-[#868386] text-xs">{item.location}</p>
-              </div>
-            </div>
+                {/* Review Text */}
+                <p className="text-[16px] sm:text-[18px] md:text-[20px] leading-relaxed text-[#EEEEEE] mb-8 sm:mb-10">
+                  {typedText}
+                  {isTyping && (
+                    <span className="animate-pulse text-[#FF3B3B]">|</span>
+                  )}
+                </p>
+
+                {/* Name + Role */}
+                <div className="mt-auto">
+                  <p className="font-semibold text-white">{t.name}</p>
+                  <p className="text-[#AAAAAA] text-sm sm:text-base">
+                    {t.role}
+                  </p>
+                </div>
+
+                {/* Counter */}
+                <p className="mt-4 text-[#666666] text-xs sm:text-sm">
+                  {index + 1}/{testimonials.length}
+                </p>
+              </motion.div>
+            </AnimatePresence>
           </div>
-        ))}
-      </div>
 
-      {/* 💬 Bottom Row */}
-      <div
-        data-aos="fade-up"
-        data-aos-delay="400"
-        className="relative z-10 flex gap-8 mt-10 animate-scroll-right"
-        style={{ animationPlayState: paused ? "paused" : "running" }}
-      >
-        {[...testimonials, ...testimonials].map((item, i) => (
-          <div
-            key={`row2-${i}`}
-            className="bg-[#0E0E0E] border border-[#1C1C1C] rounded-2xl p-6 flex flex-col justify-between flex-shrink-0 hover:border-[#D70C09]/40 transition-all duration-300 w-[340px] h-[320px]"
-          >
-            <p className="italic text-[#CCCCCC] text-[15px] leading-relaxed line-clamp-[8] overflow-hidden">
-              “{item.quote}”
-            </p>
-            <div className="flex items-center gap-3 mt-6">
-              <img
-                src={item.avatar}
-                alt={item.name}
-                className="w-10 h-10 rounded-full object-cover border border-[#D70C09]/40"
-              />
-              <div>
-                <h4 className="text-white font-semibold text-sm">{item.name}</h4>
-                <p className="text-[#868386] text-xs">{item.location}</p>
-              </div>
-            </div>
+          {/* RIGHT SIDE */}
+          <div className="md:w-[320px] flex flex-col justify-end bg-[#0A0A0A] border-t md:border-t-0 border-l border-[#1A1A1A]">
+            <motion.button
+              whileTap={{ scale: 0.95 }}
+              onClick={prev}
+              className="flex items-center gap-1 justify-start px-8 py-5 border-b border-t border-[#1A1A1A] hover:text-[#FF3B3B] transition-colors"
+            >
+              <ChevronLeft size={18} />
+              <span>Previous</span>
+            </motion.button>
+            <motion.button
+              whileTap={{ scale: 0.95 }}
+              onClick={next}
+              className="flex items-center gap-1 justify-end px-8 py-5 hover:text-[#FF3B3B] transition-colors"
+            >
+              <span>Next</span>
+              <ChevronRight size={18} />
+            </motion.button>
           </div>
-        ))}
+        </div>
       </div>
-
-      {/* 🎨 Edge Fades */}
-      <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#000000] to-transparent pointer-events-none"></div>
-      <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#000000] to-transparent pointer-events-none"></div>
-
-      {/* ⏩ Auto Scroll Keyframes */}
-      <style>{`
-        @keyframes scroll-left {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-        @keyframes scroll-right {
-          0% { transform: translateX(-50%); }
-          100% { transform: translateX(0); }
-        }
-        .animate-scroll-left {
-          animation: scroll-left 45s linear infinite;
-          display: flex;
-          width: max-content;
-        }
-        .animate-scroll-right {
-          animation: scroll-right 50s linear infinite;
-          display: flex;
-          width: max-content;
-        }
-      `}</style>
     </section>
   );
-};
-
-export default TestimonialsSection;
+}
