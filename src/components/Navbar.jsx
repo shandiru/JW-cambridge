@@ -9,7 +9,7 @@ const Navbar = () => {
     { name: "HOME", id: "/" },
     { name: "ABOUT US", id: "about" },
     { name: "SERVICE", id: "service" },
-    { name: "TESTIMONIAL", id: "testimonials" },
+    { name: "TESTIMONIAL", id: "review" },
     { name: "GALLERY", id: "gallery" },
     { name: "CONTACT", id: "contact" },
     { name: "FAQ", id: "faq" },
@@ -63,12 +63,12 @@ const Navbar = () => {
 
         {/* Right Side */}
         <div className="hidden lg:flex items-center space-x-6">
-          <button
-            onClick={() => handleScroll("contact")}
+          <a
+            href="01223311711"
             className="bg-[#D70C09] rounded-lg px-5 py-2 text-sm font-semibold hover:bg-[#868386] transition-all duration-300"
           >
             CONTACT US
-          </button>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -102,12 +102,12 @@ const Navbar = () => {
               {item.name}
             </button>
           ))}
-          <button
-            onClick={() => handleScroll("contact")}
+          <a
+            href="01223311711"
             className="bg-[#D70C09] rounded-lg px-5 py-2 text-sm font-semibold hover:bg-[#868386] transition-all duration-200"
           >
             CONTACT US
-          </button>
+          </a>
         </div>
       )}
     </nav>

@@ -15,15 +15,15 @@ const Home = () => {
     return (
         <div>
            
-            <HeroSection />
+            {/* <HeroSection /> */}
             {/* <LogoShowcase /> */}
             {/* <About /> */}
             <ServiceSection />
-            <GallerySection />
+            {/* <GallerySection />
             <TestimonialsCarousel />
             <Faq />
             <ContactSection />
-            <FindUs />
+            <FindUs /> */}
            
         </div>
     )

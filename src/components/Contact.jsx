@@ -43,58 +43,65 @@ const ContactSection = () => {
 
           <div className="space-y-10">
             {/* Address */}
-            <div
-              className="flex items-start gap-4"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div className="p-3 bg-[#D70C09]/15 text-[#D70C09] rounded-full shadow-[0_0_15px_rgba(215,12,9,0.3)]">
+            {/* Address */}
+            <div className="flex items-start gap-4" data-aos="fade-up" data-aos-delay="100">
+              <div className="p-3 bg-[#D70C09]/15 text-[#D70C09] rounded-full shadow-[0_0_15px_rgba(215,12,9,0.3)] flex items-center justify-center">
                 <Home className="w-5 h-5" />
               </div>
               <div>
                 <h4 className="font-semibold text-white mb-1">Office Address</h4>
-                <p className="text-sm text-[#868386] leading-relaxed">
-                  4517 Washington Ave. <br />
-                  Manchester, Kentucky 39495
-                </p>
+                <a
+                  href="https://maps.app.goo.gl/3BvXtzvyAL3xmKvRA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+
+                >
+                  <p className="text-sm text-[#868386] leading-relaxed cursor-pointer hover:underline">
+                    Unit 1, 2 Swanns Rd, <br />
+                    Cambridge CB5 8JZ
+                  </p>
+                </a>
               </div>
             </div>
 
             {/* Phone */}
-            <div
-              className="flex items-start gap-4"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div className="p-3 bg-[#D70C09]/15 text-[#D70C09] rounded-full shadow-[0_0_15px_rgba(215,12,9,0.3)]">
+            <div className="flex items-start gap-4" data-aos="fade-up" data-aos-delay="200">
+              <div
+
+                className="p-3 bg-[#D70C09]/15 text-[#D70C09] rounded-full shadow-[0_0_15px_rgba(215,12,9,0.3)] flex items-center justify-center"
+              >
                 <Phone className="w-5 h-5" />
               </div>
               <div>
-                <h4 className="font-semibold text-white mb-1">
-                  Contact Number
-                </h4>
-                <p className="text-sm text-[#868386]">(603) 555-0123</p>
-                <p className="text-sm text-[#868386]">(319) 555-0115</p>
+                <h4 className="font-semibold text-white mb-1">Contact Number</h4>
+                <a
+                  href="tel:01223311711"
+                  target="_blank"
+                >
+                  <p className="text-sm text-[#868386] cursor-pointer hover:underline">01223311711</p>
+                </a>
               </div>
             </div>
 
             {/* Email */}
-            <div
-              className="flex items-start gap-4"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <div className="p-3 bg-[#D70C09]/15 text-[#D70C09] rounded-full shadow-[0_0_15px_rgba(215,12,9,0.3)]">
+            <div className="flex items-start gap-4" data-aos="fade-up" data-aos-delay="300">
+              <div
+                href="mailto:info@jwcambridge.co.uk"
+                className="p-3 bg-[#D70C09]/15 text-[#D70C09] rounded-full shadow-[0_0_15px_rgba(215,12,9,0.3)] flex items-center justify-center"
+              >
                 <Mail className="w-5 h-5" />
               </div>
               <div>
-                <h4 className="font-semibold text-white mb-1">
-                  Email Address
-                </h4>
-                <p className="text-sm text-[#868386]">info@ovicars.com</p>
-                <p className="text-sm text-[#868386]">support@ovicars.com</p>
+                <h4 className="font-semibold text-white mb-1">Email Address</h4>
+                <a
+                  href="mailto:info@jwcambridge.co.uk"
+                  target="_blank"
+                >
+                  <p className="text-sm text-[#868386] cursor-pointer hover:underline">info@jwcambridge.co.uk</p>
+                </a>
               </div>
             </div>
+
           </div>
         </div>
 
@@ -110,7 +117,7 @@ const ContactSection = () => {
           <p className="text-[#868386] text-sm mb-10 leading-relaxed">
             We're always here to assist you at{" "}
             <span className="text-[#D70C09] font-semibold">
-              Ovi Car Body Repair
+              JW cambridge
             </span>
             . Our expert team is ready to help with your inquiries or booking
             requests.

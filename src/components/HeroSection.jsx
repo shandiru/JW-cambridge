@@ -9,7 +9,7 @@ const HeroSection = () => {
     }, []);
 
     return (
-        <div className="bg-white dark:bg-black" id="hero">
+        <div className="bg-black" id="hero">
             {/* Hero Section */}
             <section className="bg-[#111111] text-white min-h-screen flex items-center rounded-b-4xl justify-center px-6 md:px-12 lg:px-20">
                 <div className="max-w-7xl w-full grid md:grid-cols-2 gap-10 items-center">

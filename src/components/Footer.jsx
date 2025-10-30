@@ -39,12 +39,12 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2 text-gray-400">
               {[
-                "MOT Repair",
-                "Brakes",
-                "Suspensions",
-                "Car Services",
-                "Diagnostics",
-                "Fleet & Lease",
+                "Any Car Problems",
+                "Maintenance & Servicing",
+                "Vehicle Diagnosis",
+                "Mercedes Diagnosis & Repair",
+                "MOT Preparation & Pre-MOT Checks",
+                "Software Updates & Control Modules",
               ].map((service, index) => (
                 <li key={index}>
                   <a href="#services" className="hover:text-white transition-colors duration-300">
