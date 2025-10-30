@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="bg-black border-t border-gray-800 py-12">
+    <footer className="bg-black border-t border-[#1A1A1A] py-12 text-white">
       <div className="container mx-auto px-4 md:px-12">
         <div className="grid md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-3">
-              <span className="text-2xl font-bold bg-gradient-to-r from-[#00c6ff] to-[#0072ff] bg-clip-text text-transparent">
+              <span className="text-2xl font-bold bg-gradient-to-r from-[#E0E0E0] to-[#A8A8A8] bg-clip-text text-transparent">
                 JW <span className="text-gray-400">Cambridge</span>
               </span>
             </div>
@@ -25,7 +25,7 @@ export default function Footer() {
                 aria-label="Facebook"
               >
                 <FaFacebookF
-                  className="text-gray-400 hover:text-blue-600 cursor-pointer transition-colors duration-300"
+                  className="text-gray-400 hover:text-[#E0E0E0] cursor-pointer transition-colors duration-300"
                   size={20}
                 />
               </a>
@@ -34,7 +34,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="font-bold mb-4 bg-gradient-to-r from-[#00c6ff] to-[#0072ff] bg-clip-text text-transparent">
+            <h3 className="font-bold mb-4 bg-gradient-to-r from-[#E0E0E0] to-[#A8A8A8] bg-clip-text text-transparent">
               Services
             </h3>
             <ul className="space-y-2 text-gray-400">
@@ -47,7 +47,10 @@ export default function Footer() {
                 "Software Updates & Control Modules",
               ].map((service, index) => (
                 <li key={index}>
-                  <a href="#services" className="hover:text-white transition-colors duration-300">
+                  <a
+                    href="#services"
+                    className="hover:text-[#E0E0E0] transition-colors duration-300"
+                  >
                     {service}
                   </a>
                 </li>
@@ -57,37 +60,37 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-bold mb-4 bg-gradient-to-r from-[#00c6ff] to-[#0072ff] bg-clip-text text-transparent">
+            <h3 className="font-bold mb-4 bg-gradient-to-r from-[#E0E0E0] to-[#A8A8A8] bg-clip-text text-transparent">
               Contact Info
             </h3>
             <ul className="space-y-4 text-gray-400">
               <li className="flex items-start space-x-3">
-                <FaMapMarkerAlt className="text-[#00c6ff] mt-1" size={18} />
+                <FaMapMarkerAlt className="text-[#C0C0C0] mt-1" size={18} />
                 <a
                   href="https://maps.app.goo.gl/oHkixQgSx4GGL3Nv5"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-white transition-colors duration-300"
+                  className="hover:text-[#E0E0E0] transition-colors duration-300"
                 >
                   Unit 1, 2 Swanns Rd, Cambridge CB5 8JZ
                 </a>
               </li>
 
               <li className="flex items-center space-x-3">
-                <FaPhoneAlt className="text-[#00c6ff]" size={18} />
+                <FaPhoneAlt className="text-[#C0C0C0]" size={18} />
                 <a
                   href="tel:+441780917600"
-                  className="hover:text-white transition-colors duration-300"
+                  className="hover:text-[#E0E0E0] transition-colors duration-300"
                 >
                   01223311711
                 </a>
               </li>
 
               <li className="flex items-center space-x-3">
-                <FaEnvelope className="text-[#00c6ff]" size={18} />
+                <FaEnvelope className="text-[#C0C0C0]" size={18} />
                 <a
-                  href="mailto:sam.ferries@rsmobileservices.co.uk"
-                  className="hover:text-white transition-colors duration-300 break-all"
+                  href="mailto:info@jwcambridge.co.uk"
+                  className="hover:text-[#E0E0E0] transition-colors duration-300 break-all"
                 >
                   info@jwcambridge.co.uk
                 </a>
@@ -97,7 +100,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Divider */}
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+        <div className="border-t border-[#1A1A1A] mt-8 pt-8 text-center text-gray-400">
           <p>&copy; 2025 JW Cambridge. All rights reserved.</p>
         </div>
 
@@ -107,27 +110,27 @@ export default function Footer() {
           <div className="flex gap-4 text-sm">
             <Link
               to="/terms"
-              className="text-gray-400 hover:text-[#00c6ff] transition duration-300"
+              className="text-gray-400 hover:text-[#C0C0C0] transition duration-300"
             >
               Terms & Conditions
             </Link>
-            <span className="text-gray-500">|</span>
+            <span className="text-gray-600">|</span>
             <Link
               to="/privacy"
-              className="text-gray-400 hover:text-[#00c6ff] transition duration-300"
+              className="text-gray-400 hover:text-[#C0C0C0] transition duration-300"
             >
               Privacy Policy
             </Link>
           </div>
 
-          {/* Center: Powered by Ansely (unchanged) */}
+          {/* Center: Powered by Ansely */}
           <p className="text-center font-semibold text-gray-400">
             Powered by{" "}
             <a
               href="https://www.ansely.co.uk/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#4ab8e9] hover:underline"
+              className="text-[#C0C0C0] hover:text-white transition duration-300"
             >
               Ansely
             </a>

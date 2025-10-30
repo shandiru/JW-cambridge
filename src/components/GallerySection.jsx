@@ -28,9 +28,9 @@ export default function GallerySection() {
       id="gallery"
       className="relative overflow-hidden bg-[#000000] text-white font-['Poppins'] py-24 md:py-32 border-t border-[#1A1A1A]"
     >
-      {/* 🔥 Red Glow Gradient */}
-      <div className="absolute top-0 left-0 w-[700px] h-[700px] bg-[#D70C09]/30 blur-[180px] rounded-full -translate-x-1/3 -translate-y-1/3"></div>
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#D70C09]/20 blur-[160px] rounded-full translate-x-1/3 translate-y-1/3"></div>
+      {/* 💠 Chrome Glow Gradients */}
+      <div className="absolute top-0 left-0 w-[700px] h-[700px] bg-gradient-to-br from-[#C0C0C0]/20 to-transparent blur-[200px] rounded-full -translate-x-1/3 -translate-y-1/3"></div>
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-gradient-to-tl from-[#E0E0E0]/10 to-transparent blur-[160px] rounded-full translate-x-1/3 translate-y-1/3"></div>
 
       {/* 🏁 Section Heading */}
       <div
@@ -38,41 +38,40 @@ export default function GallerySection() {
         data-aos="fade-up"
       >
         <p
-          className="text-[#D70C09] uppercase tracking-[5px] text-sm font-semibold mb-4"
+          className="text-[#C0C0C0] uppercase tracking-[5px] text-sm font-semibold mb-4"
           data-aos="fade-down"
         >
           Ovi Car Body Repair
         </p>
 
         <h2
-          className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 text-white"
+          className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 bg-gradient-to-r from-[#EAEAEA] to-[#B0B0B0] bg-clip-text text-transparent"
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          <span className="text-white">PERFORMANCE MEETS </span>
-          <span className="text-[#D70C09]">PERFECTION</span>
+          PERFORMANCE MEETS PERFECTION
         </h2>
 
         <p
-          className="text-[#868386] max-w-2xl mx-auto text-base md:text-lg leading-relaxed mb-10"
+          className="text-[#AAAAAA] max-w-2xl mx-auto text-base md:text-lg leading-relaxed mb-10"
           data-aos="fade-up"
           data-aos-delay="400"
         >
           At Ovi Car Body Repair, we redefine automotive care through precision,
-          passion, and performance. From dent removals to full restorations, our
-          experts ensure your car looks and drives as good as new.
+          craftsmanship, and a commitment to excellence. From dent removal to
+          full restorations, we treat every car like a masterpiece.
         </p>
 
-        {/* 🔘 Buttons with animation */}
+        {/* ⚙️ Buttons */}
         <div
           className="flex flex-wrap justify-center gap-4 mb-14"
           data-aos="zoom-in"
           data-aos-delay="600"
         >
-          <button className="bg-[#D70C09] hover:bg-[#868386] text-white font-semibold uppercase px-8 py-3 rounded-md transition-all duration-300">
+          <button className="bg-[#E0E0E0] text-black font-semibold uppercase px-8 py-3 rounded-md transition-all duration-300 hover:bg-[#FFFFFF] hover:shadow-[0_0_20px_#C0C0C033]">
             Book Repair
           </button>
-          <button className="border border-[#D70C09] hover:border-[#868386] hover:text-[#868386] text-white font-semibold uppercase px-8 py-3 rounded-md transition-all duration-300">
+          <button className="border border-[#E0E0E0] text-[#E0E0E0] font-semibold uppercase px-8 py-3 rounded-md transition-all duration-300 hover:border-white hover:text-white hover:shadow-[0_0_20px_#FFFFFF33]">
             View Services
           </button>
         </div>
@@ -88,7 +87,7 @@ export default function GallerySection() {
         <CircularGallery
           items={galleryItems}
           bend={3}
-          textColor="#ffffff"
+          textColor="#E0E0E0"
           borderRadius={0.05}
           scrollEase={0.02}
         />
