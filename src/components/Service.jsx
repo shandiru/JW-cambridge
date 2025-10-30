@@ -56,8 +56,8 @@ const ServiceSection = () => {
     >
       {/* 💠 Chrome Gradient Glow */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-gradient-to-br from-[#C0C0C0]/15 to-transparent blur-[180px] rounded-full -translate-x-1/3 -translate-y-1/3"></div>
-        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-gradient-to-tl from-[#E0E0E0]/10 to-transparent blur-[160px] rounded-full translate-x-1/3 translate-y-1/3"></div>
+        <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-linear-to-br from-[#C0C0C0]/15 to-transparent blur-[180px] rounded-full -translate-x-1/3 -translate-y-1/3"></div>
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-linear-to-tl from-[#E0E0E0]/10 to-transparent blur-[160px] rounded-full translate-x-1/3 translate-y-1/3"></div>
       </div>
 
       {/* ✅ Grid layout wrapper */}
@@ -66,7 +66,7 @@ const ServiceSection = () => {
         <div className="self-start lg:sticky lg:top-24 lg:h-fit">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight uppercase text-[#EAEAEA]">
             JW Cambridge{" "}
-            <span className="bg-gradient-to-r from-[#EAEAEA] to-[#A8A8A8] bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-[#EAEAEA] to-[#A8A8A8] bg-clip-text text-transparent">
               Garage Services
             </span>
           </h2>
@@ -122,7 +122,7 @@ const ServiceSection = () => {
               </div>
 
               {/* Image */}
-              <div className="w-full sm:w-[280px] h-[160px] sm:h-[170px] mt-4 sm:mt-0 relative overflow-hidden rounded-md [clip-path:polygon(10%_0,100%_0,90%_100%,0%_100%)] shadow-[0_0_15px_rgba(255,255,255,0.05)]">
+              <div className="w-full sm:w-[280px] h-40 sm:h-[170px] mt-4 sm:mt-0 relative overflow-hidden rounded-md [clip-path:polygon(10%_0,100%_0,90%_100%,0%_100%)] shadow-[0_0_15px_rgba(255,255,255,0.05)]">
                 <img
                   src={service.image}
                   alt={service.title}
@@ -133,7 +133,7 @@ const ServiceSection = () => {
                   }`}
                 />
                 <div
-                  className={`absolute inset-0 bg-gradient-to-br from-transparent via-white/10 to-transparent transition-opacity duration-500 ${
+                  className={`absolute inset-0 bg-linear-to-br from-transparent via-white/10 to-transparent transition-opacity duration-500 ${
                     hoveredId === service.id ? "opacity-40" : "opacity-0"
                   }`}
                 ></div>

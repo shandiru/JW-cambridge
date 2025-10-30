@@ -29,8 +29,8 @@ export default function GallerySection() {
       className="relative overflow-hidden bg-[#000000] text-white font-['Poppins'] py-12 border-t border-[#1A1A1A]"
     >
       {/* 💠 Chrome Glow Gradients */}
-      <div className="absolute top-0 left-0 w-[700px] h-[700px] bg-gradient-to-br from-[#C0C0C0]/20 to-transparent blur-[200px] rounded-full -translate-x-1/3 -translate-y-1/3"></div>
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-gradient-to-tl from-[#E0E0E0]/10 to-transparent blur-[160px] rounded-full translate-x-1/3 translate-y-1/3"></div>
+      <div className="absolute top-0 left-0 w-[700px] h-[700px] bg-linear-to-br from-[#C0C0C0]/20 to-transparent blur-[200px] rounded-full -translate-x-1/3 -translate-y-1/3"></div>
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-linear-to-tl from-[#E0E0E0]/10 to-transparent blur-[160px] rounded-full translate-x-1/3 translate-y-1/3"></div>
 
       {/* 🏁 Section Heading */}
       <div
@@ -38,7 +38,7 @@ export default function GallerySection() {
         data-aos="fade-up"
       >
         <h2
-          className="text-4xl md:text-6xl font-extrabold leading-tight bg-gradient-to-r from-[#EAEAEA] to-[#B0B0B0] bg-clip-text text-transparent"
+          className="text-4xl md:text-6xl font-extrabold leading-tight bg-linear-to-r from-[#EAEAEA] to-[#B0B0B0] bg-clip-text text-transparent"
           data-aos="fade-up"
           data-aos-delay="200"
         >

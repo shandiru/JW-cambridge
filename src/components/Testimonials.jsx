@@ -108,7 +108,7 @@ export default function AutoPlusTestimonial() {
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-snug text-[#EAEAEA]">
             What Our{" "}
-            <span className="bg-gradient-to-r from-[#E0E0E0] to-[#A8A8A8] bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-[#E0E0E0] to-[#A8A8A8] bg-clip-text text-transparent">
               Customers Say
             </span>
           </h2>
@@ -126,7 +126,7 @@ export default function AutoPlusTestimonial() {
           className="flex flex-col md:flex-row overflow-hidden"
         >
           {/* LEFT SIDE */}
-          <div className="flex-1 p-8 sm:p-10 md:p-14 border-b md:border-b-0 md:border-r border-[#1A1A1A] bg-[#0A0A0A]/60 [background-image:radial-gradient(900px_700px_at_20%_20%,rgba(192,192,192,0.08),transparent_70%)]">
+          <div className="flex-1 p-8 sm:p-10 md:p-14 border-b md:border-b-0 md:border-r border-[#1A1A1A] bg-[#0A0A0A]/60 [background-image:radial-gradient(900px_700px_at_20%_20%,rgba(192,192,192,0.08), transparent_70%)]">
             <AnimatePresence mode="wait" custom={direction}>
               <motion.div
                 key={index}
