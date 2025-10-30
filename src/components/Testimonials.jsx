@@ -10,23 +10,42 @@ export default function AutoPlusTestimonial() {
 
   const testimonials = [
     {
-      name: "Cally Keetley .",
+      name: "Mason Wright .",
       role: "Customer from Nottingham",
-      text: "Rang on the Monday, got an appointment for Tuesday with plenty of upfront and transparent information about costs. Mike was quick and efficient and fixed the issue (fault with electric windows) in less than an hour.",
-      img: "c.png",
+      text: "Exceptional and speedy service with honest prices, would absolutely recommend.",
+      img: "m.png",
     },
     {
-      name: "Tommy Merrall .",
+      name: "Simon Andreou.",
       role: "Customer from Nottingham",
-      text: "BMW X5 electrical issues, 4 hours later car fixed and running. 5 star thank you!",
-      img: "t.png",
-    },
-    {
-      name: "Sylwia Ksiazkiewicz.",
-      role: "Customer from Nottingham",
-      text: "Professional and quick. Highly recommended!",
+      text: "Excellent service with reasonable prices.Recommended.",
       img: "s.png",
     },
+    {
+      name: "Hannah S.",
+      role: "Customer from Nottingham",
+      text: "Fantastic trustworthy angels run this place. Have used them for years and they have never ĺet me down. Best on seŕvice, price and advice. Thank you!",
+      img: "im.png",
+    },
+    {
+      name: "Ibbie Hart.",
+      role: "Customer from Nottingham",
+      text: "Honourable garage . Kind and friendly, quick service . As a woman on her own I always feel safe at Montbretia Motors . At my old garage I went to years ago, I felt they were ripping me off . But never felt that here. The opposite ! Thanks so much.",
+      img: "i.png",
+    },
+     {
+      name: "Oliver S.",
+      role: "Customer from Nottingham",
+      text: "Another garage told me I needed new pads and discs, took it here and they said it still had 20K miles left in them. Showing me the breaks to prove it. Couldn't recommend them enough.",
+      img: "im2.png",
+    },
+     {
+      name: "Sarah Thackray.",
+      role: "Customer from Nottingham",
+      text: "Knows his stuff and will do his best for you at a very reasonable price.",
+      img: "s.png",
+    },
+    
   ];
 
   const [index, setIndex] = useState(0);
@@ -90,7 +109,7 @@ export default function AutoPlusTestimonial() {
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-snug">
             What Our{" "}
-            <span className="text-[#FF3B3B] italic">Customers Say</span>
+            <span className="text-[#FF3B3B] ">Customers Say</span>
           </h2>
 
           <p className="text-[#CCCCCC] text-sm sm:text-base mt-3 max-w-2xl mx-auto">
