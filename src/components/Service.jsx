@@ -2,19 +2,52 @@
 import React, { useState } from "react";
 
 const services = [
-  { id: 1, title: "Panel Beating", subtitle: "Bodywork Restoration", image: "https://cdn.prod.website-files.com/651fcaf09f0ed92a42afe0e1/65266060443e8ae4314a52c9_6.png" },
-  { id: 2, title: "Paint Resprays", subtitle: "Blowtherm Technology", image: "https://cdn.prod.website-files.com/651fcaf09f0ed92a42afe0e1/65266025912cc5f97c875c6d_5.png" },
-  { id: 3, title: "Dent & Scratch Repair", subtitle: "24-Hour Turnaround", image: "https://cdn.prod.website-files.com/651fcaf09f0ed92a42afe0e1/65265ffe92e9f9d8d97cfd4b_4.png" },
-  { id: 4, title: "Accident Repairs", subtitle: "Minor to Major Damage", image: "https://cdn.prod.website-files.com/651fcaf09f0ed92a42afe0e1/65265fd712c46c5ddd18f7e5_3.png" },
-  { id: 5, title: "Insurance Jobs", subtitle: "Claim Support", image: "https://cdn.prod.website-files.com/651fcaf09f0ed92a42afe0e1/65265fa40e7a6705c7ef53d4_2.png" },
-  { id: 6, title: "Detailing", subtitle: "Polish & Finishing", image: "https://cdn.prod.website-files.com/651fcaf09f0ed92a42afe0e1/65265f40416728f696f95a6e_1.png" },
+  {
+    id: 1,
+    title: "Any Car Problems",
+    subtitle: "Expert Fault Investigation & Fixing",
+    image: "https://cdn.pixabay.com/photo/2017/07/31/11/21/car-repair-2557576_1280.jpg",
+  },
+  {
+    id: 2,
+    title: "General Maintenance & Servicing",
+    subtitle: "Keeping Your Vehicle in Peak Condition",
+    image: "https://cdn.pixabay.com/photo/2017/03/12/20/46/car-repair-2132450_1280.jpg",
+  },
+  {
+    id: 3,
+    title: "Vehicle Diagnosis",
+    subtitle: "Advanced Diagnostic Equipment & Reporting",
+    image: "https://cdn.pixabay.com/photo/2020/03/04/16/19/car-diagnostics-4900302_1280.jpg",
+  },
+  {
+    id: 4,
+    title: "Mercedes Diagnosis & Repair",
+    subtitle: "Specialist Mercedes Tools & Genuine Parts",
+    image: "https://cdn.pixabay.com/photo/2022/03/21/15/37/mercedes-7083463_1280.jpg",
+  },
+  {
+    id: 5,
+    title: "MOT Preparation & Pre-MOT Checks",
+    subtitle: "We Undertake Pre-MOT & Subcontract Final MOT",
+    image: "https://cdn.pixabay.com/photo/2017/08/06/07/36/car-2592485_1280.jpg",
+  },
+  {
+    id: 6,
+    title: "Software Updates & Control Modules",
+    subtitle: "Latest ECU Programming & Module Replacement",
+    image: "https://cdn.pixabay.com/photo/2016/02/18/22/16/auto-1209713_1280.jpg",
+  },
 ];
 
 const ServiceSection = () => {
   const [hoveredId, setHoveredId] = useState(null);
 
   return (
-    <section className="relative bg-[#000000] py-16 px-6 md:px-12 font-['Orbitron',sans-serif] text-white" id="service">
+    <section
+      id="service"
+      className="relative bg-[#000000] py-16 px-6 md:px-12 font-['Orbitron',sans-serif] text-white"
+    >
       {/* 🔥 Background Glow */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-[#D70C09]/30 blur-[160px] rounded-full -translate-x-1/3 -translate-y-1/3"></div>
@@ -23,20 +56,20 @@ const ServiceSection = () => {
 
       {/* ✅ Grid layout wrapper */}
       <div className="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-12 items-start">
-        {/* Left content (Sticky only on desktop/tablet) */}
+        {/* Left content */}
         <div className="self-start lg:sticky lg:top-24 lg:h-fit">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight text-white uppercase">
-            Ovi Car Body Repair{" "}
-            <span className="text-[#D70C09]">Since 2012</span>
+            JW Cambridge <span className="text-[#D70C09]">Garage Services</span>
           </h2>
           <p className="mt-4 text-[#868386] max-w-md leading-relaxed text-sm sm:text-base">
-            With over 28 years of experience, we provide high-quality repairs,
-            resprays, and dent removal with unmatched precision and fast
-            turnaround — trusted by Sheffield drivers for reliability and
-            excellence.
+            We specialise in **Mercedes-Benz** servicing, diagnostics, and
+            electrical repairs using the latest factory-grade tools. Whether
+            it’s maintenance, pre-MOT work, or advanced ECU updates — JW
+            Cambridge ensures your Mercedes performs flawlessly, mile after
+            mile.
           </p>
           <button className="mt-8 bg-[#D70C09] text-white font-bold px-6 py-3 rounded-md uppercase hover:bg-[#868386] transition-all text-sm sm:text-base">
-            Read More
+            Discover More
           </button>
         </div>
 
