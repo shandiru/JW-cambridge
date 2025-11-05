@@ -93,13 +93,29 @@ export default function WhyusSection() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.97 }}
           transition={{ type: "spring", stiffness: 250 }}
-          className="inline-flex items-center gap-2 mt-8  group duration-300 bg-[#1F514C] text-white font-semibold px-7 py-3 rounded-full shadow-md hover:shadow-lg hover:bg-[#25675F] transition-all"
+          className="inline-flex items-center gap-2 mt-8  group duration-300 bg-[#1F514C] text-white font-semibold px-7 py-3 rounded-full shadow-md transition-all"
         >
-          About HR Pro
+          <span className="relative px-15 py-3 flex items-center justify-center overflow-hidden">
+            {/* Old arrow — moves up and fades out */}
+            <p
+              className="absolute transform transition-all duration-300 group-hover:-translate-y-8 group-hover:translate-x-0 opacity-100"
+            >
+               About HR Pro
+            </p>
+
+            {/* New arrow — comes from bottom-left corner */}
+            <p
+              className="absolute transform translate-y-8 translate-x-0 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:translate-x-0 group-hover:opacity-100"
+            >
+               About HR Pro
+            </p>
+          </span>
+
+         
           <img
             src="https://framerusercontent.com/images/KOh2aW7z2qWOewMCDslShqhIps.svg"
             alt="Arrow Icon"
-            className="w-4 h-4"
+            className="w-4 h-4 ml-1"
           />
         </motion.a>
       </motion.div>
