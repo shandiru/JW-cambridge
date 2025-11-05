@@ -33,7 +33,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-[#000000]/90 backdrop-blur-sm fixed max-w-6xl p-3 mx-auto text-white tracking-wide top-3 rounded-lg left-0 right-0 z-50 border border-[#1A1A1A]">
+    <nav className="bg-[#FFFFFF]/90 backdrop-blur-sm fixed max-w-6xl p-3 mx-auto text-[#000000] tracking-wide top-3 rounded-lg left-0 right-0 z-50 border border-[#B9BDC1]/50 shadow-[0_4px_20px_rgba(0,0,0,0.05)]">
       <div className="flex justify-between items-center">
         {/* Logo */}
         <div
@@ -53,10 +53,10 @@ const Navbar = () => {
             <button
               key={idx}
               onClick={() => handleScroll(item.id)}
-              className="relative hover:text-[#C0C0C0] cursor-pointer transition-all duration-300"
+              className="relative text-[#000000] hover:text-[#0078D6] font-medium transition-all duration-300"
             >
               {item.name}
-              <span className="absolute left-0 bottom-[-2px] w-0 h-[1px] bg-gradient-to-r from-[#E0E0E0] to-[#A8A8A8] transition-all duration-300 hover:w-full"></span>
+              <span className="absolute left-0 bottom-[-2px] w-0 h-[2px] bg-[#0078D6] transition-all duration-300 hover:w-full"></span>
             </button>
           ))}
         </div>
@@ -65,7 +65,7 @@ const Navbar = () => {
         <div className="hidden lg:flex items-center space-x-6">
           <a
             href="tel:01223311711"
-            className="bg-gradient-to-r from-[#E0E0E0] to-[#A8A8A8] text-black rounded-lg px-5 py-2 text-sm font-semibold hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] transition-all duration-300"
+            className="bg-[#0078D6] text-[#FFFFFF] rounded-lg px-5 py-2 text-sm font-semibold hover:bg-[#0063b4] transition-all duration-300"
           >
             CONTACT US
           </a>
@@ -73,38 +73,32 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden text-white"
+          className="lg:hidden text-[#0078D6]"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? (
-            <X
-              size={26}
-              className="hover:text-[#C0C0C0] cursor-pointer transition-all"
-            />
+            <X size={26} className="hover:text-[#005fa3] transition-all" />
           ) : (
-            <Menu
-              size={26}
-              className="hover:text-[#C0C0C0] cursor-pointer transition-all"
-            />
+            <Menu size={26} className="hover:text-[#005fa3] transition-all" />
           )}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden flex flex-col items-center bg-[#0E0E0E]/95 border-t border-[#1C1C1C] pb-4 space-y-4 mt-3 rounded-b-lg">
+        <div className="lg:hidden flex flex-col items-center bg-[#FFFFFF] border-t border-[#B9BDC1] pb-4 space-y-4 mt-3 rounded-b-lg shadow-[0_8px_20px_rgba(0,0,0,0.05)]">
           {navItems.map((item, idx) => (
             <button
               key={idx}
               onClick={() => handleScroll(item.id)}
-              className="text-white hover:text-[#C0C0C0] transition-all"
+              className="text-[#000000] hover:text-[#0078D6] font-medium transition-all"
             >
               {item.name}
             </button>
           ))}
           <a
             href="tel:01223311711"
-            className="bg-gradient-to-r from-[#E0E0E0] to-[#A8A8A8] text-black rounded-lg px-5 py-2 text-sm font-semibold hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] transition-all duration-200"
+            className="bg-[#0078D6] text-[#FFFFFF] rounded-lg px-5 py-2 text-sm font-semibold hover:bg-[#0063b4] transition-all duration-200"
           >
             CONTACT US
           </a>

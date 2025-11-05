@@ -26,11 +26,11 @@ export default function GallerySection() {
   return (
     <section
       id="gallery"
-      className="relative overflow-hidden bg-[#000000] text-white font-['Poppins'] py-12 border-t border-[#1A1A1A]"
+      className="relative overflow-hidden bg-[#FFFFFF] text-[#000000] font-['Poppins'] py-12 border-t border-[#B9BDC1]/40"
     >
-      {/* 💠 Chrome Glow Gradients */}
-      <div className="absolute top-0 left-0 w-[700px] h-[700px] bg-linear-to-br from-[#C0C0C0]/20 to-transparent blur-[200px] rounded-full -translate-x-1/3 -translate-y-1/3"></div>
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-linear-to-tl from-[#E0E0E0]/10 to-transparent blur-[160px] rounded-full translate-x-1/3 translate-y-1/3"></div>
+      {/* 💠 Blue & Metallic Glow */}
+      <div className="absolute top-0 left-0 w-[700px] h-[700px] bg-gradient-to-br from-[#0078D6]/20 to-transparent blur-[200px] rounded-full -translate-x-1/3 -translate-y-1/3"></div>
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-gradient-to-tl from-[#B9BDC1]/25 to-transparent blur-[160px] rounded-full translate-x-1/3 translate-y-1/3"></div>
 
       {/* 🏁 Section Heading */}
       <div
@@ -38,12 +38,19 @@ export default function GallerySection() {
         data-aos="fade-up"
       >
         <h2
-          className="text-4xl md:text-6xl font-extrabold leading-tight bg-linear-to-r from-[#EAEAEA] to-[#B0B0B0] bg-clip-text text-transparent"
+          className="text-4xl md:text-6xl font-extrabold leading-tight bg-gradient-to-r from-[#0078D6] via-[#B9BDC1] to-[#0078D6] bg-clip-text text-transparent"
           data-aos="fade-up"
           data-aos-delay="200"
         >
           Our Gallery
         </h2>
+        <p
+          className="mt-4 text-[#555555] max-w-2xl mx-auto text-base md:text-lg"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
+          A glimpse into our state-of-the-art facilities and expert team at work.
+        </p>
       </div>
 
       {/* 🌀 Circular Gallery */}
@@ -56,7 +63,7 @@ export default function GallerySection() {
         <CircularGallery
           items={galleryItems}
           bend={3}
-          textColor="#E0E0E0"
+          textColor="#0078D6"
           borderRadius={0.05}
           scrollEase={0.02}
         />

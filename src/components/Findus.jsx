@@ -16,20 +16,20 @@ export default function FindUs() {
 
   return (
     <section
-      className="py-16 px-4 bg-[#000000] transition-colors duration-500"
       id="find-us"
+      className="py-16 px-4 bg-[#FFFFFF] transition-colors duration-500 border-t border-[#B9BDC1]/40"
     >
       <div className="max-w-6xl mx-auto text-center">
         {/* Heading */}
         <p
-          className="text-[#C0C0C0] font-semibold tracking-widest mb-3 uppercase text-lg"
+          className="text-[#0078D6] font-semibold tracking-widest mb-3 uppercase text-lg"
           data-aos="fade-up"
         >
           Find Us
         </p>
 
         <h2
-          className="text-3xl md:text-4xl font-extrabold text-[#E0E0E0] mb-8"
+          className="text-3xl md:text-4xl font-extrabold text-[#000000] mb-8"
           data-aos="fade-up"
           data-aos-delay="150"
         >
@@ -38,7 +38,7 @@ export default function FindUs() {
 
         {/* Google Map */}
         <div
-          className="rounded-xl overflow-hidden shadow-[0_0_30px_rgba(255,255,255,0.05)] border border-[#2A2A2A] w-full h-[400px]"
+          className="rounded-xl overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.1)] border border-[#B9BDC1]/50 w-full h-[400px] transition-all duration-500"
           data-aos="zoom-in-up"
           data-aos-delay="400"
         >
@@ -48,8 +48,22 @@ export default function FindUs() {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            className="border-0 w-full h-full grayscale hover:grayscale-0 transition duration-500"
+            className="border-0 w-full h-full grayscale hover:grayscale-0 transition duration-500 hover:scale-[1.01] hover:shadow-[0_0_25px_rgba(0,120,214,0.3)]"
           ></iframe>
+        </div>
+
+        {/* Address Info */}
+        <div
+          data-aos="fade-up"
+          data-aos-delay="600"
+          className="mt-8 text-center"
+        >
+          <p className="text-[#555555] text-sm sm:text-base">
+            JW Cambridge — 52 Trumpington Street, Cambridge, United Kingdom
+          </p>
+          <p className="text-[#0078D6] text-sm sm:text-base font-medium mt-1">
+            Open Monday – Saturday | 9:00 AM – 6:00 PM
+          </p>
         </div>
       </div>
     </section>

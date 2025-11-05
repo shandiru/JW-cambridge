@@ -6,7 +6,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function FAQSection() {
-  const accent = "#C0C0C0"; // Chrome Silver
+  const primary = "#B9BDC1"; // metallic tone
+  const accent = "#0078D6"; // brand blue
 
   const faqs = [
     {
@@ -57,27 +58,27 @@ export default function FAQSection() {
   return (
     <section
       id="faq"
-      className="bg-[#000000] text-white font-inter py-16 sm:py-20 md:py-24 px-4 sm:px-8 border-t border-[#1A1A1A]"
+      className="bg-[#FFFFFF] text-[#000000] font-inter py-16 sm:py-20 md:py-24 px-4 sm:px-8 border-t border-[#B9BDC1]/40"
     >
       <div
         data-aos="fade-up"
-        className="max-w-6xl mx-auto border border-[#1A1A1A] rounded-md overflow-hidden bg-[#0A0A0A] shadow-[0_0_30px_rgba(255,255,255,0.05)]"
+        className="max-w-6xl mx-auto border border-[#B9BDC1]/40 rounded-md overflow-hidden bg-[#FFFFFF] shadow-[0_0_30px_rgba(0,0,0,0.05)]"
       >
         {/* Header */}
         <div
           data-aos="fade-down"
-          className="p-6 sm:p-8 md:p-10 border-b border-[#1A1A1A] text-center"
+          className="p-6 sm:p-8 md:p-10 border-b border-[#B9BDC1]/30 text-center"
         >
-          <p className="inline-block border border-[#C0C0C033] text-[11px] sm:text-xs tracking-[4px] uppercase px-4 sm:px-6 py-1 rounded-full text-[#C0C0C0] mb-4 sm:mb-6">
+          <p className="inline-block border border-[#0078D6]/40 text-[11px] sm:text-xs tracking-[4px] uppercase px-4 sm:px-6 py-1 rounded-full text-[#0078D6] mb-4 sm:mb-6">
             FAQ
           </p>
 
           <h2
             data-aos="zoom-in"
-            className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight leading-snug sm:leading-tight md:leading-[1.2] text-[#EAEAEA]"
+            className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight leading-snug sm:leading-tight md:leading-[1.2] text-[#000000]"
           >
             Frequently Asked{" "}
-            <span className="bg-linear-to-r from-[#E0E0E0] to-[#A8A8A8] bg-clip-text text-transparent block sm:inline">
+            <span className="bg-gradient-to-r from-[#0078D6] to-[#B9BDC1] bg-clip-text text-transparent block sm:inline">
               Questions
             </span>
           </h2>
@@ -85,7 +86,7 @@ export default function FAQSection() {
           <p
             data-aos="fade-up"
             data-aos-delay="150"
-            className="text-[#AAAAAA] mt-3 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed"
+            className="text-[#555555] mt-3 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed"
           >
             Everything you need to know about our premium automotive electrical
             services across Nottinghamshire.
@@ -96,7 +97,7 @@ export default function FAQSection() {
         <div
           data-aos="fade-up"
           data-aos-delay="250"
-          className="md:columns-2 border-t border-[#1A1A1A] gap-x-0"
+          className="md:columns-2 border-t border-[#B9BDC1]/30 gap-x-0"
         >
           {faqs.map((faq, i) => (
             <div
@@ -104,23 +105,27 @@ export default function FAQSection() {
               data-aos="fade-up"
               data-aos-delay={100 + i * 50}
               onClick={() => toggle(i)}
-              className={`break-inside-avoid border-b border-[#1A1A1A] p-5 sm:p-6 md:p-8 cursor-pointer transition-all duration-300 ${
+              className={`break-inside-avoid border-b border-[#B9BDC1]/30 p-5 sm:p-6 md:p-8 cursor-pointer transition-all duration-300 ${
                 i % 2 === 0 ? "md:border-r" : ""
               } ${
                 openIndex === i
-                  ? "bg-[#0E0E0E] shadow-[inset_0_0_30px_rgba(192,192,192,0.06)]"
-                  : "hover:bg-[#111111]"
+                  ? "bg-[#F7FAFF] shadow-[inset_0_0_20px_rgba(0,120,214,0.1)]"
+                  : "hover:bg-[#F9FAFC]"
               }`}
             >
               {/* Question */}
               <div className="flex justify-between items-center select-none">
-                <h3 className="text-base sm:text-lg md:text-lg font-medium text-[#EAEAEA] pr-4">
+                <h3
+                  className={`text-base sm:text-lg md:text-lg font-medium pr-4 ${
+                    openIndex === i ? "text-[#0078D6]" : "text-[#000000]"
+                  }`}
+                >
                   {faq.q}
                 </h3>
                 <motion.div
                   animate={{ rotate: openIndex === i ? 45 : 0 }}
                   transition={{ duration: 0.3 }}
-                  className="text-[#C0C0C0]"
+                  className={`text-[#0078D6]`}
                 >
                   <Plus size={20} />
                 </motion.div>
@@ -137,7 +142,7 @@ export default function FAQSection() {
                     transition={{ duration: 0.4, ease: "easeInOut" }}
                     className="overflow-hidden"
                   >
-                    <p className="text-[#AAAAAA] mt-3 text-sm sm:text-base leading-relaxed">
+                    <p className="text-[#444444] mt-3 text-sm sm:text-base leading-relaxed">
                       {faq.a}
                     </p>
                   </motion.div>

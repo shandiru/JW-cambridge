@@ -6,7 +6,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function AutoPlusTestimonial() {
-  const accent = "#C0C0C0"; // Chrome silver
+  const accent = "#0078D6"; // Brand blue accent
+  const primary = "#B9BDC1"; // Metallic grey
 
   const testimonials = [
     {
@@ -76,8 +77,8 @@ export default function AutoPlusTestimonial() {
     setIsTyping(true);
 
     const interval = setInterval(() => {
-      if (i < text.length && typeof text[i] === "string") {
-        setTypedText((prev) => prev + text[i - 1]);
+      if (i < text.length) {
+        setTypedText((prev) => prev + text[i-1]);
         i++;
       } else {
         clearInterval(interval);
@@ -90,30 +91,30 @@ export default function AutoPlusTestimonial() {
 
   return (
     <section
-      className="bg-[#000000] text-white font-inter py-20 md:py-24 px-4 sm:px-6 overflow-hidden border-t border-[#1A1A1A]"
+      className="bg-[#FFFFFF] text-[#000000] font-inter py-20 md:py-24 px-4 sm:px-6 overflow-hidden border-t border-[#B9BDC1]/40"
       id="review"
     >
       <div
         data-aos="fade-up"
-        className="max-w-6xl mx-auto border border-[#1A1A1A] bg-[#0A0A0A] rounded-md overflow-hidden shadow-[0_0_40px_rgba(255,255,255,0.05)]"
+        className="max-w-6xl mx-auto border border-[#B9BDC1]/40 bg-[#FFFFFF] rounded-md overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.05)]"
       >
         {/* Header */}
         <div
           data-aos="fade-down"
-          className="text-center py-10 sm:py-12 border-b border-[#1A1A1A] px-4"
+          className="text-center py-10 sm:py-12 border-b border-[#B9BDC1]/30 px-4"
         >
-          <p className="inline-block border border-[#C0C0C033] text-xs tracking-[4px] uppercase px-6 py-1 rounded-full text-[#C0C0C0] mb-6">
+          <p className="inline-block border border-[#B9BDC1]/50 text-xs tracking-[4px] uppercase px-6 py-1 rounded-full text-[#0078D6] mb-6">
             Reviews
           </p>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-snug text-[#EAEAEA]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-snug text-[#000000]">
             What Our{" "}
-            <span className="bg-linear-to-r from-[#E0E0E0] to-[#A8A8A8] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#0078D6] to-[#B9BDC1] bg-clip-text text-transparent">
               Customers Say
             </span>
           </h2>
 
-          <p className="text-[#AAAAAA] text-sm sm:text-base mt-3 max-w-2xl mx-auto">
+          <p className="text-[#555555] text-sm sm:text-base mt-3 max-w-2xl mx-auto">
             Genuine feedback from satisfied customers across Nottinghamshire who
             trust AutoPlus for professional diagnostics, maintenance, and service
             excellence.
@@ -126,7 +127,7 @@ export default function AutoPlusTestimonial() {
           className="flex flex-col md:flex-row overflow-hidden"
         >
           {/* LEFT SIDE */}
-          <div className="flex-1 p-8 sm:p-10 md:p-14 border-b md:border-b-0 md:border-r border-[#1A1A1A] bg-[#0A0A0A]/60 [background-image:radial-gradient(900px_700px_at_20%_20%,rgba(192,192,192,0.08), transparent_70%)]">
+          <div className="flex-1 p-8 sm:p-10 md:p-14 border-b md:border-b-0 md:border-r border-[#B9BDC1]/30 bg-gradient-to-br from-[#F9F9F9] to-[#FFFFFF]">
             <AnimatePresence mode="wait" custom={direction}>
               <motion.div
                 key={index}
@@ -143,27 +144,29 @@ export default function AutoPlusTestimonial() {
                     <img
                       src={t.img}
                       alt={t.name}
-                      className="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover ring-1 ring-white/10"
+                      className="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover ring-2 ring-[#B9BDC1]/40"
                     />
                   </div>
                 </div>
 
                 {/* Review Text */}
-                <p className="text-[16px] sm:text-[18px] md:text-[20px] leading-relaxed text-[#E0E0E0] mb-8 sm:mb-10">
+                <p className="text-[16px] sm:text-[18px] md:text-[20px] leading-relaxed text-[#000000] mb-8 sm:mb-10">
                   {typedText}
                   {isTyping && (
-                    <span className="animate-pulse text-[#C0C0C0]">|</span>
+                    <span className="animate-pulse text-[#0078D6]">|</span>
                   )}
                 </p>
 
                 {/* Name + Role */}
                 <div className="mt-auto">
-                  <p className="font-semibold text-white">{t.name}</p>
-                  <p className="text-[#888888] text-sm sm:text-base">{t.role}</p>
+                  <p className="font-semibold text-[#0078D6]">{t.name}</p>
+                  <p className="text-[#555555] text-sm sm:text-base">
+                    {t.role}
+                  </p>
                 </div>
 
                 {/* Counter */}
-                <p className="mt-4 text-[#666666] text-xs sm:text-sm tracking-wide">
+                <p className="mt-4 text-[#777777] text-xs sm:text-sm tracking-wide">
                   {index + 1}/{testimonials.length}
                 </p>
               </motion.div>
@@ -171,11 +174,11 @@ export default function AutoPlusTestimonial() {
           </div>
 
           {/* RIGHT SIDE */}
-          <div className="md:w-[320px] flex flex-col justify-end bg-[#0A0A0A] border-t md:border-t-0 border-l border-[#1A1A1A]">
+          <div className="md:w-[320px] flex flex-col justify-end bg-[#FFFFFF] border-t md:border-t-0 border-l border-[#B9BDC1]/30">
             <motion.button
               whileTap={{ scale: 0.95 }}
               onClick={prev}
-              className="flex items-center gap-1 justify-start px-8 py-5 border-b border-t border-[#1A1A1A] hover:text-[#C0C0C0] transition-colors"
+              className="flex items-center gap-1 justify-start px-8 py-5 border-b border-t border-[#B9BDC1]/30 text-[#0078D6] hover:text-[#0063b4] transition-colors font-medium"
             >
               <ChevronLeft size={18} />
               <span>Previous</span>
@@ -183,7 +186,7 @@ export default function AutoPlusTestimonial() {
             <motion.button
               whileTap={{ scale: 0.95 }}
               onClick={next}
-              className="flex items-center gap-1 justify-end px-8 py-5 hover:text-[#C0C0C0] transition-colors"
+              className="flex items-center gap-1 justify-end px-8 py-5 text-[#0078D6] hover:text-[#0063b4] transition-colors font-medium"
             >
               <span>Next</span>
               <ChevronRight size={18} />
