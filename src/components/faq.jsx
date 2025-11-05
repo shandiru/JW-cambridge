@@ -77,7 +77,7 @@ export default function FAQSection() {
             className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight leading-snug sm:leading-tight md:leading-[1.2] text-[#EAEAEA]"
           >
             Frequently Asked{" "}
-            <span className="bg-gradient-to-r from-[#E0E0E0] to-[#A8A8A8] bg-clip-text text-transparent block sm:inline">
+            <span className="bg-linear-to-r from-[#E0E0E0] to-[#A8A8A8] bg-clip-text text-transparent block sm:inline">
               Questions
             </span>
           </h2>
@@ -96,7 +96,7 @@ export default function FAQSection() {
         <div
           data-aos="fade-up"
           data-aos-delay="250"
-          className="md:columns-2 border-t border-[#1A1A1A] [column-gap:0]"
+          className="md:columns-2 border-t border-[#1A1A1A] gap-x-0"
         >
           {faqs.map((faq, i) => (
             <div

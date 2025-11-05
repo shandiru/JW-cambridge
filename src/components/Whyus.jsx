@@ -1,95 +1,149 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import {
+  Briefcase,
+  Zap,
+  Users,
+  Link2,
+} from "lucide-react"; // icons – optional (replace with your SVGs if needed)
 
-const About = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1200,
-      once: false, // triggers again when scrolling back up
-      easing: "ease-out-cubic",
-    });
-  }, []);
+export default function WhyusSection() {
+  const features = [
+    {
+      id: 1,
+      icon: <Briefcase className="w-6 h-6 text-white" />,
+      title: "Tailored Solutions",
+      desc: "Tailored hiring solutions that fit your business perfectly.",
+    },
+    {
+      id: 2,
+      icon: <Zap className="w-6 h-6 text-white" />,
+      title: "Faster Hiring",
+      desc: "Streamlined hiring processes that cut hiring time by 30%.",
+    },
+    {
+      id: 3,
+      icon: <Users className="w-6 h-6 text-white" />,
+      title: "Access to Top Talent",
+      desc: "Connect with highly qualified candidates across industries.",
+    },
+    {
+      id: 4,
+      icon: <Link2 className="w-6 h-6 text-white" />,
+      title: "Effortless Integration",
+      desc: "Seamlessly integrate with your HR tools for effortless hiring.",
+    },
+  ];
 
   return (
-    <section
-      id="about"
-      className="relative bg-black text-white px-6 md:px-12 lg:px-24 py-20 overflow-hidden"
-    >
-      {/* 🔥 Red Glow Background */}
-      <div className="absolute inset-0 pointer-events-none -z-10">
-        <div className="absolute top-0 left-0 w-[700px] h-[700px] bg-[#D70C09]/30 blur-[180px] rounded-full -translate-x-1/3 -translate-y-1/3"></div>
-        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#D70C09]/20 blur-[160px] rounded-full translate-x-1/3 translate-y-1/3"></div>
+    <section className="relative bg-[#F9FAF9] overflow-hidden py-20 px-6 md:px-12">
+      {/* 🌿 Background Curve */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute left-0 bottom-0 w-full h-[500px] bg-linear-to-tr from-[#EAF1EE] via-[#F9FAF9] to-transparent rounded-t-[100px]" />
       </div>
 
-      {/* 🏁 Top Section Title */}
-      <div className="max-w-6xl mx-auto relative">
-        <p
-          data-aos="fade-down"
-          className="text-white uppercase tracking-widest mb-4 border-l-4 border-[#D70C09] pl-4"
+      {/* 🧩 Center Content */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once: true }}
+        className="max-w-4xl mx-auto text-center"
+      >
+        {/* Icon */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          className="mx-auto mb-6 w-12 h-12 rounded-2xl bg-[#1F514C]/10 flex items-center justify-center"
         >
-          Discover the Passion and Expertise Behind Ovi Car Body Repair
-        </p>
-
-        <div
-          className="flex flex-col md:flex-row items-start md:items-center justify-between relative"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          {/* Left Side Title */}
-          <h2 className="text-3xl md:text-5xl font-semibold leading-tight uppercase max-w-6xl z-10">
-            Delivering Precision, Quality & Speed — The Trusted Name in Car Body
-            Repair and Respray Services Since 2012
-          </h2>
-
-          {/* Rotating Tire Image on the Right */}
-          <motion.img
-            src="/image.svg"
-            alt="Rotating tire"
-            className="w-[220px] md:w-[280px] lg:w-[320px] opacity-30 md:opacity-40 mt-10 md:mt-0 md:ml-10"
-            animate={{ rotate: [0, 360] }}
-            transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+          <img
+            src="https://framerusercontent.com/images/vcJ3OQtmtbaX89QtoWA8xXSnyqI.svg"
+            alt="HR Pro Icon"
+            className="w-7 h-7"
           />
-        </div>
-      </div>
+        </motion.div>
 
-      {/* 📘 Content Grid */}
-      <div className="mt-16 max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-10 mb-10">
-          {/* Our Story */}
-          <div data-aos="fade-up" data-aos-delay="300">
-            <h6 className="text-white uppercase tracking-widest mb-3 border-l-4 border-[#D70C09] pl-4">
-              Our Story
-            </h6>
-            <p className="text-gray-300 leading-relaxed max-w-lg">
-              Since 2012, with over 28 years of experience, Ovi Car Body Repair
-              has been providing one of the best spray booth services in the
-              Sheffield area. We’ve built a strong reputation for fast,
-              affordable, and reliable services — with a 24-hour turnaround on
-              all vehicles. From minor dents and scratches to full collision
-              repairs and complete resprays, we handle it all with precision and
-              care.
-            </p>
-          </div>
+        {/* Title */}
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1, duration: 0.6 }}
+          className="text-3xl md:text-5xl font-semibold text-[#1F514C] leading-snug"
+        >
+          Platform designed to simplify and enhance the hiring process.
+        </motion.h2>
 
-          {/* Our Commitment */}
-          <div data-aos="fade-up" data-aos-delay="400">
-            <h6 className="text-white uppercase tracking-widest mb-3 border-l-4 border-[#D70C09] pl-4">
-              Our Commitment
-            </h6>
-            <p className="text-gray-300 leading-relaxed max-w-md">
-              We use advanced Blowtherm paint respray technology to ensure a
-              flawless finish every time. Whether it’s restoring your vehicle’s
-              original shine or customizing its look, we guarantee top-quality
-              results and a level of customer service that’s hard to beat.
+        {/* Subtitle */}
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          className="text-[#777272] mt-4 max-w-2xl mx-auto text-base md:text-lg"
+        >
+          With personalized solutions tailored to your business needs, we connect you
+          with the best talent quickly and efficiently, helping you build stronger,
+          more effective teams.
+        </motion.p>
+
+        {/* Button */}
+        <motion.a
+          href="#"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.97 }}
+          transition={{ type: "spring", stiffness: 250 }}
+          className="inline-flex items-center gap-2 mt-8  group duration-300 bg-[#1F514C] text-white font-semibold px-7 py-3 rounded-full shadow-md hover:shadow-lg hover:bg-[#25675F] transition-all"
+        >
+          About HR Pro
+          <img
+            src="https://framerusercontent.com/images/KOh2aW7z2qWOewMCDslShqhIps.svg"
+            alt="Arrow Icon"
+            className="w-4 h-4"
+          />
+        </motion.a>
+      </motion.div>
+
+      {/* 🌿 Feature Cards */}
+      <motion.div
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        variants={{
+          hidden: {},
+          show: {
+            transition: {
+              staggerChildren: 0.15,
+            },
+          },
+        }}
+        className="max-w-6xl mx-auto mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+      >
+        {features.map((feature) => (
+          <motion.div
+            key={feature.id}
+            variants={{
+              hidden: { opacity: 0, y: 30 },
+              show: { opacity: 1, y: 0 },
+            }}
+            transition={{ duration: 0.6 }}
+            className="bg-linear-to-b from-white to-[#FFFFFF00] rounded-2xl p-6 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.08)] border border-[#E9EAEA] transition-all duration-300"
+          >
+            {/* Icon */}
+            <div className="w-12 h-12 rounded-lg bg-[#1F514C] flex items-center justify-center border-2 border-white/20 mb-4">
+              {feature.icon}
+            </div>
+            {/* Title */}
+            <h5 className="text-[#1F514C] text-lg font-semibold mb-2">
+              {feature.title}
+            </h5>
+            {/* Description */}
+            <p className="text-[#777272] text-sm leading-relaxed">
+              {feature.desc}
             </p>
-          </div>
-        </div>
-      </div>
+          </motion.div>
+        ))}
+      </motion.div>
     </section>
   );
-};
-
-export default About;
+}
