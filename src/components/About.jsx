@@ -80,9 +80,9 @@ export default function AboutSection() {
             />
           </div>
 
-          <div className="absolute bottom-0 left-0 right-0 p-5 rounded-b-2xl backdrop-blur-[3px] bg-gradient-to-t from-[#000000]/80 to-transparent">
+          <div className="absolute bottom-0 left-0 right-0 p-5 rounded-b-2xl backdrop-blur-[3px] bg-linear-to-t from-[#000000]/80 to-transparent">
             <h3 className="text-[#FFFFFF] text-lg font-semibold">David Smith</h3>
-            <p className="text-sm bg-clip-text text-transparent bg-gradient-to-r from-[#0078D6] to-[#B9BDC1]">
+            <p className="text-sm bg-clip-text text-transparent bg-linear-to-r from-[#0078D6] to-[#B9BDC1]">
               AI Expert & Advisor
             </p>
 
@@ -115,26 +115,29 @@ export default function AboutSection() {
         >
           <motion.p
             variants={fadeUp}
-            className="text-sm text-[#333333] bg-clip-text bg-gradient-to-r from-[#0078D6] to-[#B9BDC1] mb-2"
+            className="text-sm text-[#333333] bg-clip-text bg-linear-to-r from-[#0078D6] to-[#B9BDC1] mb-2"
           >
-            // About me
+            // About Us
           </motion.p>
 
           <motion.h2
             variants={fadeUp}
-            className="text-4xl md:text-5xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-[#0078D6] to-[#B9BDC1] mb-6"
+            className="text-4xl md:text-5xl font-bold leading-tight bg-clip-text text-transparent bg-linear-to-r from-[#0078D6] to-[#B9BDC1] mb-6"
           >
-            AI experiences that solve real problems
+            Precision Automotive Care, Delivered to Your Doorstep
           </motion.h2>
 
           <motion.p
             variants={fadeUp}
+            className="text-[#444444] leading-relaxed mb-2"
+          >
+            With years of hands-on experience and a passion for premium car care, JW Cambridge provides reliable, professional, and honest mechanical services throughout Cambridge and surrounding areas.
+          </motion.p>
+            <motion.p
+            variants={fadeUp}
             className="text-[#444444] leading-relaxed mb-10"
           >
-            With 8+ years and 50+ delivered projects, I build reliable
-            implementations on your existing stack with a studio-grade look and
-            tight performance. I work close to the business, value clear
-            communication, and optimize for impact.
+           Whether it’s routine maintenance, complex diagnostics, or specialised Mercedes repairs, we offer high-quality workmanship backed by transparent communication and real expertise.
           </motion.p>
 
           <motion.div className="flex gap-4">
@@ -145,7 +148,7 @@ export default function AboutSection() {
               whileTap={{ y: 0 }}
               className="px-6 py-3 rounded-lg bg-[#0078D6] text-white hover:bg-[#0063b4] font-medium transition"
             >
-              My process
+              Our Process
             </motion.a>
             <motion.a
               variants={fadeUp}
@@ -154,7 +157,7 @@ export default function AboutSection() {
               whileTap={{ y: 0 }}
               className="px-6 py-3 rounded-lg border border-[#B9BDC1]/60 text-[#0078D6] hover:bg-[#0078D6] hover:text-white font-medium transition"
             >
-              Contact me
+              Contact Us
             </motion.a>
           </motion.div>
         </motion.div>
@@ -181,7 +184,7 @@ export default function AboutSection() {
             <h3 className="text-4xl font-semibold text-[#0078D6] mb-1">
               <AnimatedCounter to={to} suffix={suffix} />
             </h3>
-            <p className="text-sm uppercase bg-clip-text text-transparent bg-gradient-to-r from-[#0078D6] to-[#B9BDC1] tracking-wide">
+            <p className="text-sm uppercase bg-clip-text text-transparent bg-linear-to-r from-[#0078D6] to-[#B9BDC1] tracking-wide">
               {label}
             </p>
           </motion.div>

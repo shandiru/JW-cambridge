@@ -20,17 +20,15 @@ const HeroSection = () => {
 
           {/* Left Content */}
           <div className="space-y-6" data-aos="fade-right">
-            <h1 className="text-2xl md:text-4xl lg:text-5xl mt-10 font-extrabold leading-tight tracking-tight">
+            <h1 className="text-xl md:text-3xl lg:text-4xl mt-10 font-extrabold leading-tight tracking-tight">
               Where Quality Meets the Open Road<br />
-              <span className="bg-gradient-to-r from-[#0078D6] to-[#B9BDC1] bg-clip-text text-transparent">
-                Expert Mobile Mechanics
+              <span className="bg-linear-to-r from-[#0078D6] to-[#B9BDC1] bg-clip-text text-transparent">
+                Expert Mobile Mechanics - Mercedes Specialists
               </span>
             </h1>
 
             <p className="text-[#333333] max-w-md leading-relaxed">
-              Wherever you are, JW Cambridge brings the garage to you. From oil
-              changes to engine diagnostics, our fully equipped vans ensure your
-              vehicle runs perfectly — without visiting a workshop.
+             Wherever you are, JW Cambridge brings dealership-level expertise straight to your driveway. From general servicing to full Mercedes diagnostics, our fully equipped mobile vans deliver precision repairs without the workshop hassle.
             </p>
 
             <div className="flex items-center gap-5 pt-4">
@@ -59,7 +57,7 @@ const HeroSection = () => {
               className="w-full h-auto mt-10 rounded-3xl shadow-[0_0_30px_rgba(0,120,214,0.15)] object-cover"
             />
             {/* Subtle gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[#0078D6]/10 to-transparent rounded-3xl"></div>
+            <div className="absolute inset-0 bg-linear-to-br from-transparent via-[#0078D6]/10 to-transparent rounded-3xl"></div>
           </div>
         </div>
       </section>

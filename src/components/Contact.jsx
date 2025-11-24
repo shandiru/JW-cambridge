@@ -7,7 +7,7 @@ export default function ContactSection() {
   const accent = "#0078D6";  // brand blue
 
   return (
-    <section className="bg-[#FFFFFF] text-[#000000] px-6 md:px-12 lg:px-24 py-20 border-t border-[#B9BDC1]/40">
+    <section id="contact" className="bg-[#FFFFFF] text-[#000000] px-6 md:px-12 lg:px-24 py-20 border-t border-[#B9BDC1]/40">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
         {/* LEFT CONTENT */}
         <div className="space-y-8">
@@ -28,7 +28,7 @@ export default function ContactSection() {
           <div className="flex flex-col sm:flex-row gap-5 mt-6">
             {/* CHAT BOX */}
             <div className="border border-[#B9BDC1]/40 rounded-2xl p-2 transition-all">
-              <div className="flex-1 bg-gradient-to-b from-[#F9FAFC] to-[#FFFFFF] border border-[#B9BDC1]/30 rounded-2xl p-6 hover:border-[#0078D6] hover:shadow-[0_0_20px_rgba(0,120,214,0.2)] transition-all">
+              <div className="flex-1 bg-linear-to-b from-[#F9FAFC] to-[#FFFFFF] border border-[#B9BDC1]/30 rounded-2xl p-6 hover:border-[#0078D6] hover:shadow-[0_0_20px_rgba(0,120,214,0.2)] transition-all">
                 <div className="flex items-center gap-3 mb-3">
                   <div className="p-2 bg-[#EAF4FF] rounded-lg text-[#0078D6]">
                     <FiSend size={20} />
@@ -45,7 +45,7 @@ export default function ContactSection() {
 
             {/* CALL BOX */}
             <div className="border border-[#B9BDC1]/40 rounded-2xl p-2 transition-all">
-              <div className="flex-1 bg-gradient-to-b from-[#F9FAFC] to-[#FFFFFF] border border-[#B9BDC1]/30 rounded-2xl p-6 hover:border-[#0078D6] hover:shadow-[0_0_20px_rgba(0,120,214,0.2)] transition-all">
+              <div className="flex-1 bg-linear-to-b from-[#F9FAFC] to-[#FFFFFF] border border-[#B9BDC1]/30 rounded-2xl p-6 hover:border-[#0078D6] hover:shadow-[0_0_20px_rgba(0,120,214,0.2)] transition-all">
                 <div className="flex items-center gap-3 mb-3">
                   <div className="p-2 bg-[#EAF4FF] rounded-lg text-[#0078D6]">
                     <FiPhone size={20} />
@@ -62,7 +62,7 @@ export default function ContactSection() {
 
         {/* RIGHT CONTACT FORM */}
         <div className="border border-[#B9BDC1]/40 rounded-2xl p-2 shadow-[0_0_25px_rgba(0,0,0,0.05)] hover:shadow-[0_0_35px_rgba(0,120,214,0.15)] transition-all">
-          <div className="bg-gradient-to-b from-[#F9FAFC] to-[#FFFFFF] border border-[#B9BDC1]/30 rounded-2xl p-8 transition-all">
+          <div className="bg-linear-to-b from-[#F9FAFC] to-[#FFFFFF] border border-[#B9BDC1]/30 rounded-2xl p-8 transition-all">
             <form className="space-y-5">
               {/* NAME */}
               <div>

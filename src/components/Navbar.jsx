@@ -41,9 +41,9 @@ const Navbar = () => {
           onClick={() => handleScroll("/")}
         >
           <img
-            src="/path-to-your-logo.png"
+            src="/logo.png"
             alt="JW Cambridge Logo"
-            className="h-8 w-auto object-contain"
+            className="h-12 w-auto object-contain"
           />
         </div>
 
@@ -56,7 +56,7 @@ const Navbar = () => {
               className="relative text-[#000000] hover:text-[#0078D6] font-medium transition-all duration-300"
             >
               {item.name}
-              <span className="absolute left-0 bottom-[-2px] w-0 h-[2px] bg-[#0078D6] transition-all duration-300 hover:w-full"></span>
+              <span className="absolute left-0 -bottom-0.5 w-0 h-0.5 bg-[#0078D6] transition-all duration-300 hover:w-full"></span>
             </button>
           ))}
         </div>
