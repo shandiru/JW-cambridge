@@ -1,44 +1,44 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { Briefcase, Zap, Users, Link2 } from "lucide-react";
+import { Wrench, Zap, Star, Link as LinkIcon } from "lucide-react";
 
 export default function WhyusSection() {
   const features = [
     {
       id: 1,
-      icon: <Briefcase className="w-6 h-6 text-white" />,
-      title: "Tailored Solutions",
-      desc: "Tailored hiring solutions that fit your business perfectly.",
+      icon: <Wrench className="w-6 h-6 text-white" />,
+      title: "Tailored Services",
+      desc: "From general maintenance to advanced Mercedes diagnostics — fully customised for your vehicle.",
     },
     {
       id: 2,
       icon: <Zap className="w-6 h-6 text-white" />,
-      title: "Faster Hiring",
-      desc: "Streamlined hiring processes that cut hiring time by 30%.",
+      title: "Fast, Reliable Support",
+      desc: "On-site servicing that eliminates garage visits and keeps your day running smoothly.",
     },
     {
       id: 3,
-      icon: <Users className="w-6 h-6 text-white" />,
-      title: "Access to Top Talent",
-      desc: "Connect with highly qualified candidates across industries.",
+      icon: <Star className="w-6 h-6 text-white" />,
+      title: "Mercedes Specialists",
+      desc: "Dealership-grade diagnostics, software updates, and control module replacements.",
     },
     {
       id: 4,
-      icon: <Link2 className="w-6 h-6 text-white" />,
-      title: "Effortless Integration",
-      desc: "Seamlessly integrate with your HR tools for effortless hiring.",
+      icon: <LinkIcon className="w-6 h-6 text-white" />,
+      title: "Seamless Experience",
+      desc: "Easy booking, clear communication, and instant WhatsApp support.",
     },
   ];
 
   return (
     <section className="relative bg-[#FFFFFF] overflow-hidden py-20 px-6 md:px-12">
-      {/* 💠 Background Glow */}
+      {/* Background Glow */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute left-0 bottom-0 w-full h-[500px] bg-gradient-to-tr from-[#B9BDC1]/30 via-[#FFFFFF] to-transparent rounded-t-[100px]" />
       </div>
 
-      {/* 🧩 Center Content */}
+      {/* Section Intro */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -46,7 +46,7 @@ export default function WhyusSection() {
         viewport={{ once: true }}
         className="max-w-4xl mx-auto text-center"
       >
-        {/* Icon */}
+        {/* Small Icon */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -55,7 +55,7 @@ export default function WhyusSection() {
         >
           <img
             src="https://framerusercontent.com/images/vcJ3OQtmtbaX89QtoWA8xXSnyqI.svg"
-            alt="HR Pro Icon"
+            alt="Icon"
             className="w-7 h-7"
           />
         </motion.div>
@@ -67,7 +67,7 @@ export default function WhyusSection() {
           transition={{ delay: 0.1, duration: 0.6 }}
           className="text-3xl md:text-5xl font-semibold text-[#0078D6] leading-snug"
         >
-          Platform designed to simplify and enhance the hiring process.
+          Why Choose JW Cambridge
         </motion.h2>
 
         {/* Subtitle */}
@@ -77,12 +77,12 @@ export default function WhyusSection() {
           transition={{ delay: 0.2, duration: 0.6 }}
           className="text-[#555555] mt-4 max-w-2xl mx-auto text-base md:text-lg"
         >
-          With personalized solutions tailored to your business needs, we connect you
-          with the best talent quickly and efficiently, helping you build stronger,
-          more effective teams.
+          Mobile mechanic services designed around your convenience — making 
+          vehicle care simple, efficient, and dependable whether you’re at home, 
+          at work, or on the road.
         </motion.p>
 
-        {/* Button with smooth hover animation */}
+        {/* CTA Button (WhatsApp example) */}
         <motion.a
           href="#"
           whileHover={{ scale: 1.05 }}
@@ -92,10 +92,10 @@ export default function WhyusSection() {
         >
           <span className="relative flex items-center justify-center overflow-hidden">
             <p className="absolute transform transition-all duration-300 group-hover:-translate-y-8 opacity-100">
-              About HR Pro
+              Contact Us
             </p>
             <p className="absolute transform translate-y-8 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-              About HR Pro
+              WhatsApp Us
             </p>
           </span>
           <img
@@ -106,7 +106,7 @@ export default function WhyusSection() {
         </motion.a>
       </motion.div>
 
-      {/* 💠 Feature Cards */}
+      {/* Features */}
       <motion.div
         initial="hidden"
         whileInView="show"
@@ -131,14 +131,14 @@ export default function WhyusSection() {
             <div className="w-12 h-12 rounded-lg bg-[#0078D6] flex items-center justify-center border-2 border-[#FFFFFF]/30 mb-4 shadow-[0_4px_12px_rgba(0,120,214,0.3)]">
               {feature.icon}
             </div>
+
             {/* Title */}
             <h5 className="text-[#0078D6] text-lg font-semibold mb-2">
               {feature.title}
             </h5>
+
             {/* Description */}
-            <p className="text-[#555555] text-sm leading-relaxed">
-              {feature.desc}
-            </p>
+            <p className="text-[#555555] text-sm leading-relaxed">{feature.desc}</p>
           </motion.div>
         ))}
       </motion.div>
