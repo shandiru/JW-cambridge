@@ -67,7 +67,7 @@ export default function WhyusSection() {
           transition={{ delay: 0.1, duration: 0.6 }}
           className="text-3xl md:text-5xl font-semibold text-[#0078D6] leading-snug"
         >
-           Why Choose JW Cambridge
+          Why Choose JW Cambridge
         </motion.h2>
 
         {/* Subtitle */}
@@ -80,13 +80,13 @@ export default function WhyusSection() {
           Experience Cambridge’s premium Mercedes specialists, combining advanced diagnostics, meticulous craftsmanship, and uncompromising quality for every vehicle we care for.
         </motion.p>
 
-        {/* CTA Button (WhatsApp example) */}
+        {/* CTA Button */}
         <motion.a
           href="#"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.97 }}
           transition={{ type: "spring", stiffness: 250 }}
-          className="inline-flex items-center gap-2 mt-8 group duration-300 bg-[#0078D6] text-white font-semibold px-7 py-3 rounded-full shadow-md hover:shadow-[0_0_25px_rgba(0,120,214,0.4)] hover:bg-[#0063b4] transition-all"
+          className="inline-flex items-center gap-2 mt-8 group duration-300 bg-[#0078D6] text-white font-semibold px-7 py-3 rounded-full shadow-md hover:bg-[#0063b4] transition-all"
         >
           <span className="relative flex items-center justify-center overflow-hidden">
             <p className="absolute transform transition-all duration-300 group-hover:-translate-y-8 opacity-100">
@@ -104,7 +104,7 @@ export default function WhyusSection() {
         </motion.a>
       </motion.div>
 
-      {/* Features */}
+      {/* Features Grid */}
       <motion.div
         initial="hidden"
         whileInView="show"
@@ -122,11 +122,21 @@ export default function WhyusSection() {
               hidden: { opacity: 0, y: 30 },
               show: { opacity: 1, y: 0 },
             }}
-            transition={{ duration: 0.6 }}
-            className="bg-gradient-to-b from-[#FFFFFF] to-[#F5F7FA] rounded-2xl p-6 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_6px_25px_rgba(0,120,214,0.1)] border border-[#B9BDC1]/50 transition-all duration-300"
+            transition={{ duration: 0.2 }}
+            whileHover={{
+              y: -8,
+              scale: 1.02,
+              borderColor: "#0078D6",
+            }}
+            whileTap={{
+              y: -8,
+              scale: 1.02,
+              borderColor: "#0078D6",
+            }}
+            className="bg-gradient-to-b from-[#FFFFFF] to-[#F5F7FA] rounded-2xl p-6 border border-[#B9BDC1]/50 transition-all duration-300 cursor-pointer"
           >
             {/* Icon */}
-            <div className="w-12 h-12 rounded-lg bg-[#0078D6] flex items-center justify-center border-2 border-[#FFFFFF]/30 mb-4 shadow-[0_4px_12px_rgba(0,120,214,0.3)]">
+            <div className="w-12 h-12 rounded-lg bg-[#0078D6] flex items-center justify-center border-2 border-[#FFFFFF]/30 mb-4">
               {feature.icon}
             </div>
 
@@ -136,7 +146,9 @@ export default function WhyusSection() {
             </h5>
 
             {/* Description */}
-            <p className="text-[#555555] text-sm leading-relaxed">{feature.desc}</p>
+            <p className="text-[#555555] text-sm leading-relaxed">
+              {feature.desc}
+            </p>
           </motion.div>
         ))}
       </motion.div>

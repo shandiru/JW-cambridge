@@ -179,7 +179,21 @@ export default function AboutSection() {
           <motion.div
             key={i}
             variants={fadeUp}
-            className="p-8 border border-[#B9BDC1]/60 rounded-2xl bg-[#F9F9F9]/50 shadow-[0_0_20px_rgba(0,0,0,0.05)]"
+            whileHover={{
+              y: -8,
+              scale: 1.02,
+              borderColor: "#0078D6",
+            }}
+            whileTap={{
+              y: -8,
+              scale: 1.02,
+              borderColor: "#0078D6",
+            }}
+            transition={{
+              duration: 0.45,
+              ease: [0.22, 1, 0.36, 1], // smooth curve
+            }}
+            className="p-8 border border-[#B9BDC1]/60 rounded-2xl bg-[#F9F9F9]/50 cursor-pointer"
           >
             <h3 className="text-4xl font-semibold text-[#0078D6] mb-1">
               <AnimatedCounter to={to} suffix={suffix} />
