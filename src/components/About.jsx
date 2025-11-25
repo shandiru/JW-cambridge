@@ -81,9 +81,9 @@ export default function AboutSection() {
           </div>
 
           <div className="absolute bottom-0 left-0 right-0 p-5 rounded-b-2xl backdrop-blur-[3px] bg-linear-to-t from-[#000000]/80 to-transparent">
-            <h3 className="text-[#FFFFFF] text-lg font-semibold">David Smith</h3>
+            <h3 className="text-[#FFFFFF] text-lg font-semibold">[Name]</h3>
             <p className="text-sm bg-clip-text text-transparent bg-linear-to-r from-[#0078D6] to-[#B9BDC1]">
-              AI Expert & Advisor
+              [Job Description]
             </p>
 
             {/* Social Icons */}
