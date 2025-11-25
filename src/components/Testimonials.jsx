@@ -115,9 +115,7 @@ export default function AutoPlusTestimonial() {
           </h2>
 
           <p className="text-[#555555] text-sm sm:text-base mt-3 max-w-2xl mx-auto">
-            Genuine feedback from satisfied customers across Nottinghamshire who
-            trust AutoPlus for professional diagnostics, maintenance, and service
-            excellence.
+           Genuine feedback from Mercedes owners across Cambridge who trust us for expert diagnostics, precision maintenance, and dealer-level service excellence.
           </p>
         </div>
 
@@ -160,9 +158,9 @@ export default function AutoPlusTestimonial() {
                 {/* Name + Role */}
                 <div className="mt-auto">
                   <p className="font-semibold text-[#0078D6]">{t.name}</p>
-                  <p className="text-[#555555] text-sm sm:text-base">
+                  {/* <p className="text-[#555555] text-sm sm:text-base">
                     {t.role}
-                  </p>
+                  </p> */}
                 </div>
 
                 {/* Counter */}
