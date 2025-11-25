@@ -38,7 +38,7 @@ export default function ContactSection() {
                   Chat with us
                 </h3>
                 <p className="text-[#555555] text-sm">
-                  support@autoplus.co.uk
+                  info@jwcambridge.co.uk
                 </p>
               </div>
             </div>
@@ -54,7 +54,7 @@ export default function ContactSection() {
                 <h3 className="font-semibold text-lg text-[#000000]">
                   Call Us
                 </h3>
-                <p className="text-[#555555] text-sm">+44 987 654 321</p>
+                <p className="text-[#555555] text-sm">+44 1223 311711</p>
               </div>
             </div>
           </div>

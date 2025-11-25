@@ -67,7 +67,7 @@ export default function WhyusSection() {
           transition={{ delay: 0.1, duration: 0.6 }}
           className="text-3xl md:text-5xl font-semibold text-[#0078D6] leading-snug"
         >
-          Why Choose JW Cambridge
+           Why Choose JW Cambridge
         </motion.h2>
 
         {/* Subtitle */}
@@ -77,9 +77,7 @@ export default function WhyusSection() {
           transition={{ delay: 0.2, duration: 0.6 }}
           className="text-[#555555] mt-4 max-w-2xl mx-auto text-base md:text-lg"
         >
-          Mobile mechanic services designed around your convenience — making 
-          vehicle care simple, efficient, and dependable whether you’re at home, 
-          at work, or on the road.
+          Experience Cambridge’s premium Mercedes specialists, combining advanced diagnostics, meticulous craftsmanship, and uncompromising quality for every vehicle we care for.
         </motion.p>
 
         {/* CTA Button (WhatsApp example) */}

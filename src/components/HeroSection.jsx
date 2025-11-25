@@ -8,9 +8,9 @@ const HeroSection = () => {
     AOS.init({ duration: 1200, once: true });
   }, []);
 
-  const primary = "#B9BDC1"; // soft metallic grey
-  const secondary = "#FFFFFF"; // clean white
-  const accent = "#0078D6"; // brand accent blue
+  const primary = "#B9BDC1"; 
+  const secondary = "#FFFFFF"; 
+  const accent = "#0078D6"; 
 
   return (
     <div className="bg-[#FFFFFF]" id="hero">
@@ -28,7 +28,7 @@ const HeroSection = () => {
             </h1>
 
             <p className="text-[#333333] max-w-md leading-relaxed">
-             Wherever you are, JW Cambridge brings dealership-level expertise straight to your driveway. From general servicing to full Mercedes diagnostics, our fully equipped mobile vans deliver precision repairs without the workshop hassle.
+              Wherever you are, JW Cambridge brings dealership-level expertise straight to your driveway. From general servicing to full Mercedes diagnostics, our fully equipped mobile vans deliver precision repairs without the workshop hassle.
             </p>
 
             <div className="flex items-center gap-5 pt-4">
@@ -49,14 +49,16 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right Image */}
+          {/* Right Side — VIDEO instead of Image */}
           <div className="relative" data-aos="fade-left">
-            <img
-              src="image.png"
-              alt="Car Service"
+            <video
+              src="/heo.mp4"
               className="w-full h-auto mt-10 rounded-3xl shadow-[0_0_30px_rgba(0,120,214,0.15)] object-cover"
+              autoPlay
+              muted
+              loop
+              playsInline
             />
-            {/* Subtle gradient overlay */}
             <div className="absolute inset-0 bg-linear-to-br from-transparent via-[#0078D6]/10 to-transparent rounded-3xl"></div>
           </div>
         </div>
