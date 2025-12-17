@@ -8,14 +8,23 @@ const HeroSection = () => {
     AOS.init({ duration: 1200, once: true });
   }, []);
 
-  const primary = "#B9BDC1"; 
-  const secondary = "#FFFFFF"; 
-  const accent = "#0078D6"; 
-
   return (
-    <div className="bg-[#FFFFFF]" id="hero">
+    <div className="relative w-full min-h-screen overflow-hidden" id="hero">
+      {/* Background Video */}
+      <video
+        src="/bg-video.mp4"
+        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+        autoPlay
+        muted
+        loop
+        playsInline
+      />
+
+      {/* Optional Overlay for readability */}
+      <div className="absolute inset-0 bg-black/20 z-10"></div>
+
       {/* Hero Section */}
-      <section className="bg-[#FFFFFF] text-[#000000] min-h-screen flex items-center justify-center px-6 md:px-12 lg:px-20 border-b border-[#B9BDC1]/40">
+      <section className="relative z-20 text-black min-h-screen flex items-center justify-center px-6 md:px-12 lg:px-20 border-b border-[#B9BDC1]/40">
         <div className="max-w-7xl w-full grid md:grid-cols-2 gap-10 items-center">
 
           {/* Left Content */}
@@ -49,23 +58,24 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right Side — VIDEO instead of Image */}
+          {/* Right Side — Original Video */}
           <div className="relative" data-aos="fade-left">
             <video
               src="/heo.mp4"
-              className="w-full h-auto mt-10 rounded-3xl shadow-[0_0_30px_rgba(0,120,214,0.15)] object-cover"
+              className="w-full h-auto mt-10 rounded-3xl shadow-[0_0_30px_rgba(0,120,214,0.15)] object-cover z-20"
               autoPlay
               muted
               loop
               playsInline
             />
-            <div className="absolute inset-0 bg-linear-to-br from-transparent via-[#0078D6]/10 to-transparent rounded-3xl"></div>
+            <div className="absolute inset-0 bg-linear-to-br from-transparent via-[#0078D6]/10 to-transparent rounded-3xl z-30"></div>
           </div>
+
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="bg-[#FFFFFF] text-[#000000] shadow-lg py-10 -mt-12 w-[85%] px-6 md:px-12 lg:px-20 rounded-2xl max-w-5xl mx-auto z-10 relative border border-[#B9BDC1]/40">
+      <section className="bg-[#FFFFFF] text-[#000000] shadow-lg py-10 -mt-12 w-[85%] px-6 md:px-12 lg:px-20 rounded-2xl max-w-5xl mx-auto z-30 relative border border-[#B9BDC1]/40">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl items-center">
           {[
             { value: "3+", label: "Cities Covered" },
