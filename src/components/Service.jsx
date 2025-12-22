@@ -73,9 +73,12 @@ const ServiceSection = () => {
           <p className="mt-5 text-[#333333] max-w-md leading-relaxed text-sm sm:text-base">
            We specialise in Mercedes-Benz servicing, diagnostics, and electrical repairs using factory-grade tools, alongside professional servicing for selected other vehicles. Whether it’s maintenance, pre-MOT work, or advanced ECU updates, JW Cambridge delivers reliable performance, mile after mile.
           </p>
-          <button className="mt-8 bg-[#0078D6] text-[#FFFFFF] font-semibold px-6 py-3 rounded-md uppercase hover:bg-[#0063b4] hover:shadow-[0_0_25px_rgba(0,120,214,0.4)] transition-all text-sm sm:text-base">
-            Discover More
-          </button>
+         <a href="/service">
+  <button className="mt-8 bg-[#0078D6] text-[#FFFFFF] font-semibold px-6 py-3 rounded-md uppercase hover:bg-[#0063b4] hover:shadow-[0_0_25px_rgba(0,120,214,0.4)] transition-all text-sm sm:text-base">
+    Discover More
+  </button>
+</a>
+
         </div>
 
         {/* Right Services List */}

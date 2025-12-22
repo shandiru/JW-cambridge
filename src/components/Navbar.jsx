@@ -1,5 +1,4 @@
-"use client";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
@@ -19,16 +18,27 @@ const Navbar = () => {
     setIsOpen(false);
 
     if (id === "/") {
+      // If we are not on home page, navigate to home
+      if (window.location.pathname !== "/") {
+        window.location.href = "/";
+        return;
+      }
+      // Scroll to top if on home page
       window.scrollTo({ top: 0, behavior: "smooth" });
       return;
     }
 
-    const section = document.getElementById(id);
-    if (section) {
-      const yOffset = -70;
-      const y =
-        section.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      window.scrollTo({ top: y, behavior: "smooth" });
+    // Scroll to section if on home page
+    if (window.location.pathname === "/") {
+      const section = document.getElementById(id);
+      if (section) {
+        const yOffset = -70;
+        const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    } else {
+      // If on another page, navigate to home with hash
+      window.location.href = `/#${id}`;
     }
   };
 
@@ -36,15 +46,8 @@ const Navbar = () => {
     <nav className="bg-[#FFFFFF]/90 backdrop-blur-sm fixed max-w-6xl p-3 mx-auto text-[#000000] tracking-wide top-3 rounded-lg left-0 right-0 z-50 border border-[#B9BDC1]/50 shadow-[0_4px_20px_rgba(0,0,0,0.05)]">
       <div className="flex justify-between items-center">
         {/* Logo */}
-        <div
-          className="flex items-center cursor-pointer"
-          onClick={() => handleScroll("/")}
-        >
-          <img
-            src="/logo.png"
-            alt="JW Cambridge Logo"
-            className="h-12 w-auto object-contain"
-          />
+        <div className="flex items-center cursor-pointer" onClick={() => handleScroll("/")}>
+          <img src="/logo.png" alt="Logo" className="h-12 w-auto object-contain" />
         </div>
 
         {/* Desktop Menu */}
@@ -72,15 +75,8 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <button
-          className="lg:hidden text-[#0078D6]"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? (
-            <X size={26} className="hover:text-[#005fa3] transition-all" />
-          ) : (
-            <Menu size={26} className="hover:text-[#005fa3] transition-all" />
-          )}
+        <button className="lg:hidden text-[#0078D6]" onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? <X size={26} className="hover:text-[#005fa3] transition-all" /> : <Menu size={26} className="hover:text-[#005fa3] transition-all" />}
         </button>
       </div>
 
