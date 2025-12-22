@@ -32,7 +32,7 @@ export default function GallerySection() {
   return (
     <section
       id="gallery"
-      className="relative overflow-hidden bg-white text-black font-['Poppins'] py-8 sm:py-12 md:py-16 lg:py-20 border-t border-[#B9BDC1]/40"
+      className="relative overflow-hidden bg-[#e5e9ee] text-black font-['Poppins'] py-8 sm:py-12 md:py-16 lg:py-20 border-t border-[#B9BDC1]/40"
     >
       {/* Background Glow - Responsive */}
       <div className="absolute top-0 left-0 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] lg:w-[700px] lg:h-[700px] bg-linear-to-br from-[#0078D6]/20 to-transparent blur-[120px] sm:blur-[150px] md:blur-[200px] rounded-full -translate-x-1/3 -translate-y-1/3"></div>

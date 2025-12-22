@@ -7,42 +7,42 @@ const services = [
     title: "Any Car Problems",
     subtitle: "Expert Fault Investigation & Fixing",
     image:
-      "https://cdn.pixabay.com/photo/2017/07/31/11/21/car-repair-2557576_1280.jpg",
+      "img4.jpg",
   },
   {
     id: 2,
     title: "General Maintenance & Servicing",
     subtitle: "Keeping Your Vehicle in Peak Condition",
     image:
-      "https://cdn.pixabay.com/photo/2017/03/12/20/46/car-repair-2132450_1280.jpg",
+      "img5.jpg",
   },
   {
     id: 3,
     title: "Vehicle Diagnosis",
     subtitle: "Advanced Diagnostic Equipment & Reporting",
     image:
-      "https://cdn.pixabay.com/photo/2020/03/04/16/19/car-diagnostics-4900302_1280.jpg",
+      "img6.jpg",
   },
   {
     id: 4,
     title: "Mercedes Diagnosis & Repair",
     subtitle: "Specialist Mercedes Tools & Genuine Parts",
     image:
-      "https://cdn.pixabay.com/photo/2022/03/21/15/37/mercedes-7083463_1280.jpg",
+      "img4.jpg",
   },
   {
     id: 5,
     title: "MOT Preparation & Pre-MOT Checks",
     subtitle: "We Undertake Pre-MOT & Subcontract Final MOT",
     image:
-      "https://cdn.pixabay.com/photo/2017/08/06/07/36/car-2592485_1280.jpg",
+      "img5.jpg",
   },
   {
     id: 6,
     title: "Software Updates & Control Modules",
     subtitle: "Latest ECU Programming & Module Replacement",
     image:
-      "https://cdn.pixabay.com/photo/2016/02/18/22/16/auto-1209713_1280.jpg",
+      "img6.jpg",
   },
 ];
 
@@ -56,8 +56,8 @@ const ServiceSection = () => {
     >
       {/* 💠 Blue Metallic Glow */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-gradient-to-br from-[#0078D6]/10 to-transparent blur-[180px] rounded-full -translate-x-1/3 -translate-y-1/3"></div>
-        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-gradient-to-tl from-[#B9BDC1]/20 to-transparent blur-[160px] rounded-full translate-x-1/3 translate-y-1/3"></div>
+        <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-linear-to-br from-[#0078D6]/10 to-transparent blur-[180px] rounded-full -translate-x-1/3 -translate-y-1/3"></div>
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-linear-to-tl from-[#B9BDC1]/20 to-transparent blur-[160px] rounded-full translate-x-1/3 translate-y-1/3"></div>
       </div>
 
       {/* ✅ Grid layout wrapper */}
@@ -66,17 +66,12 @@ const ServiceSection = () => {
         <div className="self-start lg:sticky lg:top-24 lg:h-fit">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight uppercase text-[#000000]">
             JW Cambridge{" "}
-            <span className="bg-gradient-to-r from-[#0078D6] to-[#B9BDC1] bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-[#0078D6] to-[#B9BDC1] bg-clip-text text-transparent">
               Garage Services
             </span>
           </h2>
           <p className="mt-5 text-[#333333] max-w-md leading-relaxed text-sm sm:text-base">
-            We specialise in{" "}
-            <span className="text-[#0078D6] font-medium">Mercedes-Benz</span>{" "}
-            servicing, diagnostics, and electrical repairs using
-            factory-grade tools. Whether it’s maintenance, pre-MOT work, or
-            advanced ECU updates — JW Cambridge ensures your Mercedes performs
-            flawlessly, mile after mile.
+           We specialise in Mercedes-Benz servicing, diagnostics, and electrical repairs using factory-grade tools, alongside professional servicing for selected other vehicles. Whether it’s maintenance, pre-MOT work, or advanced ECU updates, JW Cambridge delivers reliable performance, mile after mile.
           </p>
           <button className="mt-8 bg-[#0078D6] text-[#FFFFFF] font-semibold px-6 py-3 rounded-md uppercase hover:bg-[#0063b4] hover:shadow-[0_0_25px_rgba(0,120,214,0.4)] transition-all text-sm sm:text-base">
             Discover More
@@ -135,7 +130,7 @@ const ServiceSection = () => {
                   }`}
                 />
                 <div
-                  className={`absolute inset-0 bg-gradient-to-br from-transparent via-[#0078D6]/15 to-transparent transition-opacity duration-500 ${
+                  className={`absolute inset-0 bg-linear-to-br from-transparent via-[#0078D6]/15 to-transparent transition-opacity duration-500 ${
                     hoveredId === service.id ? "opacity-60" : "opacity-0"
                   }`}
                 ></div>
