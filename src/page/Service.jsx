@@ -25,7 +25,7 @@ export default function Service() {
       </section>
 
        <section >
-       <EmergencyCTA />
+       {/* <EmergencyCTA /> */}
       </section>
 
 

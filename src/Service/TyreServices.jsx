@@ -166,10 +166,10 @@ export default function NandJServices() {
         {/* Title */}
         <div className="text-center mb-14">
           <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: palette.primaryBlue }}>
-            Professional Services
+            Advanced Vehicle Diagnostics & Repair Service 
           </h2>
           <p className="max-w-3xl mx-auto" style={{ color: palette.textGray }}>
-            Expert vehicle servicing, repairs, diagnostics, and maintenance solutions for all makes and models.
+            Specialist diagnostics, servicing, and repairs for Mercedes and all makes
           </p>
         </div>
 
