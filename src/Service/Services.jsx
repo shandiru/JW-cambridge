@@ -9,22 +9,21 @@ import {
   FaRegCheckCircle,
 } from "react-icons/fa";
 
-// N&J MOT Centre color palette adjusted for white background
+// JW Cambridge color palette (NO RED)
 const palette = {
-  primary: "#0B5ED7",      // blue (titles, selected icons)
-  secondary: "#D70C09",    // red (secondary highlights)
-  muted: "#475569",         // dark gray text on white
-  cardBg: "#FFFFFF",         // card background
-  cardBorder: "#CBD5E1",     // card border
-  checkIcon: "#0B5ED7",     // check icon color
-  iconText: "#FFFFFF",       // icon inside circle text
+  primary: "#0B5ED7",      // blue main brand
+  muted: "#475569",        // gray text
+  cardBg: "#FFFFFF",       // card background
+  cardBorder: "#CBD5E1",   // card border
+  checkIcon: "#0B5ED7",    // check icon blue
+  iconText: "#FFFFFF",     // icon text inside box
 };
 
-export default function WheelAlignmentServices() {
+export default function JWCambridgeVehicleServices() {
   const services = [
     {
       title: "Fault Investigation & Repair",
-      desc: "Accurate diagnosis and professional fault fixing using advanced vehicle diagnostics",
+      desc: "Accurate diagnosis and professional fault fixing using advanced vehicle diagnostics.",
       icon: <FaTools className="h-5 w-5" />,
       iconBg: palette.primary,
       points: [
@@ -37,9 +36,9 @@ export default function WheelAlignmentServices() {
     },
     {
       title: "General Maintenance & Servicing",
-      desc: "Routine servicing to keep your Mercedes and all vehicles running smoothly",
+      desc: "Routine servicing to keep your Mercedes and all vehicles running smoothly.",
       icon: <FaCogs className="h-5 w-5" />,
-      iconBg: palette.secondary,
+      iconBg: palette.primary,
       points: [
         "Maintains manufacturer service standards",
         "Improves vehicle safety and reliability",
@@ -50,7 +49,7 @@ export default function WheelAlignmentServices() {
     },
     {
       title: "Vehicle Diagnostics",
-      desc: "Advanced diagnostic testing with detailed fault reporting and analysis",
+      desc: "Advanced diagnostic testing with detailed fault reporting and analysis.",
       icon: <FaTachometerAlt className="h-5 w-5" />,
       iconBg: palette.primary,
       points: [
@@ -63,9 +62,9 @@ export default function WheelAlignmentServices() {
     },
     {
       title: "Mercedes Diagnosis & Repair",
-      desc: "Specialist Mercedes diagnostics, repairs, and genuine or OEM parts",
+      desc: "Specialist Mercedes diagnostics, repairs, and genuine or OEM parts.",
       icon: <FaCarSide className="h-5 w-5" />,
-      iconBg: palette.secondary,
+      iconBg: palette.primary,
       points: [
         "Manufacturer-level Mercedes diagnostics",
         "Genuine or OEM Mercedes parts used",
@@ -76,7 +75,7 @@ export default function WheelAlignmentServices() {
     },
     {
       title: "MOT Preparation & Pre-MOT Checks",
-      desc: "Thorough inspections and repairs to help ensure a smooth MOT pass",
+      desc: "Thorough inspections and repairs to help ensure a smooth MOT pass.",
       icon: <FaSnowflake className="h-5 w-5" />,
       iconBg: palette.primary,
       points: [
@@ -89,9 +88,9 @@ export default function WheelAlignmentServices() {
     },
     {
       title: "Software Updates & Control Modules",
-      desc: "Latest ECU programming, software updates, and module replacement",
+      desc: "Latest ECU programming, software updates, and module replacement.",
       icon: <FaTachometerAlt className="h-5 w-5" />,
-      iconBg: palette.secondary,
+      iconBg: palette.primary,
       points: [
         "Fixes software-related faults",
         "Improves performance and efficiency",
@@ -105,19 +104,21 @@ export default function WheelAlignmentServices() {
   return (
     <section className="py-16" style={{ backgroundColor: "#FFFFFF" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
         {/* Heading */}
         <div className="text-center mb-12">
           <h2
             className="text-3xl lg:text-4xl font-bold mb-4"
             style={{ color: palette.primary }}
           >
-            Professional Vehicle Services
+            JW Cambridge – Professional Vehicle Services
           </h2>
+
           <p
-            className="text-lg font-body max-w-2xl mx-auto"
+            className="text-lg max-w-2xl mx-auto"
             style={{ color: palette.muted }}
           >
-            N&J MOT Centre offers fault investigation, servicing, diagnostics, Mercedes specialist repair, MOT preparation, and software updates. Trust our certified technicians for reliable and professional service.
+            JW Cambridge offers fault investigation, servicing, diagnostics, Mercedes specialist repair, MOT preparation, and software updates. Our certified technicians ensure precision, reliability, and outstanding customer care.
           </p>
         </div>
 
@@ -133,6 +134,8 @@ export default function WheelAlignmentServices() {
               "
               style={{ backgroundColor: palette.cardBg, borderColor: palette.cardBorder }}
             >
+              
+              {/* Header with Icon */}
               <div className="grid auto-rows-min items-start gap-1.5 px-6">
                 <div className="flex items-center space-x-3 mb-2">
                   <div
@@ -141,6 +144,7 @@ export default function WheelAlignmentServices() {
                   >
                     {s.icon}
                   </div>
+
                   <div
                     className="text-xl font-bold"
                     style={{ color: palette.primary }}
@@ -148,11 +152,13 @@ export default function WheelAlignmentServices() {
                     {s.title}
                   </div>
                 </div>
+
                 <div className="text-base" style={{ color: palette.muted }}>
                   {s.desc}
                 </div>
               </div>
 
+              {/* Bullet Points */}
               <div className="px-6">
                 <ul className="space-y-2">
                   {s.points.map((p, j) => (
@@ -170,6 +176,7 @@ export default function WheelAlignmentServices() {
                   ))}
                 </ul>
               </div>
+
             </div>
           ))}
         </div>
