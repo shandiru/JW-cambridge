@@ -81,9 +81,9 @@ export default function AboutSection() {
           </div>
 
           <div className="absolute bottom-0 left-0 right-0 p-5 rounded-b-2xl backdrop-blur-[3px] bg-linear-to-t from-[#000000]/80 to-transparent">
-            <h3 className="text-[#FFFFFF] text-lg font-semibold">[Name]</h3>
+            <h3 className="text-[#FFFFFF] text-lg font-semibold">Jake Williams</h3>
             <p className="text-sm bg-clip-text text-transparent bg-linear-to-r from-[#0078D6] to-[#B9BDC1]">
-              [Job Description]
+              Head Mercedes Technician / Owner
             </p>
 
             {/* Social Icons */}
@@ -124,7 +124,7 @@ export default function AboutSection() {
             variants={fadeUp}
             className="text-4xl md:text-5xl font-bold leading-tight bg-clip-text text-transparent bg-linear-to-r from-[#0078D6] to-[#B9BDC1] mb-6"
           >
-            Precision Automotive Care, Delivered to Your Doorstep
+            Expert Mercedes-Benz Care, Trusted Servicing for All Vehicles
           </motion.h2>
 
           <motion.p
@@ -143,7 +143,7 @@ export default function AboutSection() {
           <motion.div className="flex gap-4">
             <motion.a
               variants={fadeUp}
-              href="#process"
+              href="#service"
               whileHover={{ y: -2 }}
               whileTap={{ y: 0 }}
               className="px-6 py-3 rounded-lg bg-[#0078D6] text-white hover:bg-[#0063b4] font-medium transition"

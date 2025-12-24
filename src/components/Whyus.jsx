@@ -32,10 +32,10 @@ export default function WhyusSection() {
   ];
 
   return (
-    <section className="relative bg-[#FFFFFF] overflow-hidden py-20 px-6 md:px-12">
+    <section className="relative bg-white overflow-hidden py-20 px-6 md:px-12">
       {/* Background Glow */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute left-0 bottom-0 w-full h-[500px] bg-gradient-to-tr from-[#B9BDC1]/30 via-[#FFFFFF] to-transparent rounded-t-[100px]" />
+        <div className="absolute left-0 bottom-0 w-full h-[500px] bg-linear-to-tr from-[#B9BDC1]/30 via-white to-transparent rounded-t-[100px]" />
       </div>
 
       {/* Section Intro */}
@@ -46,18 +46,14 @@ export default function WhyusSection() {
         viewport={{ once: true }}
         className="max-w-4xl mx-auto text-center"
       >
-        {/* Small Icon */}
+        {/* Icon */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
           className="mx-auto mb-6 w-12 h-12 rounded-2xl bg-[#0078D6]/10 flex items-center justify-center"
         >
-          <img
-            src="https://framerusercontent.com/images/vcJ3OQtmtbaX89QtoWA8xXSnyqI.svg"
-            alt="Icon"
-            className="w-7 h-7"
-          />
+          <img src="/benz.png" alt="Mercedes Icon" className="w-7 h-7" />
         </motion.div>
 
         {/* Title */}
@@ -65,7 +61,7 @@ export default function WhyusSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1, duration: 0.6 }}
-          className="text-3xl md:text-5xl font-semibold text-[#0078D6] leading-snug"
+          className="text-3xl md:text-5xl font-semibold text-[#0078D6]"
         >
           Why Choose JW Cambridge
         </motion.h2>
@@ -77,29 +73,31 @@ export default function WhyusSection() {
           transition={{ delay: 0.2, duration: 0.6 }}
           className="text-[#555555] mt-4 max-w-2xl mx-auto text-base md:text-lg"
         >
-          Experience Cambridge’s premium Mercedes specialists, combining advanced diagnostics, meticulous craftsmanship, and uncompromising quality for every vehicle we care for.
+          Experience Cambridge’s premium Mercedes specialists, combining advanced
+          diagnostics, meticulous craftsmanship, and uncompromising quality for
+          every vehicle we care for.
         </motion.p>
 
-        {/* CTA Button */}
+        {/* CTA */}
         <motion.a
           href="#"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.97 }}
           transition={{ type: "spring", stiffness: 250 }}
-          className="inline-flex items-center gap-2 mt-8 group duration-300 bg-[#0078D6] text-white font-semibold px-7 py-3 rounded-full shadow-md hover:bg-[#0063b4] transition-all"
+          className="inline-flex items-center gap-2 mt-8 group bg-[#0078D6] text-white font-semibold px-7 py-3 rounded-full shadow-md hover:bg-[#0063b4] transition-all"
         >
-          <span className="relative flex items-center justify-center overflow-hidden">
-            <p className="absolute transform transition-all duration-300 group-hover:-translate-y-8 opacity-100">
+          <span className="relative h-5 overflow-hidden">
+            <span className="block transition-all duration-300 group-hover:-translate-y-6">
               Contact Us
-            </p>
-            <p className="absolute transform translate-y-8 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+            </span>
+            <span className="block translate-y-6 transition-all duration-300 group-hover:translate-y-0">
               WhatsApp Us
-            </p>
+            </span>
           </span>
           <img
             src="https://framerusercontent.com/images/KOh2aW7z2qWOewMCDslShqhIps.svg"
-            alt="Arrow Icon"
-            className="w-4 h-4 ml-1"
+            alt="Arrow"
+            className="w-4 h-4"
           />
         </motion.a>
       </motion.div>
@@ -115,42 +113,43 @@ export default function WhyusSection() {
         }}
         className="max-w-6xl mx-auto mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
       >
-        {features.map((feature) => (
-          <motion.div
-            key={feature.id}
-            variants={{
-              hidden: { opacity: 0, y: 30 },
-              show: { opacity: 1, y: 0 },
-            }}
-            transition={{ duration: 0.2 }}
-            whileHover={{
-              y: -8,
-              scale: 1.02,
-              borderColor: "#0078D6",
-            }}
-            whileTap={{
-              y: -8,
-              scale: 1.02,
-              borderColor: "#0078D6",
-            }}
-            className="bg-gradient-to-b from-[#FFFFFF] to-[#F5F7FA] rounded-2xl p-6 border border-[#B9BDC1]/50 transition-all duration-300 cursor-pointer"
-          >
-            {/* Icon */}
-            <div className="w-12 h-12 rounded-lg bg-[#0078D6] flex items-center justify-center border-2 border-[#FFFFFF]/30 mb-4">
-              {feature.icon}
-            </div>
+        {features.map((feature, index) => {
+          const isGray = index % 2 === 1;
 
-            {/* Title */}
-            <h5 className="text-[#0078D6] text-lg font-semibold mb-2">
-              {feature.title}
-            </h5>
+          return (
+            <motion.div
+              key={feature.id}
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                show: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.2 }}
+              whileHover={{ y: -8, scale: 1.02 }}
+              className={`rounded-2xl p-6 border cursor-pointer transition-all duration-300
+                ${
+                  isGray
+                    ? "bg-[#e5e9ee] border-[#B9BDC1]"
+                    : "bg-white border-[#B9BDC1]/60"
+                }
+              `}
+            >
+              {/* Icon */}
+              <div className="w-12 h-12 rounded-lg bg-[#0078D6] flex items-center justify-center mb-4">
+                {feature.icon}
+              </div>
 
-            {/* Description */}
-            <p className="text-[#555555] text-sm leading-relaxed">
-              {feature.desc}
-            </p>
-          </motion.div>
-        ))}
+              {/* Title */}
+              <h5 className="text-[#0078D6] text-lg font-semibold mb-2">
+                {feature.title}
+              </h5>
+
+              {/* Description */}
+              <p className="text-[#555555] text-sm leading-relaxed">
+                {feature.desc}
+              </p>
+            </motion.div>
+          );
+        })}
       </motion.div>
     </section>
   );

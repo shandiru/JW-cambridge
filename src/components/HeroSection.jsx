@@ -26,17 +26,17 @@ const HeroSection = () => {
       {/* Hero Section Content */}
       <section className="relative z-20 min-h-screen flex items-center justify-center px-6 md:px-12 lg:px-20">
         <div
-          className="max-w-3xl w-full text-center space-y-6"
+          className="max-w-4xl w-full text-center space-y-6"
           data-aos="fade-up"
         >
-          <h1 className="text-xl md:text-3xl lg:text-4xl font-extrabold leading-tight tracking-tight text-white">
+          <h1 className="text-xl md:text-3xl lg:text-5xl font-extrabold leading-tight tracking-tight text-white">
             Where Quality Meets the Open Road<br />
             <span className="bg-linear-to-r from-[#0078D6] to-[#B9BDC1] bg-clip-text text-transparent">
               Expert Mobile Mechanics - Mercedes Specialists
             </span>
           </h1>
 
-          <p className="text-[#CCCCCC] max-w-md mx-auto leading-relaxed">
+          <p className="text-[#CCCCCC] max-w-2xl mx-auto text-xl leading-relaxed">
             Wherever you are, JW Cambridge brings dealership-level expertise
             straight to your driveway. From general servicing to full Mercedes
             diagnostics, our fully equipped mobile vans deliver precision
@@ -46,7 +46,7 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5 pt-4">
             <a href="/#contact">
               <button className="border-2 border-[#0078D6] text-[#0078D6] px-6 py-3 rounded-full flex items-center gap-2 group hover:bg-[#0078D6] hover:text-white transition font-semibold">
-                <span className="transition-transform duration-300 text-sm lg:text-base group-hover:-translate-x-1 group-active:-translate-x-1">
+                <span className="transition-transform duration-300 text-sm lg:text-2xl group-hover:-translate-x-1 group-active:-translate-x-1">
                   Book Your Mobile Service
                 </span>
                 <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1 group-active:translate-x-1 mt-1" />

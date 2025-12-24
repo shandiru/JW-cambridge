@@ -54,7 +54,7 @@ export default function FAQSection() {
   return (
     <section
       id="faq"
-      className="bg-[#FFFFFF] text-[#000000] font-inter py-16 sm:py-20 md:py-24 px-4 sm:px-8 border-t border-[#B9BDC1]/40"
+      className="bg-[#e5e9ee] text-[#000000] font-inter py-16 sm:py-20 md:py-24 px-4 sm:px-8 border-t border-[#B9BDC1]/40"
     >
       <div
         data-aos="fade-up"
@@ -74,7 +74,7 @@ export default function FAQSection() {
             className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight leading-snug sm:leading-tight md:leading-[1.2] text-[#000000]"
           >
             Mercedes Specialist{" "}
-            <span className="bg-gradient-to-r from-[#0078D6] to-[#B9BDC1] bg-clip-text text-transparent block sm:inline">
+            <span className="bg-linear-to-r from-[#0078D6] to-[#B9BDC1] bg-clip-text text-transparent block sm:inline">
                FAQs
             </span>
           </h2>

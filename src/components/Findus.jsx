@@ -17,7 +17,7 @@ export default function FindUs() {
   return (
     <section
       id="find-us"
-      className="py-16 px-4 bg-[#FFFFFF] transition-colors duration-500 border-t border-[#B9BDC1]/40"
+      className="py-16 px-4 bg-[#e5e9ee] transition-colors duration-500 border-t border-[#B9BDC1]/40"
     >
       <div className="max-w-6xl mx-auto text-center">
         {/* Heading */}
