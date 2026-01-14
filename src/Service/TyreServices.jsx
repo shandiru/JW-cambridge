@@ -16,7 +16,7 @@ const palette = {
 };
 
 export default function NandJServices() {
-   const services = [
+  const services = [
     {
       key: "fault",
       title: "Fault Investigation & Repair",
@@ -166,7 +166,7 @@ export default function NandJServices() {
         {/* Title */}
         <div className="text-center mb-14">
           <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: palette.primaryBlue }}>
-            Advanced Vehicle Diagnostics & Repair Service 
+            Advanced Vehicle Diagnostics & Repair Service
           </h2>
           <p className="max-w-3xl mx-auto" style={{ color: palette.textGray }}>
             Specialist diagnostics, servicing, and repairs for Mercedes and all makes
@@ -174,24 +174,47 @@ export default function NandJServices() {
         </div>
 
         {/* Service Boxes */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-4 mb-16">
           {services.map((s) => (
             <div
               key={s.key}
               onClick={() => setActiveService(s)}
-              className={`cursor-pointer rounded-2xl border px-6 py-8 text-center transition hover:scale-105`}
+              className="cursor-pointer rounded-2xl border px-5 py-7 text-center transition hover:scale-105"
               style={{
                 borderColor: palette.cardBorder,
-                backgroundColor: activeService.key === s.key ? palette.selectedBg : palette.cardBg,
+                backgroundColor:
+                  activeService.key === s.key
+                    ? palette.selectedBg
+                    : palette.cardBg,
               }}
             >
-              <h3 className="font-bold mb-2" style={{ color: activeService.key === s.key ? palette.selectedText : palette.primaryBlue }}>
+              <h3
+                className="font-semibold mb-1 text-base"
+                style={{
+                  color:
+                    activeService.key === s.key
+                      ? palette.selectedText
+                      : palette.primaryBlue,
+                }}
+              >
                 {s.title}
               </h3>
-              <p className="text-sm" style={{ color: palette.textGray }}>{s.desc}</p>
+
+              <p
+                className="text-xs leading-snug"
+                style={{
+                  color:
+                    activeService.key === s.key
+                      ? palette.selectedText
+                      : palette.textGray,
+                }}
+              >
+                {s.desc}
+              </p>
             </div>
           ))}
         </div>
+
 
         {/* Dynamic Content */}
         <div className="grid lg:grid-cols-2 gap-12">
@@ -221,7 +244,7 @@ export default function NandJServices() {
 
           {/* SIGNS */}
           <div className="rounded-xl border p-8" style={{ backgroundColor: palette.cardBg, borderColor: palette.cardBorder }}>
-            <h4 className="text-2xl font-bold mb-4" style={{ color: palette.primaryRed }}>
+            <h4 className="text-2xl font-extrabold  mb-4" style={{ color: palette.primaryRed, fontWeight: "900", }}>
               {activeService.signsTitle}
             </h4>
             <ul className="space-y-3" style={{ color: palette.textGray }}>

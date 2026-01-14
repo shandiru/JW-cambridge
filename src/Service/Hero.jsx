@@ -50,7 +50,7 @@ export default function WheelTyreHero() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             
             {/* Primary Button */}
-            <a href="tel:+441223311711" className="inline-block">
+            <a href="tel:+447491016816" className="inline-block">
               <button
                 className="inline-flex items-center justify-center gap-2 h-10 rounded-md px-6 font-semibold transition-all duration-300"
                 style={{
@@ -66,7 +66,7 @@ export default function WheelTyreHero() {
                 }}
               >
                 <FaPhoneAlt className="h-5 w-5" />
-                Book Service: +44 1223 311711
+                Book Service: +44 7491 016816
               </button>
             </a>
 

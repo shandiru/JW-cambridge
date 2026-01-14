@@ -48,7 +48,7 @@ export default function JWCambridgeVehicleServices() {
       ],
     },
     {
-      title: "Vehicle Diagnostics",
+      title: "Transmission service and repair replacement",
       desc: "Advanced diagnostic testing with detailed fault reporting and analysis.",
       icon: <FaTachometerAlt className="h-5 w-5" />,
       iconBg: palette.primary,
