@@ -83,10 +83,20 @@ export default function AboutSection() {
 
           <div className="absolute bottom-0 left-0 right-0 p-5 rounded-b-2xl backdrop-blur-[3px] bg-linear-to-t from-[#000000]/80 to-transparent">
             <h3 className="text-[#FFFFFF] text-lg font-semibold">Jake Williams</h3>
-            <p className="text-sm bg-clip-text text-transparent bg-linear-to-r from-[#0078D6] to-[#B9BDC1]">
-              Offically Mercedes Trained & Qualified <br />  Mercedes Benz Technician Owner
-            </p>
+            <div className="flex flex-col ">
+              {/* Line 1: Text and Medal on the same line */}
+              <div className="flex items-center gap-2">
+                <p className="text-sm font-medium bg-clip-text text-transparent bg-linear-to-r from-[#0078D6] to-[#B9BDC1]">
+                  Offically Mercedes Trained & Qualified
+                </p>
+                <Award size={20} className="text-[#0078D6] shrink-0" />
+              </div>
 
+              {/* Line 2: The next line */}
+              <p className="text-sm font-medium bg-clip-text text-transparent bg-linear-to-r from-[#0078D6] to-[#B9BDC1]">
+                Mercedes Benz Technician Owner
+              </p>
+            </div>
             {/* Social Icons */}
             <div className="flex gap-3 mt-4">
               {[
@@ -122,24 +132,32 @@ export default function AboutSection() {
           </motion.p>
 
           <motion.h2
-            variants={fadeUp}
-            className="text-4xl md:text-5xl font-bold leading-tight bg-clip-text text-transparent bg-linear-to-r from-[#0078D6] to-[#B9BDC1] mb-6"
-          >
-            Expert Mercedes-Benz Care, Trusted Servicing for All Vehicles
-          </motion.h2>
+  variants={fadeUp}
+  className="text-3xl md:text-4xl font-bold leading-tight bg-clip-text text-transparent bg-linear-to-r from-[#0078D6] to-[#B9BDC1] mb-6"
+>
+  Mercedes-Benz Specialists in Cambridge – Dealer-Level Diagnostics with Personal Service
+</motion.h2>
 
-          <motion.p
-            variants={fadeUp}
-            className="text-[#444444] leading-relaxed mb-2"
-          >
-            With years of hands-on experience and a passion for premium car care, JW Cambridge provides reliable, professional, and honest mechanical services throughout Cambridge and surrounding areas.
-          </motion.p>
-          <motion.p
-            variants={fadeUp}
-            className="text-[#444444] leading-relaxed mb-10"
-          >
-            Whether it’s routine maintenance, complex diagnostics, or specialised Mercedes repairs, we offer high-quality workmanship backed by transparent communication and real expertise.
-          </motion.p>
+<motion.p
+  variants={fadeUp}
+  className="text-[#444444] leading-relaxed mb-6"
+>
+  JW Cambridge is an independent Mercedes-Benz specialist based in Cambridge, run by an officially trained and qualified Mercedes-Benz technician. We use genuine Mercedes licences, the authorised Mercedes Xentry Diagnostic system, and have full access to the Mercedes Digital Service Book (DSB), allowing us to carry out manufacturer-level Mercedes servicing, diagnostics, and repairs.
+</motion.p>
+
+<motion.p
+  variants={fadeUp}
+  className="text-[#444444] leading-relaxed mb-6"
+>
+  We specialise in Mercedes-Benz vehicles of all models and ages, offering expert Mercedes servicing in Cambridge, advanced Mercedes diagnostics, electrical fault finding, and specialist Mercedes repairs. From routine Mercedes maintenance and A & B servicing to complex warning lights, ECU faults, and drivability issues, your car is worked on using the same systems as a main dealer – without the dealership experience.
+</motion.p>
+
+<motion.p
+  variants={fadeUp}
+  className="text-[#444444] leading-relaxed mb-10"
+>
+  Alongside our Mercedes-Benz expertise, we also...
+</motion.p>
 
           <div className="flex flex-col gap-6">
             {/* Buttons Container */}

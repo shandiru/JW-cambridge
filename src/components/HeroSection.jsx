@@ -48,8 +48,9 @@ const HeroSection = () => {
             {/* Call Button (Red Solid) */}
             <a href="tel:+447491016816" className="w-full sm:w-auto">
               <button className="flex items-center justify-center gap-2 bg-[#E32C2C] text-white px-8 py-2.5 rounded-lg font-semibold hover:bg-red-700 transition shadow-md">
-                <span className="text-lg">Call</span>
+                <span className="text-lg">Call </span>
                 <FiPhone className="text-xl" />
+                +44 7491 016816
               </button>
             </a>
 
