@@ -54,7 +54,7 @@ export default function ContactSection() {
                 <h3 className="font-semibold text-lg text-[#000000]">
                   Call Us
                 </h3>
-                <p className="text-[#555555] text-sm">+44 1223 311711</p>
+                <p className="text-[#555555] text-sm">+44 74910 16816</p>
               </div>
             </div>
           </div>

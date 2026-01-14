@@ -89,7 +89,7 @@ export default function Footer() {
                   href="tel:+441780917600"
                   className="hover:text-[#0078D6] transition-colors duration-300"
                 >
-                  01223 311711
+                  +44 74910 16816
                 </a>
               </li>
 

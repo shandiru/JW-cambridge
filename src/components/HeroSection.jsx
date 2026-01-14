@@ -2,7 +2,8 @@ import React, { useEffect } from "react";
 import { FiArrowRight, FiPlay } from "react-icons/fi";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import { FiPhone } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
 const HeroSection = () => {
   useEffect(() => {
     AOS.init({ duration: 1200, once: true });
@@ -43,19 +44,29 @@ const HeroSection = () => {
             repairs without the workshop hassle.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-5 pt-4">
-            <a href="/#contact">
-              <button className="border-2 border-[#0078D6] text-[#0078D6] px-6 py-3 rounded-full flex items-center gap-2 group hover:bg-[#0078D6] hover:text-white transition font-semibold">
-                <span className="transition-transform duration-300 text-sm lg:text-2xl group-hover:-translate-x-1 group-active:-translate-x-1">
-                  Book Your Mobile Service
-                </span>
-                <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1 group-active:translate-x-1 mt-1" />
+          <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
+            {/* Call Button (Red Solid) */}
+            <a href="tel:+447491016816" className="w-full sm:w-auto">
+              <button className="flex items-center justify-center gap-2 bg-[#E32C2C] text-white px-8 py-2.5 rounded-lg font-semibold hover:bg-red-700 transition shadow-md">
+                <span className="text-lg">Call</span>
+                <FiPhone className="text-xl" />
               </button>
             </a>
 
-            <button className="w-14 h-14 rounded-full border-2 border-[#B9BDC1] flex items-center justify-center hover:border-[#0078D6] transition">
-              <FiPlay className="text-2xl text-[#0078D6]" />
-            </button>
+            {/* WhatsApp Button (Blue Solid) */}
+            <a
+              href="https://wa.me/447491016816"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto"
+            >
+              <button className="flex items-center justify-center gap-2 bg-[#0078D6] text-white px-8 py-2.5 rounded-lg font-semibold hover:bg-[#005fa3] transition shadow-md">
+                <span className="text-lg">WhatsApp</span>
+                <FaWhatsapp className="text-xl" />
+              </button>
+            </a>
+
+
           </div>
         </div>
       </section>
