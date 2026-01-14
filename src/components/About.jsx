@@ -6,6 +6,7 @@ import {
   useTransform,
   animate,
 } from "framer-motion";
+import { Award } from "lucide-react"; // or use a simple SVG
 import { FaXTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa6";
 
 const fadeUp = {
@@ -83,7 +84,7 @@ export default function AboutSection() {
           <div className="absolute bottom-0 left-0 right-0 p-5 rounded-b-2xl backdrop-blur-[3px] bg-linear-to-t from-[#000000]/80 to-transparent">
             <h3 className="text-[#FFFFFF] text-lg font-semibold">Jake Williams</h3>
             <p className="text-sm bg-clip-text text-transparent bg-linear-to-r from-[#0078D6] to-[#B9BDC1]">
-              Head Mercedes Technician / Owner
+              Offically Mercedes Trained & Qualified <br />  Mercedes Benz Technician Owner
             </p>
 
             {/* Social Icons */}
@@ -133,33 +134,47 @@ export default function AboutSection() {
           >
             With years of hands-on experience and a passion for premium car care, JW Cambridge provides reliable, professional, and honest mechanical services throughout Cambridge and surrounding areas.
           </motion.p>
-            <motion.p
+          <motion.p
             variants={fadeUp}
             className="text-[#444444] leading-relaxed mb-10"
           >
-           Whether it’s routine maintenance, complex diagnostics, or specialised Mercedes repairs, we offer high-quality workmanship backed by transparent communication and real expertise.
+            Whether it’s routine maintenance, complex diagnostics, or specialised Mercedes repairs, we offer high-quality workmanship backed by transparent communication and real expertise.
           </motion.p>
 
-          <motion.div className="flex gap-4">
-            <motion.a
+          <div className="flex flex-col gap-6">
+            {/* Buttons Container */}
+            <motion.div className="flex gap-4">
+              <motion.a
+                variants={fadeUp}
+                href="#service"
+                whileHover={{ y: -2 }}
+                whileTap={{ y: 0 }}
+                className="px-6 py-3 rounded-lg bg-[#0078D6] text-white hover:bg-[#0063b4] font-medium transition"
+              >
+                Our Process
+              </motion.a>
+              <motion.a
+                variants={fadeUp}
+                href="#contact"
+                whileHover={{ y: -2 }}
+                whileTap={{ y: 0 }}
+                className="px-6 py-3 rounded-lg border border-[#B9BDC1]/60 text-[#0078D6] hover:bg-[#0078D6] hover:text-white font-medium transition"
+              >
+                Contact Us
+              </motion.a>
+            </motion.div>
+
+            {/* New Authorization Text */}
+            <motion.div
               variants={fadeUp}
-              href="#service"
-              whileHover={{ y: -2 }}
-              whileTap={{ y: 0 }}
-              className="px-6 py-3 rounded-lg bg-[#0078D6] text-white hover:bg-[#0063b4] font-medium transition"
+              className="flex items-center gap-2 text-[#0078D6]"
             >
-              Our Process
-            </motion.a>
-            <motion.a
-              variants={fadeUp}
-              href="#contact"
-              whileHover={{ y: -2 }}
-              whileTap={{ y: 0 }}
-              className="px-6 py-3 rounded-lg border border-[#B9BDC1]/60 text-[#0078D6] hover:bg-[#0078D6] hover:text-white font-medium transition"
-            >
-              Contact Us
-            </motion.a>
-          </motion.div>
+              <Award size={20} className="text-[#0078D6]" />
+              <span className="text-sm md:text-base font-semibold tracking-tight">
+                Mercedes Benz Authorised Independent Service Provider
+              </span>
+            </motion.div>
+          </div>
         </motion.div>
       </div>
 
@@ -168,14 +183,20 @@ export default function AboutSection() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.2 }}
-        className="mt-24 grid sm:grid-cols-2 md:grid-cols-4 gap-6 text-center max-w-6xl mx-auto"
+        className="mt-24 grid sm:grid-cols-2 gap-8 text-center max-w-5xl mx-auto"
       >
         {[
-          { to: 100, suffix: "%", label: "Client Satisfaction" },
-          { to: 55, suffix: "+", label: "Satisfied Clients" },
-          { to: 10, suffix: "+", label: "Years of Experience" },
-          { to: 80, suffix: "+", label: "Industry Recognition" },
-        ].map(({ to, suffix, label }, i) => (
+          {
+            title: "Mercedes-Benz Service A",
+            subtitle: "Minor Service",
+            price: "£249 + VAT",
+          },
+          {
+            title: "Mercedes-Benz Service B",
+            subtitle: "Major Service",
+            price: "£349 + VAT",
+          },
+        ].map(({ title, subtitle, price }, i) => (
           <motion.div
             key={i}
             variants={fadeUp}
@@ -191,15 +212,18 @@ export default function AboutSection() {
             }}
             transition={{
               duration: 0.45,
-              ease: [0.22, 1, 0.36, 1], // smooth curve
+              ease: [0.22, 1, 0.36, 1],
             }}
-            className="p-8 border border-[#B9BDC1]/60 rounded-2xl bg-[#F9F9F9]/50 cursor-pointer"
+            className="p-12 border border-[#B9BDC1]/60 rounded-2xl bg-[#F9F9F9]/50 cursor-pointer flex flex-col justify-center"
           >
-            <h3 className="text-4xl font-semibold text-[#0078D6] mb-1">
-              <AnimatedCounter to={to} suffix={suffix} />
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">
+              {title}
             </h3>
-            <p className="text-sm uppercase bg-clip-text text-transparent bg-linear-to-r from-[#0078D6] to-[#B9BDC1] tracking-wide">
-              {label}
+            <p className="text-lg font-medium text-[#0078D6] mb-4">
+              {subtitle}
+            </p>
+            <p className="text-3xl font-semibold text-gray-800">
+              From <span className="text-[#0078D6]">{price}</span>
             </p>
           </motion.div>
         ))}
