@@ -86,14 +86,17 @@ export default function WhyusSection() {
           transition={{ type: "spring", stiffness: 250 }}
           className="inline-flex items-center gap-2 mt-8 group bg-[#0078D6] text-white font-semibold px-7 py-3 rounded-full shadow-md hover:bg-[#0063b4] transition-all"
         >
-          <span className="relative h-5 overflow-hidden">
-            <span className="block transition-all duration-300 group-hover:-translate-y-6">
+          {/* Container: Ensure height matches your font size (h-6 is usually safer for 1rem text) */}
+          <span className="relative h-6 overflow-hidden flex flex-col">
+            <span className="inline-block transition-all duration-300 group-hover:-translate-y-full">
               Contact Us
             </span>
-            <span className="block translate-y-6 transition-all duration-300 group-hover:translate-y-0">
+            {/* This span sits directly under the first one */}
+            <span className="inline-block transition-all duration-300 group-hover:-translate-y-full">
               WhatsApp Us
             </span>
           </span>
+
           <img
             src="https://framerusercontent.com/images/KOh2aW7z2qWOewMCDslShqhIps.svg"
             alt="Arrow"
@@ -126,10 +129,9 @@ export default function WhyusSection() {
               transition={{ duration: 0.2 }}
               whileHover={{ y: -8, scale: 1.02 }}
               className={`rounded-2xl p-6 border cursor-pointer transition-all duration-300
-                ${
-                  isGray
-                    ? "bg-[#e5e9ee] border-[#B9BDC1]"
-                    : "bg-white border-[#B9BDC1]/60"
+                ${isGray
+                  ? "bg-[#e5e9ee] border-[#B9BDC1]"
+                  : "bg-white border-[#B9BDC1]/60"
                 }
               `}
             >
