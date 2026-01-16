@@ -13,7 +13,7 @@ const HeroSection = () => {
     <div className="relative w-full min-h-screen overflow-hidden" id="hero">
       {/* Background Video */}
       <video
-        src="/bg-video.mp4"
+        src="/newhero.mp4"
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
         autoPlay
         muted
