@@ -8,6 +8,7 @@ import {
 } from "framer-motion";
 import { Award } from "lucide-react"; // or use a simple SVG
 import { FaXTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa6";
+import { FaPhoneAlt } from "react-icons/fa";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -98,23 +99,30 @@ export default function AboutSection() {
               </p>
             </div>
             {/* Social Icons */}
+            {/* Social Icons */}
             <div className="flex gap-3 mt-4">
               {[
-                { Icon: FaXTwitter, href: "https://x.com/" },
-                { Icon: FaLinkedinIn, href: "https://www.linkedin.com/" },
-                { Icon: FaInstagram, href: "https://instagram.com" },
-              ].map(({ Icon, href }, i) => (
+              
+                { Icon: FaInstagram, href: "https://instagram.com", external: true },
+                {
+                  Icon: FaPhoneAlt,
+                  href: "tel:+447491016816", // ✅ replace with real phone number
+                  external: false,
+                },
+              ].map(({ Icon, href, external }, i) => (
                 <a
                   key={i}
                   href={href}
-                  target="_blank"
-                  rel="noreferrer"
+                  target={external ? "_blank" : undefined}
+                  rel={external ? "noreferrer" : undefined}
                   className="p-2 rounded-lg border border-[#B9BDC1]/40 hover:bg-[#0078D6]/10 transition"
+                  aria-label="Call us"
                 >
                   <Icon className="text-[#0078D6]" />
                 </a>
               ))}
             </div>
+
           </div>
         </motion.div>
 
@@ -132,32 +140,32 @@ export default function AboutSection() {
           </motion.p>
 
           <motion.h2
-  variants={fadeUp}
-  className="text-3xl md:text-4xl font-bold leading-tight bg-clip-text text-transparent bg-linear-to-r from-[#0078D6] to-[#B9BDC1] mb-6"
->
-  Mercedes-Benz Specialists in Cambridge – Dealer-Level Diagnostics with Personal Service
-</motion.h2>
+            variants={fadeUp}
+            className="text-3xl md:text-4xl font-bold leading-tight bg-clip-text text-transparent bg-linear-to-r from-[#0078D6] to-[#B9BDC1] mb-6"
+          >
+            Mercedes-Benz Specialists in Cambridge – Dealer-Level Diagnostics with Personal Service
+          </motion.h2>
 
-<motion.p
-  variants={fadeUp}
-  className="text-[#444444] leading-relaxed mb-6"
->
-  JW Cambridge is an independent Mercedes-Benz specialist based in Cambridge, run by an officially trained and qualified Mercedes-Benz technician. We use genuine Mercedes licences, the authorised Mercedes Xentry Diagnostic system, and have full access to the Mercedes Digital Service Book (DSB), allowing us to carry out manufacturer-level Mercedes servicing, diagnostics, and repairs.
-</motion.p>
+          <motion.p
+            variants={fadeUp}
+            className="text-[#444444] leading-relaxed mb-6"
+          >
+            JW Cambridge is an independent Mercedes-Benz specialist based in Cambridge, run by an officially trained and qualified Mercedes-Benz technician. We use genuine Mercedes licences, the authorised Mercedes Xentry Diagnostic system, and have full access to the Mercedes Digital Service Book (DSB), allowing us to carry out manufacturer-level Mercedes servicing, diagnostics, and repairs.
+          </motion.p>
 
-<motion.p
-  variants={fadeUp}
-  className="text-[#444444] leading-relaxed mb-6"
->
-  We specialise in Mercedes-Benz vehicles of all models and ages, offering expert Mercedes servicing in Cambridge, advanced Mercedes diagnostics, electrical fault finding, and specialist Mercedes repairs. From routine Mercedes maintenance and A & B servicing to complex warning lights, ECU faults, and drivability issues, your car is worked on using the same systems as a main dealer – without the dealership experience.
-</motion.p>
+          <motion.p
+            variants={fadeUp}
+            className="text-[#444444] leading-relaxed mb-6"
+          >
+            We specialise in Mercedes-Benz vehicles of all models and ages, offering expert Mercedes servicing in Cambridge, advanced Mercedes diagnostics, electrical fault finding, and specialist Mercedes repairs. From routine Mercedes maintenance and A & B servicing to complex warning lights, ECU faults, and drivability issues, your car is worked on using the same systems as a main dealer – without the dealership experience.
+          </motion.p>
 
-<motion.p
-  variants={fadeUp}
-  className="text-[#444444] leading-relaxed mb-10"
->
+          <motion.p
+            variants={fadeUp}
+            className="text-[#444444] leading-relaxed mb-10"
+          >
 
-</motion.p>
+          </motion.p>
 
           <div className="flex flex-col gap-6">
             {/* Buttons Container */}
