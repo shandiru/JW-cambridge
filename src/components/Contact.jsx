@@ -20,7 +20,7 @@ export default function ContactSection() {
             </h2>
             <p className="text-[#555555] max-w-md leading-relaxed">
               No delays, no vague replies — we respond within 24 hours to
-              schedule your personalized discovery call.
+              schedule your personalised discovery call.
             </p>
           </div>
 
