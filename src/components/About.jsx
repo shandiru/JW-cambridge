@@ -156,7 +156,7 @@ export default function AboutSection() {
   variants={fadeUp}
   className="text-[#444444] leading-relaxed mb-10"
 >
-  Alongside our Mercedes-Benz expertise, we also...
+
 </motion.p>
 
           <div className="flex flex-col gap-6">

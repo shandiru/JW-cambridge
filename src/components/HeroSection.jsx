@@ -76,10 +76,13 @@ const HeroSection = () => {
       <section className="bg-[#FFFFFF] text-[#000000] shadow-lg py-10 -mt-12 w-[85%] px-6 md:px-12 lg:px-20 rounded-2xl max-w-5xl mx-auto z-30 relative border border-[#B9BDC1]/40">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl items-center">
           {[
-            { value: "3+", label: "Cities Covered" },
-            { value: "1000+", label: "Cars Helped" },
-            { value: "40+", label: "Mile Radius" },
-            { value: "5+", label: "Counties Covered" },
+          [
+              { value: "15+", label: "Years Mercedes Experience" },
+              { value: "2,000+", label: "Mercedes Vehicles Serviced" },
+              { value: "100%", label: "Mercedes-Focused Specialists" },
+              { value: "1", label: "Purpose-Built Mercedes Workshop" }
+            ]
+
           ].map((stat, idx) => (
             <div
               key={idx}

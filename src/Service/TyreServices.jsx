@@ -189,7 +189,7 @@ export default function NandJServices() {
               }}
             >
               <h3
-                className="font-semibold mb-1 text-base"
+                className="font-semibold mb-1 text-lg"
                 style={{
                   color:
                     activeService.key === s.key
