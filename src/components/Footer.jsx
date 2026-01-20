@@ -99,7 +99,7 @@ export default function Footer() {
                   href="mailto:info@jwcambridge.co.uk"
                   className="hover:text-[#0078D6] transition-colors duration-300 break-all"
                 >
-                  info@jwcambridge.co.uk
+                  Jacobnw@gmail.com 
                 </a>
               </li>
             </ul>

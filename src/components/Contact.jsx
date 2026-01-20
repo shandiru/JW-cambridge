@@ -44,7 +44,7 @@ export default function ContactSection() {
                   </div>
                   <h3 className="font-semibold text-[#000000]">Chat with us</h3>
                 </div>
-                <p className="text-[#555555] text-sm truncate">info@jwcambridge.co.uk</p>
+                <p className="text-[#555555] text-sm truncate">Jacobnw@gmail.com </p>
               </div>
             </div>
 

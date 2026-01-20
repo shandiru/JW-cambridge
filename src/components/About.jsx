@@ -74,11 +74,11 @@ export default function AboutSection() {
           viewport={{ once: true, amount: 0.4 }}
           className="relative bg-[#F9F9F9]/80 border border-[#B9BDC1]/60 rounded-2xl overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.1)]"
         >
-          <div className="relative w-full aspect-square">
+          <div className="relative w-full ">
             <img
-              src="https://framerusercontent.com/images/segnJi5cGsCMhvZ3MZQnn4lCk5w.png"
+              src="aboutimage.jpeg"
               alt="David Smith"
-              className="w-full h-full object-cover rounded-2xl"
+              className="w-full h-full  rounded-2xl"
             />
           </div>
 
