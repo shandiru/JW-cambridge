@@ -59,11 +59,9 @@ export default function FindUs() {
           className="mt-8 text-center"
         >
           <p className="text-[#555555] text-sm sm:text-base">
-            JW Cambridge — 52 Trumpington Street, Cambridge, United Kingdom
+            Unit 1, 2 Swanns Rd, Cambridge CB5 8JZ, United Kingdom
           </p>
-          <p className="text-[#0078D6] text-sm sm:text-base font-medium mt-1">
-            Open Monday – Saturday | 9:00 AM – 6:00 PM
-          </p>
+         
         </div>
       </div>
     </section>
