@@ -72,7 +72,7 @@ const Navbar = () => {
         {/* Right Side */}
         <div className="hidden lg:flex items-center space-x-6">
           <a
-            href="tel:01223311711"
+            href="tel:+447491016816"
             className="bg-[#0078D6] text-[#FFFFFF] rounded-lg px-5 py-2 text-sm font-semibold hover:bg-[#0063b4] transition-all duration-300"
           >
             CONTACT US
@@ -98,7 +98,7 @@ const Navbar = () => {
             </button>
           ))}
           <a
-            href="tel:01223311711"
+            href="tel:+447491016816"
             className="bg-[#0078D6] text-[#FFFFFF] rounded-lg px-5 py-2 text-sm font-semibold hover:bg-[#0063b4] transition-all duration-200"
           >
             CONTACT US
