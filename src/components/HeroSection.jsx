@@ -73,15 +73,15 @@ const HeroSection = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="bg-[#FFFFFF] text-[#000000] shadow-lg py-10 -mt-12 w-[85%] px-6 md:px-12 lg:px-20 rounded-2xl max-w-5xl mx-auto z-30 relative border border-[#B9BDC1]/40">
+      <section className="bg-[#FFFFFF] text-[#000000] shadow-lg py-8 -mt-12 w-[85%] px-6 md:px-12 lg:px-20 rounded-2xl max-w-5xl mx-auto z-30 relative border border-[#B9BDC1]/40">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl items-center">
           {[
-          [
+          
               { value: "15+", label: "Years Mercedes Experience" },
               { value: "2,000+", label: "Mercedes Vehicles Serviced" },
               { value: "100%", label: "Mercedes-Focused Specialists" },
-              { value: "1", label: "Purpose-Built Mercedes Workshop" }
-            ]
+              { value: "1", label: "Purpose-Built Mercedes Workshop" },
+            
 
           ].map((stat, idx) => (
             <div
@@ -90,7 +90,7 @@ const HeroSection = () => {
               data-aos="fade-up"
               data-aos-delay={idx * 100}
             >
-              <h3 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#0078D6]">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#0078D6]">
                 {stat.value}
               </h3>
               <p className="text-[#555555] uppercase tracking-wide text-sm">
