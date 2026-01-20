@@ -87,14 +87,14 @@ export default function AboutSection() {
             <div className="flex flex-col ">
               {/* Line 1: Text and Medal on the same line */}
               <div className="flex items-center gap-2">
-                <p className="text-sm font-medium bg-clip-text text-transparent bg-linear-to-r from-[#0078D6] to-[#B9BDC1]">
+                <p className="text-sm font-medium bg-clip-text text-black">
                   Offically Mercedes Trained & Qualified
                 </p>
                 <Award size={20} className="text-[#0078D6] shrink-0" />
               </div>
 
               {/* Line 2: The next line */}
-              <p className="text-sm font-medium bg-clip-text text-transparent bg-linear-to-r from-[#0078D6] to-[#B9BDC1]">
+              <p className="text-sm font-medium bg-clip-text text-black">
                 Mercedes Benz Technician Owner
               </p>
             </div>
