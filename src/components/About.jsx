@@ -31,21 +31,25 @@ export default function AboutSection() {
             "radial-gradient(closest-side, rgba(0,120,214,0.15), rgba(0,0,0,0))",
         }}
       />
-
+      <div className="flex justify-center items-center">
+        <p className="inline-block border  border-[#B9BDC1]/50 text-xs tracking-[4px] uppercase px-6 py-1 rounded-full text-[#0078D6] mb-6">
+          About
+        </p>
+      </div>
+      <motion.h2
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        className="text-xl md:text-2xl font-bold leading-tight text-center mb-5 bg-clip-text text-transparent bg-linear-to-r from-[#0078D6] to-[#B9BDC1]"
+      >
+        Mercedes-Benz Specialists in Cambridge – Dealer-Level Diagnostics with Personal Service
+      </motion.h2>
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-start">
-        
+
         {/* LEFT COLUMN: Heading + Original Profile Card */}
         <div className="flex flex-col gap-10">
           {/* Main Heading Moved to Left */}
-          <motion.h2
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            className="text-xl md:text-2xl font-bold leading-tight bg-clip-text text-transparent bg-linear-to-r from-[#0078D6] to-[#B9BDC1]"
-          >
-            Mercedes-Benz Specialists in Cambridge – Dealer-Level Diagnostics with Personal Service
-          </motion.h2>
 
           {/* LEFT: Profile Card (Original Design Restored) */}
           <motion.div
@@ -76,7 +80,7 @@ export default function AboutSection() {
                   Mercedes Benz Technician Owner
                 </p>
               </div>
-              
+
               <div className="flex gap-3 mt-4">
                 {[
                   { Icon: FaInstagram, href: "https://instagram.com", external: true },
@@ -107,19 +111,16 @@ export default function AboutSection() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.4 }}
-          className="md:pt-20"
         >
-          <p className="inline-block border border-[#B9BDC1]/50 text-xs tracking-[4px] uppercase px-6 py-1 rounded-full text-[#0078D6] mb-6">
-            About
-          </p>
+
 
           <motion.p
             variants={fadeUp}
             className="text-[#444444] leading-relaxed mb-6"
           >
-           JW Cambridge is an independent Mercedes-Benz specialist based in Cambridge, run by an officially trained and qualified Mercedes-Benz technician. We use genuine Mercedes licences, the authorised Mercedes Xentry Diagnostic system, and have full access to the Mercedes Digital Service Book (DSB), allowing us to carry out manufacturer-level Mercedes servicing, diagnostics, and repairs.
+            JW Cambridge is an independent Mercedes-Benz specialist based in Cambridge, run by an officially trained and qualified Mercedes-Benz technician. We use genuine Mercedes licences, the authorised Mercedes Xentry Diagnostic system, and have full access to the Mercedes Digital Service Book (DSB), allowing us to carry out manufacturer-level Mercedes servicing, diagnostics, and repairs.
           </motion.p>
-          
+
 
           <motion.p
             variants={fadeUp}

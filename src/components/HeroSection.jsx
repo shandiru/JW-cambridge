@@ -30,7 +30,7 @@ const HeroSection = () => {
           className="max-w-4xl w-full text-center space-y-6"
           data-aos="fade-up"
         >
-          <h1 className="text-xl md:text-3xl lg:text-5xl font-extrabold leading-tight tracking-tight text-white">
+          <h1 className="text-xl md:text-3xl lg:text-5xl mt-8 font-extrabold leading-tight tracking-tight text-white">
             Where Quality Meets the Open Road<br />
             <span className="bg-linear-to-r from-[#0078D6] to-[#B9BDC1] bg-clip-text text-transparent">
               Expert Mobile Mechanics - Mercedes Specialists
