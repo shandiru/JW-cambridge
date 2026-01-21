@@ -86,7 +86,7 @@ export default function ContactSection() {
                   </div>
                   <h3 className="font-semibold text-[#000000]">Chat with us</h3>
                 </div>
-                <p className="text-[#555555] text-sm truncate">Jacobnw@gmail.com </p>
+                <a href="mailto:info@jwcambridge.co.uk" className="text-[#555555] hover:text-gray-700 text-sm truncate">info@jwcambridge.co.uk </a>
               </div>
             </div>
 
@@ -99,7 +99,7 @@ export default function ContactSection() {
                   </div>
                   <h3 className="font-semibold text-[#000000]">Call Us</h3>
                 </div>
-                <p className="text-[#555555] text-sm">+44 74910 16816</p>
+                <a href="tel: +447491016816" className="text-[#555555] hover:text-gray-700 text-sm">+44 74910 16816</a>
               </div>
             </div>
 

@@ -15,7 +15,7 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-3">
-              <span className="text-2xl font-bold bg-gradient-to-r from-[#0078D6] to-[#B9BDC1] bg-clip-text text-transparent">
+              <span className="text-2xl font-bold bg-linear-to-r from-[#0078D6] to-[#B9BDC1] bg-clip-text text-transparent">
                 JW <span className="text-[#000000]">Cambridge</span>
               </span>
             </div>
@@ -99,7 +99,7 @@ export default function Footer() {
                   href="mailto:info@jwcambridge.co.uk"
                   className="hover:text-[#0078D6] transition-colors duration-300 break-all"
                 >
-                  Jacobnw@gmail.com 
+                  info@jwcambridge.co.uk 
                 </a>
               </li>
             </ul>
