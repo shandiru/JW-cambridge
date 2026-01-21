@@ -27,7 +27,7 @@ export default function WheelTyreHero() {
               color: "#FFFFFF",
             }}
           >
-            Professional Wheel Services
+            Mercedes specialist
           </span>
 
           {/* Heading */}
