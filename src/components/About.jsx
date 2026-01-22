@@ -80,23 +80,7 @@ export default function AboutSection() {
                 </div>
 
                 {/* Social Icons - Right Side (Same Line) */}
-                <div className="flex gap-2">
-                  {[
-                    { Icon: FaInstagram, href: "https://instagram.com", external: true },
-                    { Icon: FaPhoneAlt, href: "tel:+447491016816", external: false },
-                  ].map(({ Icon, href, external }, i) => (
-                    <a
-                      key={i}
-                      href={href}
-                      target={external ? "_blank" : undefined}
-                      rel={external ? "noreferrer" : undefined}
-                      className="p-2 rounded-lg border border-white/20 bg-white/10 hover:bg-[#0078D6] transition-colors"
-                      aria-label="Contact"
-                    >
-                      <Icon size={16} className="text-white" />
-                    </a>
-                  ))}
-                </div>
+                
               </div>
             </div>
           </motion.div>
