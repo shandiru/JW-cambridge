@@ -15,7 +15,7 @@ export default function WhyusSection() {
       id: 2,
       icon: <Zap className="w-6 h-6 text-white" />,
       title: "Fast, Reliable Support",
-      desc: "On-site servicing that eliminates garage visits and keeps your day running smoothly.",
+      desc: "Precision Mercedes-Benz servicing carried out in our fully equipped Cambridge workshop.",
     },
     {
       id: 3,
