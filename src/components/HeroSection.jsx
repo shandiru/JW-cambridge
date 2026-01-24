@@ -1,26 +1,23 @@
-import React, { useEffect } from "react";
-import { FiArrowRight, FiPlay } from "react-icons/fi";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React from "react";
 import { FiPhone } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 
 const HeroSection = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1200, once: true });
-  }, []);
 
   return (
     <div className="relative w-full min-h-screen overflow-hidden" id="hero">
       {/* Background Video */}
       <video
+        className="absolute inset-0 w-full h-full object-cover"
         src="/newhero.mp4"
-        className="absolute top-0 left-0 w-full h-full object-cover z-0"
         autoPlay
-        muted
         loop
+        muted
         playsInline
-      />
+        poster="/fall.png"
+        onError={(e) => (e.currentTarget.style.display = "none")}
+      >
+      </video>
 
       {/* Black Overlay */}
       <div className="absolute inset-0 bg-black/60 z-10"></div>
@@ -43,7 +40,7 @@ const HeroSection = () => {
 
           {/* Description - Better mobile readability */}
           <p className="text-[#CCCCCC] max-w-3xl mx-auto text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed px-2">
-           Located in the heart of Cambridge, JW Cambridge provides dealership-level expertise directly to you. With official licenced Genuine Dealership level equipment and being fully qualified Diagnostic technician trained by Mercedes-Benz themselves, we are the expert. From general servicing to full Mercedes diagnostics, our fully equipped workshop delivers precision repairs with the personal touch.
+            Wherever you are in Cambridge and the surrounding area, JW Cambridge delivers dealership-level expertise from our fully equipped workshop. From general servicing to full Mercedes diagnostics, our specialist technicians provide precision repairs using manufacturer-grade equipment—without the dealership hassle.
           </p>
 
           {/* CTA Buttons - Stack on mobile, side-by-side on larger screens */}

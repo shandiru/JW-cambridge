@@ -3,8 +3,6 @@ import { FiSend, FiPhone, FiClock } from "react-icons/fi";
 import emailjs from "@emailjs/browser";
 
 export default function ContactSection() {
-  const primary = "#B9BDC1"; // metallic tone
-  const accent = "#0078D6";  // brand blue
 
   const businessHours = [
     { day: "Mon - Thu", time: "9 AM – 5 PM" },

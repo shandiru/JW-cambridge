@@ -3,8 +3,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function AutoPlusTestimonial() {
-  const accent = "#0078D6"; // Brand blue accent
-  const primary = "#B9BDC1"; // Metallic grey
 
   const testimonials = [
     {

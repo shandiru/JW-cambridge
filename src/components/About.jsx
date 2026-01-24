@@ -1,8 +1,6 @@
-"use client";
 import React from "react";
 import { motion } from "framer-motion";
 import { Award } from "lucide-react";
-import { FaInstagram, FaPhoneAlt } from "react-icons/fa";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -57,6 +55,7 @@ export default function AboutSection() {
               <img
                 src="newabout.jpeg"
                 alt="Jake Williams"
+                loading="lazy"
                 className="w-full h-full object-cover rounded-2xl"
               />
             </div>
@@ -77,10 +76,7 @@ export default function AboutSection() {
                   <p className="text-xs md:text-sm font-medium text-[#0078D6]">
                     Mercedes Benz Technician Owner
                   </p>
-                </div>
-
-                {/* Social Icons - Right Side (Same Line) */}
-                
+                </div>                
               </div>
             </div>
           </motion.div>

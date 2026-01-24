@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus } from "lucide-react";
 
 export default function FAQSection() {
-  const primary = "#B9BDC1"; // metallic tone
-  const accent = "#0078D6"; // brand blue
 
  const faqs = [
   {

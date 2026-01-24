@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { motion } from "framer-motion";
 import { Wrench, Zap, Star, Link as LinkIcon } from "lucide-react";
