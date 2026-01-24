@@ -87,6 +87,7 @@ export default function GDPRConsent() {
           >
             <img
               src="/revisit.svg"
+              loading="lazy"
               className="w-6 h-6 invert opacity-80"
               alt="Cookie Preferences"
             />

@@ -99,7 +99,7 @@ export default function Footer() {
                   href="mailto:info@jwcambridge.co.uk"
                   className="hover:text-[#0078D6] transition-colors duration-300 break-all"
                 >
-                  info@jwcambridge.co.uk 
+                  info@jwcambridge.co.uk
                 </a>
               </li>
             </ul>
@@ -107,10 +107,10 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-[#B9BDC1]/30 mt-10 pt-8 text-center text-[#555555]">
-          <p>&copy; 2025 JW Cambridge. All rights reserved.</p>
-        </div>
 
+       <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+          <p>&copy; {new Date().getFullYear()} JW Cambridge. All rights reserved.</p>
+        </div>
         {/* Bottom Bar */}
         <div className="mt-3 flex flex-col sm:flex-row justify-center items-center gap-3 text-center font-medium text-[#555555]">
           {/* Terms & Privacy */}

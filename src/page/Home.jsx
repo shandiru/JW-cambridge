@@ -1,8 +1,6 @@
 import React from 'react'
-
 import HeroSection from '../components/HeroSection'
 import ServiceSection from '../components/Service'
-import GallerySection from "../components/GallerySection"
 import TestimonialsCarousel from '../components/Testimonials'
 import Faq from "../components/faq"
 import ContactSection from '../components/Contact'
@@ -19,7 +17,6 @@ const Home = () => {
             <AboutSection />
             <WhyusSection />
             <ServiceSection />
-            {/* <GallerySection /> */}
             <TestimonialsCarousel />
             <Faq />
             <ContactSection />

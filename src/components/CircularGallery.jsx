@@ -400,9 +400,6 @@ class App {
       { type: 'image', src: `https://picsum.photos/seed/4/800/600?grayscale`, text: 'Strawberries' }
     ];
 
-    // Normalize incoming items:
-    // - new shape: { type: 'image'|'video', src, text }
-    // - legacy: { image, text }
     const normalize = (it) => {
       if (it.type && it.src) return it;
       if (it.image) return { type: 'image', src: it.image, text: it.text };

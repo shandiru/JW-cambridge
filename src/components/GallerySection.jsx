@@ -1,23 +1,11 @@
-"use client";
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
-
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 export default function GallerySection() {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: false,
-      easing: "ease-out-cubic",
-    });
-  }, []);
 
   const galleryItems = [
     { src: "im.jpg" },
@@ -88,6 +76,7 @@ export default function GallerySection() {
               <div className="rounded-lg sm:rounded-xl overflow-hidden shadow-md border border-[#B9BDC1]/40 hover:scale-[1.02] sm:hover:scale-[1.03] transition-all duration-300 w-full max-w-[320px] sm:max-w-[340px] md:max-w-[360px] lg:max-w-[380px]">
                 <img
                   src={item.src}
+                  loading="lazy"
                   alt={`Gallery Image ${idx + 1}`}
                   className="w-full h-[180px] xs:h-[200px] sm:h-[220px] md:h-60 lg:h-[260px] xl:h-[280px] object-cover"
                 />

@@ -1,9 +1,6 @@
-"use client";
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 export default function AutoPlusTestimonial() {
   const accent = "#0078D6"; // Brand blue accent
@@ -53,10 +50,6 @@ export default function AutoPlusTestimonial() {
   const [typedText, setTypedText] = useState("");
   const [isTyping, setIsTyping] = useState(false);
 
-  useEffect(() => {
-    AOS.init({ duration: 1000, easing: "ease-in-out", once: false });
-  }, []);
-
   const next = () => {
     setDirection(1);
     setIndex((i) => (i + 1) % testimonials.length);
@@ -69,7 +62,7 @@ export default function AutoPlusTestimonial() {
 
   const t = testimonials[index];
 
-  // ✅ Typewriter effect
+  // Typewriter effect
   useEffect(() => {
     let i = 0;
     const text = String(t.text || "");
@@ -142,6 +135,7 @@ export default function AutoPlusTestimonial() {
                     <img
                       src={t.img}
                       alt={t.name}
+                      loading="lazy"
                       className="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover ring-2 ring-[#B9BDC1]/40"
                     />
                   </div>
@@ -158,9 +152,6 @@ export default function AutoPlusTestimonial() {
                 {/* Name + Role */}
                 <div className="mt-auto">
                   <p className="font-semibold text-[#0078D6]">{t.name}</p>
-                  {/* <p className="text-[#555555] text-sm sm:text-base">
-                    {t.role}
-                  </p> */}
                 </div>
 
                 {/* Counter */}

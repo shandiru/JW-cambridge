@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -29,6 +28,7 @@ const LogoStrip = ({ direction = "left" }) => {
           <img
             key={idx}
             src={logo}
+            loading="lazy"
             alt="brand logo"
             className="w-24 sm:w-28 md:w-32 lg:w-40 opacity-90"
           />
@@ -45,6 +45,7 @@ export default function LogoShowcase() {
       <motion.img
         src="/image.svg"
         alt="background pattern"
+        loading="lazy"
         className="absolute w-[300px] opacity-20 pointer-events-none"
         animate={{ rotate: [0, 360] }}
         transition={{ duration: 40, repeat: Infinity, ease: "linear" }}

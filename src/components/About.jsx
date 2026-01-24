@@ -1,10 +1,6 @@
-"use client";
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import {
   motion,
-  useMotionValue,
-  useTransform,
-  animate,
 } from "framer-motion";
 import { Award } from "lucide-react";
 import { FaInstagram, FaPhoneAlt } from "react-icons/fa";

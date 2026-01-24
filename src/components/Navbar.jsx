@@ -52,7 +52,7 @@ const Navbar = () => {
       <div className="flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center cursor-pointer" onClick={() => handleScroll({ id: "/" })}>
-          <img src="/logo.png" alt="Logo" className="h-12 w-auto object-contain" />
+          <img src="/logo.png" loading="lazy" alt="Logo" className="h-12 w-auto object-contain" />
         </div>
 
         {/* Desktop Menu */}

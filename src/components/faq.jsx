@@ -1,9 +1,6 @@
-"use client";
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus } from "lucide-react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 export default function FAQSection() {
   const primary = "#B9BDC1"; // metallic tone
@@ -42,14 +39,6 @@ export default function FAQSection() {
 
   const [openIndex, setOpenIndex] = useState(null);
   const toggle = (index) => setOpenIndex(openIndex === index ? null : index);
-
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      easing: "ease-in-out",
-      once: false,
-    });
-  }, []);
 
   return (
     <section

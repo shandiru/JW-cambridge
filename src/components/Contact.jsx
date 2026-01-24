@@ -1,4 +1,3 @@
-"use client";
 import React, { useState } from "react";
 import { FiSend, FiPhone, FiClock } from "react-icons/fi";
 import emailjs from "@emailjs/browser";

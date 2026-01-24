@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import {
   FaCarSide,
@@ -168,7 +167,7 @@ export default function JWCambridgeVehicleServices() {
                       style={{ color: palette.muted }}
                     >
                       <FaRegCheckCircle
-                        className="h-4 w-4 mr-2 flex-shrink-0"
+                        className="h-4 w-4 mr-2 shrink-0"
                         style={{ color: palette.checkIcon }}
                       />
                       {p}
