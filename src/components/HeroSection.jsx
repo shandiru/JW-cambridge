@@ -43,7 +43,7 @@ const HeroSection = () => {
 
           {/* Description - Better mobile readability */}
           <p className="text-[#CCCCCC] max-w-3xl mx-auto text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed px-2">
-            Wherever you are in Cambridge and the surrounding area, JW Cambridge delivers dealership-level expertise from our fully equipped workshop. From general servicing to full Mercedes diagnostics, our specialist technicians provide precision repairs using manufacturer-grade equipment—without the dealership hassle.
+           Located in the heart of Cambridge, JW Cambridge provides dealership-level expertise directly to you. With official licenced Genuine Dealership level equipment and being fully qualified Diagnostic technician trained by Mercedes-Benz themselves, we are the expert. From general servicing to full Mercedes diagnostics, our fully equipped workshop delivers precision repairs with the personal touch.
           </p>
 
           {/* CTA Buttons - Stack on mobile, side-by-side on larger screens */}
