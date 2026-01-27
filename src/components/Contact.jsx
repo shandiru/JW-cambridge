@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FiSend, FiPhone, FiClock } from "react-icons/fi";
-import emailjs from "@emailjs/browser";
+import { FaWhatsapp } from "react-icons/fa"; // Added for the button icon
 
 export default function ContactSection() {
 
@@ -17,8 +17,8 @@ export default function ContactSection() {
     message: "",
   });
 
-  const [statusMessage, setStatusMessage] = useState(""); // in-page message
-  const [statusType, setStatusType] = useState(""); // "success" or "error"
+  const [statusMessage, setStatusMessage] = useState("");
+  const [statusType, setStatusType] = useState("");
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -27,37 +27,33 @@ export default function ContactSection() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-    const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+    // WhatsApp Configuration
+    const phoneNumber = "447491016816";
+    const text = `*New Website Inquiry*\n\n*Name:* ${formData.name}\n*Email:* ${formData.email}\n*Phone:* ${formData.number}\n*Message:* ${formData.message}`;
+    const encodedText = encodeURIComponent(text);
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedText}`;
 
-    emailjs.send(serviceID, templateID, formData, publicKey)
-      .then((response) => {
-        setStatusMessage("Your message has been sent successfully!");
-        setStatusType("success");
-        setFormData({ name: "", email: "", number: "", message: "" });
+    try {
+      window.open(whatsappURL, "_blank");
+      setStatusMessage("Opening WhatsApp...");
+      setStatusType("success");
+      setFormData({ name: "", email: "", number: "", message: "" });
+    } catch (error) {
+      setStatusMessage("Failed to open WhatsApp. Please try again.");
+      setStatusType("error");
+    }
 
-        // Automatically hide the message after 5 seconds
-        setTimeout(() => {
-          setStatusMessage("");
-          setStatusType("");
-        }, 5000);
-      }, (error) => {
-        setStatusMessage("Failed to send message. Please try again.");
-        setStatusType("error");
-
-        setTimeout(() => {
-          setStatusMessage("");
-          setStatusType("");
-        }, 5000);
-      });
+    setTimeout(() => {
+      setStatusMessage("");
+      setStatusType("");
+    }, 5000);
   };
 
   return (
     <section id="contact" className="bg-[#FFFFFF] text-[#000000] px-6 md:px-12 lg:px-24 py-20 border-t border-[#B9BDC1]/40">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
 
-        {/* LEFT CONTENT */}
+        {/* LEFT CONTENT - UNTOUCHED */}
         <div className="space-y-8">
           <div>
             <p className="uppercase text-[#0078D6] text-sm tracking-widest mb-2">
@@ -72,9 +68,7 @@ export default function ContactSection() {
             </p>
           </div>
 
-          {/* CONTACT OPTIONS GRID */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
-            {/* CHAT BOX */}
             <div className="border border-[#B9BDC1]/40 rounded-2xl p-1 transition-all">
               <div className="h-full bg-linear-to-b from-[#F9FAFC] to-[#FFFFFF] border border-[#B9BDC1]/30 rounded-2xl p-5 hover:border-[#0078D6] hover:shadow-[0_0_20px_rgba(0,120,214,0.1)] transition-all">
                 <div className="flex items-center gap-3 mb-3">
@@ -87,7 +81,6 @@ export default function ContactSection() {
               </div>
             </div>
 
-            {/* CALL BOX */}
             <div className="border border-[#B9BDC1]/40 rounded-2xl p-1 transition-all">
               <div className="h-full bg-linear-to-b from-[#F9FAFC] to-[#FFFFFF] border border-[#B9BDC1]/30 rounded-2xl p-5 hover:border-[#0078D6] hover:shadow-[0_0_20px_rgba(0,120,214,0.1)] transition-all">
                 <div className="flex items-center gap-3 mb-3">
@@ -96,11 +89,10 @@ export default function ContactSection() {
                   </div>
                   <h3 className="font-semibold text-[#000000]">Call Us</h3>
                 </div>
-                <a href="tel: +447491016816" className="text-[#555555] hover:text-gray-700 text-sm">+44 74910 16816</a>
+                <a href="tel:012223311711" className="text-[#555555] hover:text-gray-700 text-sm">012 2233 11711</a>
               </div>
             </div>
 
-            {/* OPENING HOURS BOX */}
             <div className="sm:col-span-2 border border-[#B9BDC1]/40 rounded-2xl p-1 transition-all">
               <div className="bg-linear-to-b from-[#F9FAFC] to-[#FFFFFF] border border-[#B9BDC1]/30 rounded-2xl p-5 hover:border-[#0078D6] hover:shadow-[0_0_20px_rgba(0,120,214,0.1)] transition-all">
                 <div className="flex items-center gap-3 mb-4">
@@ -113,7 +105,7 @@ export default function ContactSection() {
                   {businessHours.map((item, idx) => (
                     <div key={idx} className="flex flex-col border-l border-[#B9BDC1]/30 pl-3">
                       <span className="text-[#888888] text-[10px] uppercase tracking-wider font-bold">{item.day}</span>
-                      <span className={`font-medium ${item.time === "Closed" ? "text-red-500/70" : "text-[#555555]"}`}>{item.time}</span>
+                      <span className={`font-medium ${item.time === "Closed" ? "text-[#B62025] dark:text-[#FF4B4B]" : "text-[#555555]"}`}>{item.time}</span>
                     </div>
                   ))}
                 </div>
@@ -122,12 +114,11 @@ export default function ContactSection() {
           </div>
         </div>
 
-        {/* RIGHT CONTACT FORM */}
-        <div className="border border-[#B9BDC1]/40 rounded-2xl p-2 shadow-[0_0_25px_rgba(0,0,0,0.05)] hover:shadow-[0_0_35px_rgba(0,120,214,0.15)] transition-all">
+        {/* RIGHT CONTACT FORM - WHATSAPP UPDATED */}
+        <div className="border border-[#B9BDC1]/40 rounded-2xl p-2 shadow-[0_0_25px_rgba(0,0,0,0.05)] hover:shadow-[0_0_35px_rgba(37,211,102,0.15)] transition-all">
           <div className="bg-linear-to-b from-[#F9FAFC] to-[#FFFFFF] border border-[#B9BDC1]/30 rounded-2xl p-8 transition-all">
             <form className="space-y-5" onSubmit={handleSubmit}>
 
-              {/* NAME */}
               <div>
                 <label className="block text-xs text-[#555555] mb-2 font-bold tracking-tight">NAME</label>
                 <input
@@ -137,11 +128,10 @@ export default function ContactSection() {
                   onChange={handleChange}
                   placeholder="Your name"
                   required
-                  className="w-full bg-transparent border border-[#B9BDC1]/40 rounded-lg px-4 py-3 text-sm text-[#000000] focus:outline-none focus:border-[#0078D6] transition"
+                  className="w-full bg-transparent border border-[#B9BDC1]/40 rounded-lg px-4 py-3 text-sm text-[#000000] focus:outline-none focus:border-[#25D366] transition"
                 />
               </div>
 
-              {/* EMAIL */}
               <div>
                 <label className="block text-xs text-[#555555] mb-2 font-bold tracking-tight">EMAIL</label>
                 <input
@@ -151,11 +141,10 @@ export default function ContactSection() {
                   onChange={handleChange}
                   placeholder="Enter your email"
                   required
-                  className="w-full bg-transparent border border-[#B9BDC1]/40 rounded-lg px-4 py-3 text-sm text-[#000000] focus:outline-none focus:border-[#0078D6] transition"
+                  className="w-full bg-transparent border border-[#B9BDC1]/40 rounded-lg px-4 py-3 text-sm text-[#000000] focus:outline-none focus:border-[#25D366] transition"
                 />
               </div>
 
-              {/* NUMBER */}
               <div>
                 <label className="block text-xs text-[#555555] mb-2 font-bold tracking-tight">NUMBER</label>
                 <input
@@ -165,11 +154,10 @@ export default function ContactSection() {
                   onChange={handleChange}
                   placeholder="Enter your number"
                   required
-                  className="w-full bg-transparent border border-[#B9BDC1]/40 rounded-lg px-4 py-3 text-sm text-[#000000] focus:outline-none focus:border-[#0078D6] transition"
+                  className="w-full bg-transparent border border-[#B9BDC1]/40 rounded-lg px-4 py-3 text-sm text-[#000000] focus:outline-none focus:border-[#25D366] transition"
                 />
               </div>
 
-              {/* MESSAGE */}
               <div>
                 <label className="block text-xs text-[#555555] mb-2 font-bold tracking-tight">MESSAGE</label>
                 <textarea
@@ -179,27 +167,26 @@ export default function ContactSection() {
                   placeholder="Enter your message"
                   rows="4"
                   required
-                  className="w-full bg-transparent border border-[#B9BDC1]/40 rounded-lg px-4 py-3 text-sm text-[#000000] focus:outline-none focus:border-[#0078D6] transition"
+                  className="w-full bg-transparent border border-[#B9BDC1]/40 rounded-lg px-4 py-3 text-sm text-[#000000] focus:outline-none focus:border-[#25D366] transition"
                 ></textarea>
               </div>
 
-              {/* STATUS MESSAGE */}
               {statusMessage && (
-                <p className={`text-sm font-medium ${statusType === "success" ? "text-green-600" : "text-red-600"} text-center`}>
+                <p className={`text-sm font-medium ${statusType === "success" ? "text-green-600" : "text-[#B62025] dark:text-[#FF4B4B]"} text-center`}>
                   {statusMessage}
                 </p>
               )}
 
-              {/* SUBMIT BUTTON */}
               <button
                 type="submit"
-                className="w-full bg-[#0078D6] hover:bg-[#0063b4] text-white py-3 rounded-lg transition text-sm font-medium shadow-[0_0_15px_rgba(0,120,214,0.25)] hover:shadow-[0_0_25px_rgba(0,120,214,0.4)]"
+                className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white py-3 rounded-lg transition text-sm font-medium shadow-[0_0_15px_rgba(37,211,102,0.25)] flex items-center justify-center gap-2"
               >
-                Send the Message
+                <FaWhatsapp size={18} />
+                Send via WhatsApp
               </button>
 
               <p className="text-[10px] text-center text-[#888888] leading-tight px-4">
-                By submitting this form, you agree to us processing your details to respond to your enquiry in line with our Privacy Policy.
+               By submitting this form, you agree to us processing your details to respond to your enquiry in line with our Privacy Policy.
               </p>
             </form>
           </div>

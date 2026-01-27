@@ -46,10 +46,10 @@ const HeroSection = () => {
           {/* CTA Buttons - Stack on mobile, side-by-side on larger screens */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-4 sm:pt-6 px-4">
             {/* Call Button (Red Solid) */}
-            <a href="tel:+447491016816" className="w-full sm:w-auto">
+            <a href="tel:012223311711" className="w-full sm:w-auto">
               <button className="flex items-center justify-center gap-2 bg-[#E32C2C] text-white px-6 sm:px-8 py-3 sm:py-2.5 rounded-lg font-semibold hover:bg-red-700 transition shadow-md w-full sm:w-auto text-base sm:text-lg">
                 <FiPhone className="text-lg sm:text-xl" />
-                <span>Call +44 7491 016816</span>
+                <span>Call 012 2233 11711</span>
               </button>
             </a>
 
