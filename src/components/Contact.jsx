@@ -89,7 +89,7 @@ export default function ContactSection() {
                   </div>
                   <h3 className="font-semibold text-[#000000]">Call Us</h3>
                 </div>
-                <a href="tel:012223311711" className="text-[#555555] hover:text-gray-700 text-sm">012 2233 11711</a>
+                <a href="tel:01223311711" className="text-[#555555] hover:text-gray-700 text-sm">01223 311 711</a>
               </div>
             </div>
 
