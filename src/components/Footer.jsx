@@ -20,9 +20,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-[#555555] mb-4 mt-3 leading-relaxed">
-              From oil changes to engine diagnostics, our fully equipped vans
-              ensure your vehicle runs smoothly — without the hassle of visiting
-              a workshop.
+              From oil changes to engine diagnostics, our fully equipped workshop ensure your vehicle runs smoothly — without the hassle of visiting a dealer.
             </p>
             <div className="flex space-x-4">
               <a
