@@ -105,7 +105,7 @@ export default function ContactSection() {
                   {businessHours.map((item, idx) => (
                     <div key={idx} className="flex flex-col border-l border-[#B9BDC1]/30 pl-3">
                       <span className="text-[#888888] text-[10px] uppercase tracking-wider font-bold">{item.day}</span>
-                      <span className={`font-medium ${item.time === "Closed" ? "text-[#B62025] dark:text-[#FF4B4B]" : "text-[#555555]"}`}>{item.time}</span>
+                      <span className={`font-medium ${item.time === "Closed" ? "text-[#B62025]" : "text-[#555555]"}`}>{item.time}</span>
                     </div>
                   ))}
                 </div>
@@ -172,7 +172,7 @@ export default function ContactSection() {
               </div>
 
               {statusMessage && (
-                <p className={`text-sm font-medium ${statusType === "success" ? "text-green-600" : "text-[#B62025] dark:text-[#FF4B4B]"} text-center`}>
+                <p className={`text-sm font-medium ${statusType === "success" ? "text-green-600" : "text-[#B62025]"} text-center`}>
                   {statusMessage}
                 </p>
               )}
