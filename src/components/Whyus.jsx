@@ -86,15 +86,25 @@ export default function WhyusSection() {
           className="inline-flex items-center gap-2 mt-8 group bg-[#0078D6] text-white font-semibold px-7 py-3 rounded-full shadow-md hover:bg-[#0063b4] transition-all"
         >
           {/* Container: Ensure height matches your font size (h-6 is usually safer for 1rem text) */}
-          <span className="relative h-6 overflow-hidden flex flex-col">
-            <span className="inline-block transition-all duration-300 group-hover:-translate-y-full">
-              Contact Us
+          <a
+            href="https://wa.me/447491016816"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center"
+          >
+            <span className="relative h-6 overflow-hidden flex flex-col">
+
+              <span className="inline-block transition-all duration-300 group-hover:-translate-y-full">
+                Contact Us
+              </span>
+
+              <span className="inline-block transition-all duration-300 group-hover:-translate-y-full">
+                WhatsApp Us
+              </span>
+
             </span>
-            {/* This span sits directly under the first one */}
-            <span className="inline-block transition-all duration-300 group-hover:-translate-y-full">
-              WhatsApp Us
-            </span>
-          </span>
+          </a>
+
 
           <img
             src="https://framerusercontent.com/images/KOh2aW7z2qWOewMCDslShqhIps.svg"

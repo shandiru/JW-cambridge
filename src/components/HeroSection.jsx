@@ -18,16 +18,16 @@ const HeroSection = () => {
     <section className="relative overflow-hidden bg-[#e5e9ee] pt-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-15">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          
+
           {/* LEFT CONTENT */}
-          <div className="space-y-6 text-left" data-aos="fade-right">
+          <div className="space-y-6 text-center lg:text-left" data-aos="fade-right">
             <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl lg:text-[2.75rem] xl:text-6xl font-black leading-tight text-gray-900 dark:text-neutral-100">
-                Crafting the Standard of 
-                
+              <h1 className="text-4xl md:text-5xl lg:text-[2.75rem] xl:text-6xl text-center lg:text-left font-black leading-tight text-gray-900 dark:text-neutral-100">
+                Crafting the Standard of
+
                 {/* MOBILE ONLY VIDEO - Appears right after the first line */}
                 <div className="block lg:hidden my-6 w-full overflow-hidden rounded-xl shadow-xl aspect-video relative border-2 border-gray-100">
-                   <video
+                  <video
                     src="/newhero.mp4"
                     autoPlay
                     muted
@@ -43,21 +43,21 @@ const HeroSection = () => {
                   Mercedes-Benz Luxury
                 </span>
               </h1>
-              
-              <p className="text-xl font-bold text-[#0078D6]">
+
+              <p className="text-xl text-center lg:text-left font-bold text-[#0078D6]">
                 Expert Mechanics — Mercedes Specialists
               </p>
             </div>
 
-            <p className="text-lg leading-relaxed text-gray-700 dark:text-neutral-300 max-w-lg">
-              Wherever you are in Cambridge and the surrounding area, JW Cambridge delivers 
-              dealership-level expertise from our fully equipped workshop. From general servicing 
-              to full diagnostics, our specialist technicians provide precision repairs using 
+            <p className="text-lg text-center lg:text-left leading-relaxed text-gray-700 dark:text-neutral-300">
+              Wherever you are in Cambridge and the surrounding area, JW Cambridge delivers
+              dealership-level expertise from our fully equipped workshop. From general servicing
+              to full diagnostics, our specialist technicians provide precision repairs using
               manufacturer-grade equipment—without the dealership hassle.
             </p>
 
             {/* BUTTONS */}
-            <div className="flex flex-col sm:flex-row gap-4" data-aos="fade-up">
+            <div className="flex justify-center lg:justify-start flex-col sm:flex-row gap-4" data-aos="fade-up">
               <a
                 href="tel:01223311711"
                 className="inline-flex items-center justify-center gap-2 text-sm bg-[#0dc94b] text-white shadow h-12 rounded-md px-8 font-semibold transition-all duration-300 hover:bg-green-700 hover:shadow-lg"
