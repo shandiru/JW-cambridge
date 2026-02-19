@@ -1,64 +1,53 @@
-import React from "react";
+"use client";
+
+import React, { useEffect } from "react";
 import { FiPhone } from "react-icons/fi";
-import { FaWhatsapp } from "react-icons/fa"; // Ensure correct import path for your icons
+import { FaWhatsapp } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const HeroSection = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
+
   return (
-    <section className="relative min-h-screen overflow-hidden" id="hero">
-      
-      {/* Background Container */}
-      <div className="absolute inset-0 z-0">
-        <video
-          className="absolute inset-0 w-full h-full object-cover"
-          autoPlay
-          loop
-          muted
-          playsInline
-          poster="/fall.png"
-          src="/newhero.mp4"
-        >
-          <source src="/newhero.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/60 z-10" />
-      </div>
+    <section className="relative overflow-hidden bg-white pt-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          
+          {/* LEFT CONTENT - Your Mercedes Content */}
+          <div className="space-y-6 text-left" data-aos="fade-right">
+            <div className="space-y-4">
+              <h1 className="text-4xl md:text-5xl lg:text-[2.75rem] xl:text-6xl font-black leading-tight text-gray-900 dark:text-neutral-100">
+                Crafting the Standard of 
+                <br />
+                <span className="bg-linear-to-r from-[#0078D6] to-[#B9BDC1] bg-clip-text text-transparent">
+                  Mercedes-Benz Luxury
+                </span>
+              </h1>
+              <p className="text-xl font-bold text-[#0078D6]">
+                Expert Mechanics — Mercedes Specialists
+              </p>
+            </div>
 
-      {/* Main Layout Wrapper */}
-      <div className="relative z-20 min-h-screen flex flex-col justify-center">
-        
-        {/* HERO CONTENT - Left Aligned Layout */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-24 sm:py-32 w-full">
-          <div className="max-w-4xl" data-aos="fade-up">
-            
-            {/* Heading with Responsive Scaling */}
-            <h1 className="text-[30px] sm:text-[36px] md:text-[44px] lg:text-[56px] xl:text-[68px] leading-[1.1] font-extrabold text-white mb-6">
-              Crafting the Standard of 
-              <br />
-              <span className="bg-linear-to-r from-[#0078D6] to-[#B9BDC1] bg-clip-text text-transparent">
-                Mercedes-Benz Luxury
-              </span>
-            </h1>
-
-            {/* Sub-heading */}
-            <h2 className="text-[18px] sm:text-[22px] md:text-[28px] lg:text-[32px] font-bold text-white mb-5 sm:mb-6">
-              Expert Mechanics & Mercedes Specialists
-            </h2>
-
-            {/* Description */}
-            <p className="text-gray-200 text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl mb-8 sm:mb-10">
-              Wherever you are in Cambridge, JW Cambridge delivers dealership-level expertise 
-              from our fully equipped workshop. From general servicing to full diagnostics, 
-              our technicians provide precision repairs using manufacturer-grade equipment.
+            <p className="text-lg leading-relaxed text-gray-700 dark:text-neutral-300 max-w-lg">
+              Wherever you are in Cambridge and the surrounding area, JW Cambridge delivers 
+              dealership-level expertise from our fully equipped workshop. From general servicing 
+              to full diagnostics, our specialist technicians provide precision repairs using 
+              manufacturer-grade equipment—without the dealership hassle.
             </p>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 sm:gap-4 md:gap-6">
+            {/* BUTTONS */}
+            <div className="flex flex-col sm:flex-row gap-4" data-aos="fade-up">
               <a
                 href="tel:01223311711"
-                className="bg-[#E32C2C] hover:bg-white hover:text-black text-white font-bold px-8 sm:px-10 py-3.5 sm:py-4 rounded-full transition-all duration-300 flex items-center justify-center gap-2 uppercase tracking-wider text-xs sm:text-sm text-center"
+                className="inline-flex items-center justify-center gap-2 text-sm bg-[#E32C2C] text-white shadow h-12 rounded-md px-8 font-semibold transition-all duration-300 hover:bg-red-700 hover:shadow-lg"
               >
-                <FiPhone className="text-lg" />
+                <FiPhone className="h-5 w-5" />
                 Call 01223 311 711
               </a>
 
@@ -66,43 +55,44 @@ const HeroSection = () => {
                 href="https://wa.me/447491016816"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-transparent border-2 border-[#0078D6] text-white hover:bg-[#0078D6] font-bold px-8 sm:px-10 py-3.5 sm:py-4 rounded-full transition-all duration-300 flex items-center justify-center gap-2 uppercase tracking-wider text-xs sm:text-sm text-center"
+                className="inline-flex items-center justify-center gap-2 text-sm border-2 border-[#0078D6] text-[#0078D6] dark:text-white h-12 rounded-md px-8 font-semibold transition-all duration-300 hover:bg-[#0078D6] hover:text-white"
               >
-                <FaWhatsapp className="text-lg" />
+                <FaWhatsapp className="h-5 w-5" />
                 Message on WhatsApp
               </a>
             </div>
-          </div>
-        </div>
 
-        {/* STATS SECTION - Positioned at the bottom of the hero area */}
-        <div className="w-full px-4 pb-12">
-          <div className="bg-white/95 backdrop-blur-sm text-black shadow-2xl py-8 px-6 rounded-2xl max-w-6xl mx-auto border border-gray-200">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-              {[
-                { value: "15+", label: "Years Mercedes Experience" },
-                { value: "2,000+", label: "Vehicles Serviced" },
-                { value: "100%", label: "Mercedes Specialists" },
-                { value: "1", label: "Purpose-Built Workshop" },
-              ].map((stat, idx) => (
-                <div
-                  key={idx}
-                  className="text-center"
-                  data-aos="fade-up"
-                  data-aos-delay={idx * 100}
-                >
-                  <h3 className="text-xl sm:text-3xl font-bold text-[#0078D6] mb-1">
-                    {stat.value}
-                  </h3>
-                  <p className="text-gray-600 uppercase tracking-wide text-[10px] sm:text-xs font-semibold leading-tight">
-                    {stat.label}
-                  </p>
-                </div>
-              ))}
+            {/* QUICK STATS (Integrated like the reference location info) */}
+            <div className="grid grid-cols-2 gap-6 pt-8 border-t border-gray-100 dark:border-neutral-800">
+              <div>
+                <p className="text-2xl font-black text-[#0078D6]">15+</p>
+                <p className="text-xs uppercase tracking-widest text-gray-500 font-bold">Years Experience</p>
+              </div>
+              <div>
+                <p className="text-2xl font-black text-[#0078D6]">2,000+</p>
+                <p className="text-xs uppercase tracking-widest text-gray-500 font-bold">Vehicles Serviced</p>
+              </div>
             </div>
           </div>
-        </div>
 
+          {/* RIGHT VIDEO - The Card Style from the reference */}
+          <div className="relative w-full" data-aos="fade-left">
+            <div className="aspect-video sm:aspect-4/3 w-full relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-neutral-900">
+              <video
+                src="/newhero.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                poster="/fall.png"
+                className="object-cover absolute inset-0 h-full w-full"
+              />
+              {/* Optional Blue tint overlay to match Mercedes Branding */}
+              <div className="absolute inset-0 bg-[#0078D6]/10 pointer-events-none"></div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
   );
