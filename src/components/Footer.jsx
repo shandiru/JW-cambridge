@@ -53,7 +53,7 @@ export default function Footer() {
               ].map((service, index) => (
                 <li key={index}>
                   <a
-                    href="#services"
+                    href="/service"
                     className="hover:text-[#0078D6] transition-colors duration-300"
                   >
                     {service}
