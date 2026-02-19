@@ -52,11 +52,11 @@ const Navbar = () => {
       <div className="flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center cursor-pointer" onClick={() => handleScroll({ id: "/" })}>
-          <img src="/logo.png" loading="lazy" alt="Logo" className="h-12 w-auto object-contain" />
+          <img src="/logo.png" loading="lazy" alt="Logo" className="h-8 w-auto object-contain" />
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex items-center space-x-8">
+        <div className="hidden xl:flex items-center space-x-8">
           {navItems.map((item, idx) => (
             <button
               key={idx}
@@ -70,7 +70,7 @@ const Navbar = () => {
         </div>
 
         {/* Right Side */}
-        <div className="hidden lg:flex items-center space-x-6">
+        <div className="hidden xl:flex items-center space-x-6">
           <a
             href="tel:+447491016816"
             className="bg-[#0078D6] text-[#FFFFFF] rounded-lg px-5 py-2 text-sm font-semibold hover:bg-[#0063b4] transition-all duration-300"
@@ -80,14 +80,14 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <button className="lg:hidden text-[#0078D6]" onClick={() => setIsOpen(!isOpen)}>
+        <button className="xl:hidden text-[#0078D6]" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X size={26} className="hover:text-[#005fa3] transition-all" /> : <Menu size={26} className="hover:text-[#005fa3] transition-all" />}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden flex flex-col items-center bg-[#FFFFFF] border-t border-[#B9BDC1] pb-4 space-y-4 mt-3 rounded-b-lg shadow-[0_8px_20px_rgba(0,0,0,0.05)]">
+        <div className="xl:hidden flex flex-col items-center bg-[#FFFFFF] border-t border-[#B9BDC1] pb-4 space-y-4 mt-3 rounded-b-lg shadow-[0_8px_20px_rgba(0,0,0,0.05)]">
           {navItems.map((item, idx) => (
             <button
               key={idx}
