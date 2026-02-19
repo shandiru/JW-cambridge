@@ -11,6 +11,7 @@ import GDPRConsent from "./components/GDPRButton";
 import ScrollToTop from "./components/ScrollToTop";
 import Home from "./page/Home";
 import Service from "./page/Service";
+import ScrollToHash from "./components/ScrollToHash";
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
+      <ScrollToHash />
       <Navbar />
 
       <Routes>

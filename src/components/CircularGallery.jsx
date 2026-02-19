@@ -20,7 +20,7 @@ function autoBind(instance) {
   });
 }
 
-function createTextTexture(gl, text, font = 'bold 30px monospace', color = 'black') {
+function createTextTexture(gl, text, font = 'bold 30px', color = 'black') {
   const canvas = document.createElement('canvas');
   const context = canvas.getContext('2d');
   context.font = font;
@@ -46,7 +46,7 @@ function createTextTexture(gl, text, font = 'bold 30px monospace', color = 'blac
 
 /* ---------- Title (caption) ---------- */
 class Title {
-  constructor({ gl, plane, renderer, text, textColor = '#545050', font = '30px sans-serif' }) {
+  constructor({ gl, plane, renderer, text, textColor = '#545050', font = '30px' }) {
     autoBind(this);
     this.gl = gl;
     this.plane = plane;
@@ -248,7 +248,7 @@ class Media {
       renderer: this.renderer,
       text: this.text,
       textColor: this.textColor,
-      font: this.font // <-- FIX: pass as `font` (was `fontFamily`)
+      font: this.font 
     });
   }
 
@@ -344,7 +344,7 @@ class App {
       bend,
       textColor = '#ffffff',
       borderRadius = 0,
-      font = 'bold 30px Figtree',
+      font = 'bold 30px',
       scrollSpeed = 2,
       scrollEase = 0.05
     } = {}
@@ -536,7 +536,7 @@ export default function CircularGallery({
   bend = 3,
   textColor = '#ffffff',
   borderRadius = 0.05,
-  font = 'bold 30px Figtree',
+  font = 'bold 30px',
   scrollSpeed = 2,
   scrollEase = 0.05
 }) {

@@ -8,8 +8,8 @@ const Navbar = () => {
     { name: "HOME", id: "/" },
     { name: "ABOUT US", id: "about" },
     { name: "SERVICE", id: "/service", isExternal: true }, // Changed to path
-    { name: "TESTIMONIAL", id: "review" },
     { name: "GALLERY", id: "gallery" },
+    { name: "TESTIMONIAL", id: "review" },
     { name: "CONTACT", id: "contact" },
     { name: "FAQ", id: "faq" },
   ];

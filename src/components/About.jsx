@@ -11,7 +11,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="relative min-h-screen bg-[#FFFFFF] text-[#000000] py-24 px-6 md:px-12 lg:px-24 font-[Inter] overflow-hidden"
+      className="relative min-h-screen bg-[#FFFFFF] text-[#000000] py-24 px-6 md:px-12 lg:px-24 overflow-hidden"
     >
       {/* Subtle glow background */}
       <motion.div

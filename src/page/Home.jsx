@@ -7,21 +7,21 @@ import ContactSection from '../components/Contact'
 import FindUs from '../components/Findus'
 import AboutSection from '../components/About'
 import WhyusSection from '../components/Whyus'
+import GallerySection from '../components/GallerySection'
 
 
 const Home = () => {
     return (
-        <div>
-           
+        <div>       
             <HeroSection />
             <AboutSection />
             <WhyusSection />
             <ServiceSection />
+            <GallerySection />
             <TestimonialsCarousel />
             <Faq />
             <ContactSection />
-            <FindUs />
-           
+            <FindUs />          
         </div>
     )
 }

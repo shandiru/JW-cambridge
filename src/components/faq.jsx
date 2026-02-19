@@ -41,7 +41,7 @@ export default function FAQSection() {
   return (
     <section
       id="faq"
-      className="bg-[#e5e9ee] text-[#000000] font-inter py-16 sm:py-20 md:py-24 px-4 sm:px-8 border-t border-[#B9BDC1]/40"
+      className="bg-[#e5e9ee] text-[#000000] py-16 sm:py-20 md:py-24 px-4 sm:px-8 border-t border-[#B9BDC1]/40"
     >
       <div
         data-aos="fade-up"

@@ -51,7 +51,7 @@ const ServiceSection = () => {
   return (
     <section
       id="service"
-      className="relative bg-[#FFFFFF] py-20 px-6 md:px-12 font-['Poppins'] text-[#000000] border-t border-[#B9BDC1]/40"
+      className="relative bg-[#FFFFFF] py-20 px-6 md:px-12 text-[#000000] border-t border-[#B9BDC1]/40"
     >
       {/*  Blue Metallic Glow */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
