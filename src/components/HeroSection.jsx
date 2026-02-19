@@ -22,7 +22,7 @@ const HeroSection = () => {
           {/* LEFT CONTENT */}
           <div className="space-y-6 text-center lg:text-left" data-aos="fade-right">
             <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl lg:text-[2.75rem] xl:text-6xl text-center lg:text-left font-black leading-tight text-gray-900 dark:text-neutral-100">
+              <h1 className="text-4xl md:text-5xl lg:text-[2.75rem] xl:text-6xl text-center lg:text-left font-black leading-tight bg-linear-to-r from-[#0078D6] to-[#B9BDC1] bg-clip-text text-transparent">
                 Crafting the Standard of
 
                 {/* MOBILE ONLY VIDEO - Appears right after the first line */}
@@ -44,12 +44,12 @@ const HeroSection = () => {
                 </span>
               </h1>
 
-              <p className="text-xl text-center lg:text-left font-bold text-[#0078D6]">
+              <p className="text-xl text-center lg:text-left font-bold bg-linear-to-r from-[#0078D6] to-[#B9BDC1] bg-clip-text text-transparent">
                 Expert Mechanics — Mercedes Specialists
               </p>
             </div>
 
-            <p className="text-lg text-center lg:text-left leading-relaxed text-gray-700 dark:text-neutral-300">
+            <p className="text-lg text-center lg:text-left leading-relaxed text-gray-700 ">
               Wherever you are in Cambridge and the surrounding area, JW Cambridge delivers
               dealership-level expertise from our fully equipped workshop. From general servicing
               to full diagnostics, our specialist technicians provide precision repairs using
@@ -70,7 +70,7 @@ const HeroSection = () => {
                 href="https://wa.me/447491016816"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 text-sm border-2 border-[#0078D6] text-[#0078D6] dark:text-white h-12 rounded-md px-8 font-semibold transition-all duration-300 hover:bg-[#0078D6] hover:text-white"
+                className="inline-flex items-center justify-center gap-2 text-sm border-2 border-[#0078D6] text-[#0078D6]  h-12 rounded-md px-8 font-semibold transition-all duration-300 hover:bg-[#0078D6] hover:text-white"
               >
                 <FaWhatsapp className="h-5 w-5" />
                 Message on WhatsApp
@@ -78,7 +78,7 @@ const HeroSection = () => {
             </div>
 
             {/* QUICK STATS */}
-            <div className="grid grid-cols-2 gap-6 pt-8 border-t border-gray-100 dark:border-neutral-800">
+            <div className="grid grid-cols-2 gap-6 pt-8 border-t border-gray-100 ">
               <div>
                 <p className="text-2xl font-black text-[#0078D6]">15+</p>
                 <p className="text-xs uppercase tracking-widest text-gray-500 font-bold">Years Experience</p>
@@ -92,7 +92,7 @@ const HeroSection = () => {
 
           {/* DESKTOP VIDEO - Hidden on mobile screens */}
           <div className="hidden lg:block relative w-full" data-aos="fade-left">
-            <div className="aspect-video sm:aspect-4/3 w-full relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-neutral-900">
+            <div className="aspect-video sm:aspect-4/3 w-full relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white ">
               <video
                 src="/newhero.mp4"
                 autoPlay
