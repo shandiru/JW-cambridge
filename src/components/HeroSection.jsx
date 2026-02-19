@@ -32,6 +32,7 @@ const HeroSection = () => {
                     autoPlay
                     muted
                     loop
+                    poster="/fall.png"
                     playsInline
                     className="object-cover absolute inset-0 h-full w-full"
                   />
