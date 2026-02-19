@@ -15,7 +15,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-white pt-10">
+    <section className="relative overflow-hidden bg-[#e5e9ee] pt-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-15">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           
@@ -59,7 +59,7 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4" data-aos="fade-up">
               <a
                 href="tel:01223311711"
-                className="inline-flex items-center justify-center gap-2 text-sm bg-[#E32C2C] text-white shadow h-12 rounded-md px-8 font-semibold transition-all duration-300 hover:bg-red-700 hover:shadow-lg"
+                className="inline-flex items-center justify-center gap-2 text-sm bg-[#0dc94b] text-white shadow h-12 rounded-md px-8 font-semibold transition-all duration-300 hover:bg-green-700 hover:shadow-lg"
               >
                 <FiPhone className="h-5 w-5" />
                 Call 01223 311 711
