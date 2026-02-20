@@ -53,7 +53,7 @@ export default function AboutSection() {
           >
             <div className="relative w-full">
               <img
-                src="newabout.jpeg"
+                src="newabout1.jpeg"
                 alt="Jake Williams"
                 loading="lazy"
                 className="w-full h-full object-cover rounded-2xl"
