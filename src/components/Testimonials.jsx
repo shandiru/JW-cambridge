@@ -6,10 +6,28 @@ export default function AutoPlusTestimonial() {
 
   const testimonials = [
     {
+      name: "Alex Howlett",
+      role: "Customer from Nottingham",
+      text: "Absolute legend, car broke down today, he saw me immediately and did me a massive favour by charging me very little as it didn’t take him long to fix and he gave me plenty of extra and useful advice on top . Definitely a very new experience for me with garage , so highly recommend",
+      img: "m.png",
+    },
+    {
+      name: "stephen holliday",
+      role: "Customer from Nottingham",
+      text: "Jake very knowledgeable and helpful chap would highly recommend these guys Genuine people",
+      img: "s.png",
+    },
+    {
       name: "Mason Wright",
       role: "Customer from Nottingham",
       text: "Exceptional and speedy service with honest prices, would absolutely recommend.",
-      img: "m.png",
+      img: "m1.png",
+    },
+    {
+      name: "Graham Wesson",
+      role: "Customer from Nottingham",
+      text: "Using JW Cambridge for my car MOT and Service. Very knowledgeable and approachable. Will continue to use them.",
+      img: "g.png",
     },
     {
       name: "Simon Andreou",
@@ -18,28 +36,10 @@ export default function AutoPlusTestimonial() {
       img: "s.png",
     },
     {
-      name: "Hannah S.",
-      role: "Customer from Nottingham",
-      text: "Fantastic trustworthy angels run this place. Have used them for years and they have never let me down. Best on service, price, and advice.",
-      img: "im.png",
-    },
-    {
       name: "Ibbie Hart",
       role: "Customer from Nottingham",
-      text: "Honourable garage. Kind and friendly, quick service. As a woman on her own I always feel safe here. Genuine, honest, and dependable.",
+      text: "Honourable garage . Kind and friendly, quick service . As a woman on her own I always feel safe at Montbretia Motors . At my old garage I went to years ago, I felt they were ripping me off . But never felt that here. The opposite ! Thanks so much.",
       img: "i.png",
-    },
-    {
-      name: "Oliver S.",
-      role: "Customer from Nottingham",
-      text: "Another garage told me I needed new pads and discs. Took it here, and they said I still had 20K miles left — even showed me the brakes. Honest team.",
-      img: "im2.png",
-    },
-    {
-      name: "Sarah Thackray",
-      role: "Customer from Nottingham",
-      text: "Knows his stuff and will do his best for you at a very reasonable price.",
-      img: "s.png",
     },
   ];
 
