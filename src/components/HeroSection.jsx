@@ -39,7 +39,7 @@ const HeroSection = () => {
                 </div>
 
                 <br className="hidden lg:block" />
-                <span className="bg-linear-to-r from-[#0078D6] to-[#B9BDC1] bg-clip-text text-transparent">
+                <span className="text-[#0078D6]">
                   Mercedes-Benz Luxury
                 </span>
               </h1>

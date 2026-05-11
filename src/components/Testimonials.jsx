@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function AutoPlusTestimonial() {
-
   const testimonials = [
     {
       name: "Alex Howlett",
@@ -60,16 +59,17 @@ export default function AutoPlusTestimonial() {
 
   const t = testimonials[index];
 
-  // Typewriter effect
+  // Typewriter effect - Corrected wording logic
   useEffect(() => {
     let i = 0;
     const text = String(t.text || "");
-    setTypedText("");
+    setTypedText(""); // Clear previous text immediately on slide change
     setIsTyping(true);
 
     const interval = setInterval(() => {
       if (i < text.length) {
-        setTypedText((prev) => prev + text[i-1]);
+        // Use slice to ensure we get the string up to the current character
+        setTypedText(text.slice(0, i + 1));
         i++;
       } else {
         clearInterval(interval);
@@ -106,7 +106,7 @@ export default function AutoPlusTestimonial() {
           </h2>
 
           <p className="text-[#555555] text-sm sm:text-base mt-3 max-w-2xl mx-auto">
-           Genuine feedback from Mercedes owners across Cambridge who trust us for expert diagnostics, precision maintenance, and dealer-level service excellence.
+            Genuine feedback from Mercedes owners across Cambridge who trust us for expert diagnostics, precision maintenance, and dealer-level service excellence.
           </p>
         </div>
 
