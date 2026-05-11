@@ -6,7 +6,6 @@ import TyreServices from "../Service/TyreServices";
 export default function Service() {
   return (
     <div>
-      {/* Hero */}
       <section >
         <WheelTyreHero />
       </section>
@@ -16,19 +15,6 @@ export default function Service() {
       <section >
         <TyreServices />
       </section>
-      <section >
-
-      </section>
-
-      <section >
-        {/* <EmergencyCTA /> */}
-      </section>
-
-
-
-
-
-
     </div>
   );
 }

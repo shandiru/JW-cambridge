@@ -100,7 +100,7 @@ export default function AutoPlusTestimonial() {
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-snug text-[#000000]">
             What Our{" "}
-            <span className="bg-linear-to-r from-[#0078D6] to-[#B9BDC1] bg-clip-text text-transparent">
+            <span className="text-[#0078D6]">
               Customers Say
             </span>
           </h2>

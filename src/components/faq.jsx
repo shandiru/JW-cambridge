@@ -61,7 +61,7 @@ export default function FAQSection() {
             className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight leading-snug sm:leading-tight md:leading-[1.2] text-[#000000]"
           >
             Mercedes Specialist{" "}
-            <span className="bg-linear-to-r from-[#0078D6] to-[#B9BDC1] bg-clip-text text-transparent block sm:inline">
+            <span className="text-[#0078D6] block sm:inline">
                FAQs
             </span>
           </h2>

@@ -32,7 +32,7 @@ export default function GallerySection() {
         data-aos="fade-up"
       >
         <h2
-          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight bg-linear-to-r from-[#0078D6] via-[#B9BDC1] to-[#0078D6] bg-clip-text text-transparent"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight text-[#0078D6]"
           data-aos-delay="200"
         >
           Our Gallery

@@ -36,7 +36,7 @@ export default function AboutSection() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="text-xl md:text-2xl font-bold leading-tight text-center mb-5 bg-clip-text text-transparent bg-linear-to-r from-[#0078D6] to-[#B9BDC1]"
+        className="text-xl md:text-2xl font-bold leading-tight text-center mb-5 text-[#0078D6]"
       >
         Mercedes-Benz Specialists in Cambridge – Dealer-Level Diagnostics with Personal Service
       </motion.h2>

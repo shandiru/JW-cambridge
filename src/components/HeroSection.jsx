@@ -22,7 +22,7 @@ const HeroSection = () => {
           {/* LEFT CONTENT */}
           <div className="space-y-6 text-center lg:text-left" data-aos="fade-right">
             <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl lg:text-[2.75rem] xl:text-6xl text-center lg:text-left font-black leading-tight bg-linear-to-r from-[#0078D6] to-[#B9BDC1] bg-clip-text text-transparent">
+              <h1 className="text-4xl md:text-5xl lg:text-[2.75rem] xl:text-6xl text-center lg:text-left font-black leading-tight text-[#0078D6]">
                 Crafting the Standard of
 
                 {/* MOBILE ONLY VIDEO - Appears right after the first line */}
@@ -44,7 +44,7 @@ const HeroSection = () => {
                 </span>
               </h1>
 
-              <p className="text-xl text-center lg:text-left font-bold bg-linear-to-r from-[#0078D6] to-[#B9BDC1] bg-clip-text text-transparent">
+              <p className="text-xl text-center lg:text-left font-bold text-[#0078D6]">
                 Expert Mechanics — Mercedes Specialists
               </p>
             </div>
