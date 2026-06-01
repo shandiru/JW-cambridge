@@ -23,7 +23,7 @@ const HeroSection = () => {
           <div className="space-y-6 text-center lg:text-left" data-aos="fade-right">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-5xl lg:text-[2.75rem] xl:text-6xl text-center lg:text-left font-black leading-tight text-[#0078D6]">
-                Crafting the Standard of
+                Maintaining the Standard of
 
                 {/* MOBILE ONLY VIDEO - Appears right after the first line */}
                 <div className="block lg:hidden my-6 w-full overflow-hidden rounded-xl shadow-xl aspect-video relative border-2 border-gray-100">
