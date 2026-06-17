@@ -28,7 +28,7 @@ const HeroSection = () => {
                 {/* MOBILE ONLY VIDEO - Appears right after the first line */}
                 <div className="block lg:hidden my-6 w-full overflow-hidden rounded-xl shadow-xl aspect-video relative border-2 border-gray-100">
                   <video
-                    src="/newhero.mp4"
+                    src="/JW.mp4"
                     autoPlay
                     muted
                     loop
@@ -94,7 +94,7 @@ const HeroSection = () => {
           <div className="hidden lg:block relative w-full" data-aos="fade-left">
             <div className="aspect-video sm:aspect-4/3 w-full relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white ">
               <video
-                src="/newhero.mp4"
+                src="/JW.mp4"
                 autoPlay
                 muted
                 loop
@@ -102,7 +102,6 @@ const HeroSection = () => {
                 poster="/fall.png"
                 className="object-cover absolute inset-0 h-full w-full"
               />
-              <div className="absolute inset-0 bg-[#0078D6]/10 pointer-events-none"></div>
             </div>
           </div>
 
