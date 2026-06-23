@@ -22,13 +22,13 @@ const HeroSection = () => {
           {/* LEFT CONTENT */}
           <div className="space-y-6 text-center lg:text-left" data-aos="fade-right">
             <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl lg:text-[2.75rem] xl:text-6xl text-center lg:text-left font-black leading-tight bg-linear-to-r from-[#0078D6] to-[#B9BDC1] bg-clip-text text-transparent">
-                Crafting the Standard of
+              <h1 className="text-4xl md:text-5xl lg:text-[2.75rem] xl:text-6xl text-center lg:text-left font-black leading-tight text-[#0078D6]">
+                Maintaining the Standard of
 
                 {/* MOBILE ONLY VIDEO - Appears right after the first line */}
                 <div className="block lg:hidden my-6 w-full overflow-hidden rounded-xl shadow-xl aspect-video relative border-2 border-gray-100">
                   <video
-                    src="/newhero.mp4"
+                    src="/JW.mp4"
                     autoPlay
                     muted
                     loop
@@ -39,12 +39,12 @@ const HeroSection = () => {
                 </div>
 
                 <br className="hidden lg:block" />
-                <span className="bg-linear-to-r from-[#0078D6] to-[#B9BDC1] bg-clip-text text-transparent">
+                <span className="text-[#0078D6]">
                   Mercedes-Benz Luxury
                 </span>
               </h1>
 
-              <p className="text-xl text-center lg:text-left font-bold bg-linear-to-r from-[#0078D6] to-[#B9BDC1] bg-clip-text text-transparent">
+              <p className="text-xl text-center lg:text-left font-bold text-[#0078D6]">
                 Expert Mechanics — Mercedes Specialists
               </p>
             </div>
@@ -94,7 +94,7 @@ const HeroSection = () => {
           <div className="hidden lg:block relative w-full" data-aos="fade-left">
             <div className="aspect-video sm:aspect-4/3 w-full relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white ">
               <video
-                src="/newhero.mp4"
+                src="/JW.mp4"
                 autoPlay
                 muted
                 loop
@@ -102,7 +102,6 @@ const HeroSection = () => {
                 poster="/fall.png"
                 className="object-cover absolute inset-0 h-full w-full"
               />
-              <div className="absolute inset-0 bg-[#0078D6]/10 pointer-events-none"></div>
             </div>
           </div>
 

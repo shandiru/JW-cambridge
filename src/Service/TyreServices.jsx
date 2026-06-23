@@ -227,7 +227,7 @@ export default function NandJServices() {
               {activeService.whyDesc}
             </p>
 
-            <h4 className="text-xl font-bold mb-4" style={{ color: palette.primaryRed }}>
+            <h4 className="text-xl font-bold mb-4 text-[#0078D6]">
               {activeService.benefitsTitle}
             </h4>
 
@@ -243,7 +243,7 @@ export default function NandJServices() {
 
           {/* SIGNS */}
           <div className="rounded-xl border p-8" style={{ backgroundColor: palette.cardBg, borderColor: palette.cardBorder }}>
-            <h4 className="text-2xl font-extrabold  mb-4" style={{ color: palette.primaryRed, fontWeight: "900", }}>
+            <h4 className="text-2xl font-extrabold  mb-4 text-[#0078D6]" style={{ fontWeight: "900", }}>
               {activeService.signsTitle}
             </h4>
             <ul className="space-y-3" style={{ color: palette.textGray }}>

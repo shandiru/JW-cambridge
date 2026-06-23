@@ -3,13 +3,30 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function AutoPlusTestimonial() {
-
   const testimonials = [
+    {
+      name: "Alex Howlett",
+      role: "Customer from Nottingham",
+      text: "Absolute legend, car broke down today, he saw me immediately and did me a massive favour by charging me very little as it didn’t take him long to fix and he gave me plenty of extra and useful advice on top . Definitely a very new experience for me with garage , so highly recommend",
+      img: "m.png",
+    },
+    {
+      name: "stephen holliday",
+      role: "Customer from Nottingham",
+      text: "Jake very knowledgeable and helpful chap would highly recommend these guys Genuine people",
+      img: "s.png",
+    },
     {
       name: "Mason Wright",
       role: "Customer from Nottingham",
       text: "Exceptional and speedy service with honest prices, would absolutely recommend.",
-      img: "m.png",
+      img: "m1.png",
+    },
+    {
+      name: "Graham Wesson",
+      role: "Customer from Nottingham",
+      text: "Using JW Cambridge for my car MOT and Service. Very knowledgeable and approachable. Will continue to use them.",
+      img: "g.png",
     },
     {
       name: "Simon Andreou",
@@ -18,28 +35,10 @@ export default function AutoPlusTestimonial() {
       img: "s.png",
     },
     {
-      name: "Hannah S.",
-      role: "Customer from Nottingham",
-      text: "Fantastic trustworthy angels run this place. Have used them for years and they have never let me down. Best on service, price, and advice.",
-      img: "im.png",
-    },
-    {
       name: "Ibbie Hart",
       role: "Customer from Nottingham",
-      text: "Honourable garage. Kind and friendly, quick service. As a woman on her own I always feel safe here. Genuine, honest, and dependable.",
+      text: "Honourable garage . Kind and friendly, quick service . As a woman on her own I always feel safe at Montbretia Motors . At my old garage I went to years ago, I felt they were ripping me off . But never felt that here. The opposite ! Thanks so much.",
       img: "i.png",
-    },
-    {
-      name: "Oliver S.",
-      role: "Customer from Nottingham",
-      text: "Another garage told me I needed new pads and discs. Took it here, and they said I still had 20K miles left — even showed me the brakes. Honest team.",
-      img: "im2.png",
-    },
-    {
-      name: "Sarah Thackray",
-      role: "Customer from Nottingham",
-      text: "Knows his stuff and will do his best for you at a very reasonable price.",
-      img: "s.png",
     },
   ];
 
@@ -60,16 +59,17 @@ export default function AutoPlusTestimonial() {
 
   const t = testimonials[index];
 
-  // Typewriter effect
+  // Typewriter effect - Corrected wording logic
   useEffect(() => {
     let i = 0;
     const text = String(t.text || "");
-    setTypedText("");
+    setTypedText(""); // Clear previous text immediately on slide change
     setIsTyping(true);
 
     const interval = setInterval(() => {
       if (i < text.length) {
-        setTypedText((prev) => prev + text[i-1]);
+        // Use slice to ensure we get the string up to the current character
+        setTypedText(text.slice(0, i + 1));
         i++;
       } else {
         clearInterval(interval);
@@ -100,13 +100,13 @@ export default function AutoPlusTestimonial() {
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-snug text-[#000000]">
             What Our{" "}
-            <span className="bg-linear-to-r from-[#0078D6] to-[#B9BDC1] bg-clip-text text-transparent">
+            <span className="text-[#0078D6]">
               Customers Say
             </span>
           </h2>
 
           <p className="text-[#555555] text-sm sm:text-base mt-3 max-w-2xl mx-auto">
-           Genuine feedback from Mercedes owners across Cambridge who trust us for expert diagnostics, precision maintenance, and dealer-level service excellence.
+            Genuine feedback from Mercedes owners across Cambridge who trust us for expert diagnostics, precision maintenance, and dealer-level service excellence.
           </p>
         </div>
 
