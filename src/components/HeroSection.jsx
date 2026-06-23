@@ -1,40 +1,69 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { FiPhone } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+const HERO_VIDEO_SRC = "/newhero.mp4";
+
 const HeroSection = () => {
+  const videoRefs = useRef([]);
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
       once: false,
     });
+
+    const videos = videoRefs.current.filter(Boolean);
+    const cleanupFns = [];
+
+    videos.forEach((video) => {
+      const tryPlay = () => {
+        video.muted = true;
+        const playPromise = video.play();
+        if (playPromise?.catch) {
+          playPromise.catch(() => {});
+        }
+      };
+
+      tryPlay();
+      video.addEventListener("canplay", tryPlay);
+      cleanupFns.push(() => video.removeEventListener("canplay", tryPlay));
+    });
+
+    return () => {
+      cleanupFns.forEach((cleanup) => cleanup());
+    };
   }, []);
 
   return (
     <section className="relative overflow-hidden bg-[#e5e9ee] pt-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-15">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-8 xl:gap-10 items-center lg:items-stretch">
 
           {/* LEFT CONTENT */}
           <div className="space-y-6 text-center lg:text-left" data-aos="fade-right">
             <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl lg:text-[2.75rem] xl:text-6xl text-center lg:text-left font-black leading-tight text-[#0078D6]">
+              <h1 className="text-3xl md:text-4xl lg:text-[2.45rem] xl:text-[3.6rem] text-center lg:text-left font-black leading-[1.05] text-[#0078D6]">
                 Maintaining the Standard of
 
                 {/* MOBILE ONLY VIDEO - Appears right after the first line */}
-                <div className="block lg:hidden my-6 w-full overflow-hidden rounded-xl shadow-xl aspect-video relative border-2 border-gray-100">
+                <div className="block lg:hidden my-5 w-full min-h-[280px] overflow-hidden rounded-2xl shadow-xl relative border-2 border-gray-100">
                   <video
-                    src="/JW.mp4"
+                    ref={(el) => {
+                      videoRefs.current[0] = el;
+                    }}
+                    src={HERO_VIDEO_SRC}
                     autoPlay
                     muted
                     loop
                     poster="/fall.png"
                     playsInline
-                    className="object-cover absolute inset-0 h-full w-full"
+                    preload="auto"
+                    className="absolute inset-0 h-full w-full bg-black object-contain"
                   />
                 </div>
 
@@ -91,16 +120,20 @@ const HeroSection = () => {
           </div>
 
           {/* DESKTOP VIDEO - Hidden on mobile screens */}
-          <div className="hidden lg:block relative w-full" data-aos="fade-left">
-            <div className="aspect-video sm:aspect-4/3 w-full relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white ">
+          <div className="hidden lg:block relative w-full h-full" data-aos="fade-left">
+            <div className="w-full h-full min-h-[520px] relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
               <video
-                src="/JW.mp4"
+                ref={(el) => {
+                  videoRefs.current[1] = el;
+                }}
+                src={HERO_VIDEO_SRC}
                 autoPlay
                 muted
                 loop
                 playsInline
                 poster="/fall.png"
-                className="object-cover absolute inset-0 h-full w-full"
+                preload="auto"
+                className="absolute inset-0 h-full w-full bg-black object-contain"
               />
             </div>
           </div>
