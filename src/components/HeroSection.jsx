@@ -1,69 +1,40 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { FiPhone } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const HERO_VIDEO_SRC = "/newhero.mp4";
-
 const HeroSection = () => {
-  const videoRefs = useRef([]);
-
   useEffect(() => {
     AOS.init({
       duration: 1000,
       once: false,
     });
-
-    const videos = videoRefs.current.filter(Boolean);
-    const cleanupFns = [];
-
-    videos.forEach((video) => {
-      const tryPlay = () => {
-        video.muted = true;
-        const playPromise = video.play();
-        if (playPromise?.catch) {
-          playPromise.catch(() => {});
-        }
-      };
-
-      tryPlay();
-      video.addEventListener("canplay", tryPlay);
-      cleanupFns.push(() => video.removeEventListener("canplay", tryPlay));
-    });
-
-    return () => {
-      cleanupFns.forEach((cleanup) => cleanup());
-    };
   }, []);
 
   return (
     <section className="relative overflow-hidden bg-[#e5e9ee] pt-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-15">
-        <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-8 xl:gap-10 items-center lg:items-stretch">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
 
           {/* LEFT CONTENT */}
           <div className="space-y-6 text-center lg:text-left" data-aos="fade-right">
             <div className="space-y-4">
-              <h1 className="text-3xl md:text-4xl lg:text-[2.45rem] xl:text-[3.6rem] text-center lg:text-left font-black leading-[1.05] text-[#0078D6]">
+              <h1 className="text-[2rem] sm:text-[2.35rem] md:text-[2.6rem] lg:text-[2.85rem] xl:text-[3.75rem] text-center lg:text-left font-black leading-[1.1] md:leading-[1.08] text-[#0078D6]">
                 Maintaining the Standard of
 
                 {/* MOBILE ONLY VIDEO - Appears right after the first line */}
-                <div className="block lg:hidden my-5 w-full min-h-[280px] overflow-hidden rounded-2xl shadow-xl relative border-2 border-gray-100">
+                <div className="block lg:hidden my-6 w-full overflow-hidden rounded-xl shadow-xl aspect-video relative border-2 border-gray-100 bg-black/5">
                   <video
-                    ref={(el) => {
-                      videoRefs.current[0] = el;
-                    }}
-                    src={HERO_VIDEO_SRC}
+                    src="/JW.mp4"
                     autoPlay
                     muted
                     loop
                     poster="/fall.png"
                     playsInline
-                    preload="auto"
-                    className="absolute inset-0 h-full w-full bg-black object-contain"
+                    className="absolute inset-0 h-full w-full object-contain"
                   />
                 </div>
 
@@ -73,7 +44,7 @@ const HeroSection = () => {
                 </span>
               </h1>
 
-              <p className="text-xl text-center lg:text-left font-bold text-[#0078D6]">
+              <p className="text-lg md:text-xl text-center lg:text-left font-bold leading-snug text-[#0078D6]">
                 Expert Mechanics — Mercedes Specialists
               </p>
             </div>
@@ -120,20 +91,16 @@ const HeroSection = () => {
           </div>
 
           {/* DESKTOP VIDEO - Hidden on mobile screens */}
-          <div className="hidden lg:block relative w-full h-full" data-aos="fade-left">
-            <div className="w-full h-full min-h-[520px] relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+          <div className="hidden lg:block relative w-full" data-aos="fade-left">
+            <div className="aspect-[16/10] xl:aspect-video w-full relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-black/5">
               <video
-                ref={(el) => {
-                  videoRefs.current[1] = el;
-                }}
-                src={HERO_VIDEO_SRC}
+                src="/JW.mp4"
                 autoPlay
                 muted
                 loop
                 playsInline
                 poster="/fall.png"
-                preload="auto"
-                className="absolute inset-0 h-full w-full bg-black object-contain"
+                className="absolute inset-0 h-full w-full object-contain"
               />
             </div>
           </div>
