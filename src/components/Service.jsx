@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -70,13 +71,13 @@ const ServiceSection = () => {
             </span>
           </h2>
           <p className="mt-5 text-[#333333] max-w-md leading-relaxed text-sm sm:text-base">
-           We specialise in Mercedes-Benz servicing, diagnostics, and electrical repairs using factory-grade tools, alongside professional servicing for selected other vehicles. Whether it’s maintenance, pre-MOT work, or advanced ECU updates, JW Cambridge delivers reliable performance, mile after mile.
+            We specialise in Mercedes-Benz servicing, diagnostics, and electrical repairs using factory-grade tools, alongside professional servicing for selected other vehicles. Whether it’s maintenance, pre-MOT work, or advanced ECU updates, JW Cambridge delivers reliable performance, mile after mile.
           </p>
-         <a href="/service">
-  <button className="mt-8 bg-[#0078D6] text-[#FFFFFF] font-semibold px-6 py-3 rounded-md uppercase hover:bg-[#0063b4] hover:shadow-[0_0_25px_rgba(0,120,214,0.4)] transition-all text-sm sm:text-base">
-    Discover More
-  </button>
-</a>
+          <Link to="/service">
+            <button className="mt-8 bg-[#0078D6] text-[#FFFFFF] font-semibold px-6 py-3 rounded-md uppercase hover:bg-[#0063b4] hover:shadow-[0_0_25px_rgba(0,120,214,0.4)] transition-all text-sm sm:text-base">
+              Discover More
+            </button>
+          </Link>
 
         </div>
 
@@ -92,29 +93,26 @@ const ServiceSection = () => {
               {/* Text */}
               <div>
                 <h3
-                  className={`text-[20px] sm:text-[22px] md:text-[24px] font-semibold uppercase tracking-wide transition-colors duration-300 ${
-                    hoveredId === service.id
+                  className={`text-[20px] sm:text-[22px] md:text-[24px] font-semibold uppercase tracking-wide transition-colors duration-300 ${hoveredId === service.id
                       ? "text-[#0078D6]"
                       : "text-[#000000]"
-                  }`}
+                    }`}
                 >
                   <span
-                    className={`mr-2 sm:mr-3 text-[22px] sm:text-[26px] md:text-[28px] font-bold transition-colors ${
-                      hoveredId === service.id
+                    className={`mr-2 sm:mr-3 text-[22px] sm:text-[26px] md:text-[28px] font-bold transition-colors ${hoveredId === service.id
                         ? "text-[#0078D6]"
                         : "text-[#B9BDC1]"
-                    }`}
+                      }`}
                   >
                     {service.id.toString().padStart(2, "0")}
                   </span>
                   {service.title}
                 </h3>
                 <p
-                  className={`uppercase font-semibold text-xs sm:text-sm mt-1 transition-colors ${
-                    hoveredId === service.id
+                  className={`uppercase font-semibold text-xs sm:text-sm mt-1 transition-colors ${hoveredId === service.id
                       ? "text-[#0078D6]"
                       : "text-[#666666]"
-                  }`}
+                    }`}
                 >
                   {service.subtitle}
                 </p>
@@ -126,16 +124,14 @@ const ServiceSection = () => {
                   src={service.image}
                   alt={service.title}
                   loading="lazy"
-                  className={`absolute w-full h-full object-cover transition-all duration-500 ease-out transform ${
-                    hoveredId === service.id
+                  className={`absolute w-full h-full object-cover transition-all duration-500 ease-out transform ${hoveredId === service.id
                       ? "opacity-100 translate-x-0 scale-100"
                       : "opacity-0 translate-x-5 scale-95"
-                  }`}
+                    }`}
                 />
                 <div
-                  className={`absolute inset-0 bg-linear-to-br from-transparent via-[#0078D6]/15 to-transparent transition-opacity duration-500 ${
-                    hoveredId === service.id ? "opacity-60" : "opacity-0"
-                  }`}
+                  className={`absolute inset-0 bg-linear-to-br from-transparent via-[#0078D6]/15 to-transparent transition-opacity duration-500 ${hoveredId === service.id ? "opacity-60" : "opacity-0"
+                    }`}
                 ></div>
               </div>
             </div>

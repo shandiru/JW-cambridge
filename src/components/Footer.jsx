@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  FaFacebookF,
   FaMapMarkerAlt,
   FaPhoneAlt,
   FaEnvelope,
@@ -22,19 +21,6 @@ export default function Footer() {
             <p className="text-[#555555] mb-4 mt-3 leading-relaxed">
               From oil changes to engine diagnostics, our fully equipped workshop ensure your vehicle runs smoothly — without the hassle of visiting a dealer.
             </p>
-            <div className="flex space-x-4">
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-              >
-                <FaFacebookF
-                  className="text-[#B9BDC1] hover:text-[#0078D6] cursor-pointer transition-colors duration-300"
-                  size={20}
-                />
-              </a>
-            </div>
           </div>
 
           {/* Services */}
@@ -52,12 +38,12 @@ export default function Footer() {
                 "Software Updates & Control Modules",
               ].map((service, index) => (
                 <li key={index}>
-                  <a
-                    href="/service"
+                  <Link
+                    to="/service"
                     className="hover:text-[#0078D6] transition-colors duration-300"
                   >
                     {service}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -106,7 +92,7 @@ export default function Footer() {
 
         {/* Divider */}
 
-       <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+       <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-600">
           <p>&copy; {new Date().getFullYear()} JW Cambridge. All rights reserved.</p>
         </div>
         {/* Bottom Bar */}

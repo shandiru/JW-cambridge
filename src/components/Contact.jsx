@@ -29,7 +29,7 @@ export default function ContactSection() {
 
     // WhatsApp Configuration
     const phoneNumber = "447491016816";
-    const text = `*New Website Inquiry*\n\n*Name:* ${formData.name}\n*Email:* ${formData.email}\n*Phone:* ${formData.number}\n*Message:* ${formData.message}`;
+    const text = `*New Website Inquiry*\n\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.number}\nMessage: ${formData.message}`;
     const encodedText = encodeURIComponent(text);
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedText}`;
 
@@ -185,7 +185,7 @@ export default function ContactSection() {
                 Send via WhatsApp
               </button>
 
-              <p className="text-[10px] text-center text-[#888888] leading-tight px-4">
+              <p className="text-[12px] text-center text-[#888888] leading-tight px-4">
                By submitting this form, you agree to us processing your details to respond to your enquiry in line with our Privacy Policy.
               </p>
             </form>
