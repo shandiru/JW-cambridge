@@ -2,34 +2,34 @@ import React from 'react';
 
 const PrivacyPolicy = () => {
     return (
-        <div className="mx-auto px-4 py-12 sm:px-6 lg:px-16 bg-black text-white">
-            <h1 className="text-4xl font-semibold text-center mb-8 mt-15">Privacy Policy</h1>
-            <p className="text-center text-white">Last updated: 09/09/25</p>
+        <div className="mx-auto px-4 py-12 sm:px-6 lg:px-16 bg-white text-slate-800">
+            <h1 className="text-4xl font-semibold text-center mb-8 mt-15 text-black">Privacy Policy</h1>
+            <p className="text-center text-slate-500">Last updated: 01/07/26</p>
 
             <div className="mt-8 space-y-6">
                 <section>
-                    <h2 className="text-2xl font-medium">1. Information We Collect</h2>
-                    <p className="text-white">
+                    <h2 className="text-2xl font-medium text-black">1. Information We Collect</h2>
+                    <p className="text-slate-700">
                         When you complete a form on our website or contact us directly, we may collect:
                     </p>
-                    <ul className="list-disc ml-6 text-white">
+                    <ul className="list-disc ml-6 text-slate-700 mt-2 space-y-1">
                         <li>Full name</li>
                         <li>Email address</li>
                         <li>Phone number</li>
                         <li>Address (if relevant to the service)</li>
                         <li>Details of your enquiry or project</li>
                     </ul>
-                    <p className="mt-2 text-white">
+                    <p className="mt-2 text-slate-700">
                         We may also collect limited technical data automatically when you visit our website, such as your IP address and browser type.
                     </p>
                 </section>
 
                 <section>
-                    <h2 className="text-2xl font-medium">2. Lawful Basis for Processing</h2>
-                    <p className="text-white">
+                    <h2 className="text-2xl font-medium text-black">2. Lawful Basis for Processing</h2>
+                    <p className="text-slate-700">
                         We only process your personal data where we have a lawful basis to do so. This includes:
                     </p>
-                    <ul className="list-disc ml-6 text-white">
+                    <ul className="list-disc ml-6 text-slate-700 mt-2 space-y-1">
                         <li>Contract – to provide a quote, arrange services, or fulfill an agreement with you</li>
                         <li>Consent – when you give us permission to contact you for specific purposes</li>
                         <li>Legitimate interests – to respond to inquiries and manage our business effectively</li>
@@ -38,27 +38,27 @@ const PrivacyPolicy = () => {
                 </section>
 
                 <section>
-                    <h2 className="text-2xl font-medium">3. How We Use Your Information</h2>
-                    <p className="text-white">
+                    <h2 className="text-2xl font-medium text-black">3. How We Use Your Information</h2>
+                    <p className="text-slate-700">
                         We use your personal data to:
                     </p>
-                    <ul className="list-disc ml-6 text-white">
+                    <ul className="list-disc ml-6 text-slate-700 mt-2 space-y-1">
                         <li>Respond to inquiries and provide quotes</li>
                         <li>Deliver JW cambridge services</li>
                         <li>Communicate with you about your project</li>
                         <li>Maintain business records and comply with legal requirements</li>
                     </ul>
-                    <p className="mt-2 text-white">
+                    <p className="mt-2 text-slate-700">
                         We do not sell or trade your personal details to third parties.
                     </p>
                 </section>
 
                 <section>
-                    <h2 className="text-2xl font-medium">4. Sharing Your Information</h2>
-                    <p className="text-white">
+                    <h2 className="text-2xl font-medium text-black">4. Sharing Your Information</h2>
+                    <p className="text-slate-700">
                         We may share your personal data only with:
                     </p>
-                    <ul className="list-disc ml-6 text-white">
+                    <ul className="list-disc ml-6 text-slate-700 mt-2 space-y-1">
                         <li>Trusted service providers (such as IT and hosting providers) who help us operate our business</li>
                         <li>Professional advisers (such as accountants or insurers)</li>
                         <li>Regulatory bodies or law enforcement, if required by law</li>
@@ -66,32 +66,32 @@ const PrivacyPolicy = () => {
                 </section>
 
                 <section>
-                    <h2 className="text-2xl font-medium">5. Cookies & Website Tracking</h2>
-                    <p className="text-white">
+                    <h2 className="text-2xl font-medium text-black">5. Cookies & Website Tracking</h2>
+                    <p className="text-slate-700">
                         Our website may use cookies or similar technologies to improve user experience and monitor website performance. You can set your browser to refuse cookies if you prefer.
                     </p>
                 </section>
 
                 <section>
-                    <h2 className="text-2xl font-medium">6. Data Security</h2>
-                    <p className="text-white">
+                    <h2 className="text-2xl font-medium text-black">6. Data Security</h2>
+                    <p className="text-slate-700">
                         We take appropriate measures to keep your personal information secure and prevent unauthorized access, disclosure, alteration, or destruction.
                     </p>
                 </section>
 
                 <section>
-                    <h2 className="text-2xl font-medium">7. How Long We Keep Your Information</h2>
-                    <p className="text-white">
+                    <h2 className="text-2xl font-medium text-black">7. How Long We Keep Your Information</h2>
+                    <p className="text-slate-700">
                         We keep your personal data only for as long as necessary to fulfill the purposes for which it was collected, including legal, accounting, or reporting requirements.
                     </p>
                 </section>
 
                 <section>
-                    <h2 className="text-2xl font-medium">8. Your Rights</h2>
-                    <p className="text-white">
+                    <h2 className="text-2xl font-medium text-black">8. Your Rights</h2>
+                    <p className="text-slate-700">
                         Under UK GDPR, you have the right to:
                     </p>
-                    <ul className="list-disc ml-6 text-white">
+                    <ul className="list-disc ml-6 text-slate-700 mt-2 space-y-1">
                         <li>Access the personal data we hold about you</li>
                         <li>Request correction of any inaccurate information</li>
                         <li>Request deletion of your data (where legally permissible)</li>
@@ -99,34 +99,33 @@ const PrivacyPolicy = () => {
                         <li>Withdraw consent (where consent is the basis for processing)</li>
                         <li>Data portability (to receive your data in a usable format)</li>
                     </ul>
-                    <p className="mt-2 text-white">
+                    <p className="mt-2 text-slate-700">
                         To exercise your rights, please contact us using the details below.
                     </p>
                 </section>
 
                 <section>
-                    <h2 className="text-2xl font-medium">9. Contact Us</h2>
-                    <p className="text-white">
+                    <h2 className="text-2xl font-medium text-black">9. Contact Us</h2>
+                    <p className="text-slate-700">
                         If you have any questions about this Privacy Policy or how we handle your personal data, please contact us:
                     </p>
-                    <div className="text-white">
+                    <div className="text-slate-700 mt-2 space-y-1">
                         <p><strong>JW cambridge</strong></p>
-                        <p>Email: <a href="mailto:info@jwcambridge.co.uk" className="text-[#4ab8e9] hover:underline">info@jwcambridge.co.uk</a></p>
+                        <p>Email: <a href="mailto:info@jwcambridge.co.uk" className="text-[#0078D6] hover:underline">info@jwcambridge.co.uk</a></p>
                         <p>Phone: 01223311711</p>
                         <p>Address: Unit 1, 2 Swanns Rd, Cambridge CB5 8JZ</p>
                     </div>
-                    <p className="mt-2 text-white">
+                    <p className="mt-4 text-slate-700">
                         If you are not satisfied with our response, you have the right to lodge a complaint with the{' '}
                         <a
                             href="https://ico.org.uk/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-[#D70C09] hover:underline"
+                            className="text-[#D70C09] font-medium hover:underline"
                         >
                             Information Commissioner’s Office (ICO)
                         </a>
                     </p>
-
                 </section>
             </div>
         </div>
